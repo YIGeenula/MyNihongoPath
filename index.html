@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>My Nihongo Path - Your Japanese Journey</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="icon" type="image/x-icon" href="images/siteIcoRed.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b3b",
+                        "background-light": "#fcf8f8",
+                        "background-dark": "#221012",
+                        "sakura-pink": "#FEEAFA",
+                        "muted-indigo": "#5C6784",
+                        "pale-red": "#F2B4B4",
+                        "brand-dark": "#1b0d0f",
+                        "brand-light": "#fcf8f8",
+                        "brand-subtle": "#f3e7e8",
+                        "brand-muted": "#9a4c52",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light font-display">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+    <div class="layout-container flex h-full grow flex-col">
+
+        <div class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-5">
+            <div class="layout-content-container flex flex-col w-full max-w-[1100px]">
+                <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-brand-subtle px-6 sm:px-10 py-3">
+                    <div class="flex items-center gap-4 text-brand-dark">
+                        <div class="size-5 text-primary">
+                            <img src="images/siteIcoRed.png" alt="siteIcon">
+                        </div>
+                        <h2 class="text-brand-dark text-lg font-bold leading-tight tracking-[-0.015em]">My Nihongo Path</h2>
+                    </div>
+                    <div class="hidden lg:flex flex-1 justify-end items-center gap-8">
+                        <nav class="flex items-center gap-9">
+                            <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+                            <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Courses</a>
+                            <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">About</a>
+                            <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">FAQ</a>
+                        </nav>
+                    </div>
+                    <div class="lg:hidden">
+                        <span class="material-symbols-outlined text-muted-indigo">menu</span>
+                    </div>
+                </header>
+            </div>
+        </div>
+
+        <div class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-5">
+            <div class="layout-content-container flex flex-col w-full max-w-[1100px]">
+                <div class="@container">
+                    <div class="@[480px]:p-4">
+                        <div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-start justify-end px-4 pb-10 @[480px]:px-10"
+                             data-alt="A stylized, soft-focus image of cherry blossoms with a subtle silhouette of Mt. Fuji in the background."
+                             style='background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.3) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuACi-5FRsgsvji757KC1UD1-v4brn5p-fq7XFu3hkBNbv_lAOIBql1wyAhi6Ekf5aO1lPDV8Y6Y_81x7bJAqGoaEVqhS9x540Jgalffuk2qqD6vlc24w5jamIQQOzf2hMQME5fTnL1XdD5U9Jp6xmRIuQiXni8uBOmYX4iYzzLLpjqrWDZawi1bZfpinWx0Zu5rWumibmneTfZ6gaRSyMB9fUQtOp24e7EORQ6UrCr3uftgZTf0NAPhMBz1eB_IVbIg5qd6beBpa-yG");'>
+                            <div class="flex flex-col gap-2 text-left">
+                                <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                                    みなさん
+                                </h1>
+                                <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                                    Welcome to Your Japanese Journey
+                                </h1>
+                                <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                                    Master Japanese with our calm, focused, and study-friendly approach. Learn at your own pace with interactive lessons and a supportive community.
+                                </h2>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-brand-light text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:bg-opacity-90 transition-opacity">
+                                    <span class="truncate">Start Learning</span>
+                                </button>
+                                <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-brand-subtle text-brand-dark text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:bg-pale-red/80 transition-colors">
+                                    <span class="truncate">Explore Courses</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-5">
+            <div class="layout-content-container flex flex-col w-full max-w-[1100px]">
+                <h2 class="text-muted-indigo text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-center">Why Learn With Us?</h2>
+            </div>
+        </div>
+
+        <div class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-5">
+            <div class="layout-content-container flex flex-col w-full max-w-[1100px]">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+                    <div class="flex flex-1 gap-3 rounded-lg border border-brand-subtle bg-background-light p-4 flex-col text-center items-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-pale-red text-4xl">
+                            <span class="material-symbols-outlined !text-4xl">auto_stories</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="text-muted-indigo text-base font-bold leading-tight">Interactive Lessons</h3>
+                            <p class="text-brand-muted text-sm font-normal leading-normal">Engaging lessons that make learning fun and effective.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-1 gap-3 rounded-lg border border-brand-subtle bg-background-light p-4 flex-col text-center items-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-pale-red text-4xl">
+                            <span class="material-symbols-outlined !text-4xl">style</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="text-muted-indigo text-base font-bold leading-tight">Master Kanji</h3>
+                            <p class="text-brand-muted text-sm font-normal leading-normal">Practice and learn Kanji with our intuitive flashcard system.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-1 gap-3 rounded-lg border border-brand-subtle bg-background-light p-4 flex-col text-center items-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-pale-red text-4xl">
+                            <span class="material-symbols-outlined !text-4xl">groups</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="text-muted-indigo text-base font-bold leading-tight">Practice Speaking</h3>
+                            <p class="text-brand-muted text-sm font-normal leading-normal">Connect with other learners and practice your speaking skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-10">
+            <div class="layout-content-container flex flex-col w-full max-w-[1100px]">
+                <div class="@container bg-sakura-pink/30 rounded-lg">
+                    <div class="flex flex-col items-center justify-center gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
+                        <div class="flex flex-col gap-2 text-center items-center">
+                            <h2 class="text-muted-indigo tracking-tight text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
+                                Ready to Start Your Journey?
+                            </h2>
+                            <p class="text-muted-indigo text-base font-normal leading-normal max-w-[720px]">Join thousands of learners and begin your path to fluency today.</p>
+                        </div>
+                        <div class="flex flex-1 justify-center">
+                            <div class="flex justify-center">
+                                <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-brand-light text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow hover:bg-opacity-90 transition-opacity">
+                                    <span class="truncate">Get Started for Free</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center pt-10 pb-5">
+            <div class="layout-content-container flex flex-col w-full max-w-[1100px]">
+                <footer class="w-full border-t border-brand-subtle py-8">
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 text-center">
+                        <div class="flex items-center gap-3"> 
+                            <span class="text-sm text-brand-muted">© 2025 My Nihongo Path. All rights reserved.</span>       
+                        </div>
+                        <div class="flex gap-4">
+                            <p class="text-sm text-brand-muted">
+                                Designed & Developed by 
+                                <a href="https://www.linkedin.com/in/yigeenula" target="_blank" class="hover:text-black">
+                                    Yasiru Isum Geenula
+                                </a>
+                                    |
+                                <a href="https://codexblaze.netlify.app/" target="_blank" class="hover:text-black">
+                                    CodeXBlaze
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
