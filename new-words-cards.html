@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Hiragana New Words - My Nihongo Path</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="icon" type="image/x-icon" href="images/siteIcoRed.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b3b",
+                        "background-light": "#fcf8f8",
+                        "brand-dark": "#1b0d0f",
+                        "brand-subtle": "#f3e7e8",
+                        "muted-indigo": "#5C6784"
+                    },
+                    fontFamily: { "display": ["Lexend", "sans-serif"] },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "1.5rem" }
+                }
+            }
+        };
+    </script>
+    <style> body { font-family: 'Lexend', sans-serif; } </style>
+</head>
+<body class="bg-background-light font-display">
+<div class="min-h-screen px-4 sm:px-10 lg:px-20 xl:px-40 py-8">
+    <header class="flex items-center justify-between border-b border-brand-subtle pb-4">
+        <h1 class="text-brand-dark text-2xl font-black">Hiragana new words</h1>
+        <a href="index.html" class="text-muted-indigo hover:text-primary">Back to Home</a>
+    </header>
+
+    <section class="mt-6">
+        <p class="text-muted-indigo">Choose a set to start learning and practicing.</p>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Card 1: 25 words from first 15 Hiragana letters -->
+            <a href="new-words-one.html" class="group block bg-white rounded-lg border border-brand-subtle shadow-sm hover:shadow-md hover:border-primary/40 transition">
+                <div class="p-6 flex flex-col gap-3">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-brand-dark text-xl font-black">25 words from first 15 Hiragana letters</h2>
+                        <span class="text-white bg-primary rounded-full text-xs font-bold px-3 py-1">25 words</span>
+                    </div>
+                    <p class="text-muted-indigo">
+                        Built from あ〜お、か〜こ、さ〜そ. Learn vocabulary and practice dictation.
+                    </p>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="rounded-full bg-brand-subtle text-brand-dark text-xs px-2 py-1">あ〜お</span>
+                        <span class="rounded-full bg-brand-subtle text-brand-dark text-xs px-2 py-1">か〜こ</span>
+                        <span class="rounded-full bg-brand-subtle text-brand-dark text-xs px-2 py-1">さ〜そ</span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="inline-flex items-center gap-2 rounded-full bg-primary text-white font-bold px-4 py-2">
+                            Open
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 2: Coming soon -->
+            <div class="bg-white rounded-lg border border-brand-subtle shadow-sm opacity-80">
+                <div class="p-6 flex flex-col gap-3">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-brand-dark text-xl font-black">Next 25 words (Hiragana 16–30)</h2>
+                        <span class="text-white bg-muted-indigo rounded-full text-xs font-bold px-3 py-1">Coming soon</span>
+                    </div>
+                    <p class="text-muted-indigo">
+                        More words built from た〜と、な〜の、は〜ほ. Stay tuned!
+                    </p>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="rounded-full bg-brand-subtle text-brand-dark text-xs px-2 py-1">た〜と</span>
+                        <span class="rounded-full bg-brand-subtle text-brand-dark text-xs px-2 py-1">な〜の</span>
+                        <span class="rounded-full bg-brand-subtle text-brand-dark text-xs px-2 py-1">は〜ほ</span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="inline-flex items-center gap-2 rounded-full bg-muted-indigo text-white font-bold px-4 py-2 cursor-not-allowed">
+                            Coming soon
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

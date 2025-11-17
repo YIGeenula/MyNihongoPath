@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>New Words - My Nihongo Path</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/siteIcoRed.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b3b",
+                        "background-light": "#fcf8f8",
+                        "brand-dark": "#1b0d0f",
+                        "brand-light": "#fcf8f8",
+                        "brand-subtle": "#f3e7e8",
+                        "muted-indigo": "#5C6784"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body { font-family: 'Lexend', sans-serif; }
+    </style>
+</head>
+<body class="bg-background-light font-display">
+    <div class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-5">
+            <div class="layout-content-container flex flex-col w-full max-w-[1100px]">
+                <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-brand-subtle px-6 sm:px-10 py-3">
+                    <div class="flex items-center gap-4 text-brand-dark">
+                        <div class="size-5 text-primary">
+                            <img src="images/siteIcoRed.png" alt="siteIcon">
+                        </div>
+                        <h2 class="text-brand-dark text-lg font-bold leading-tight tracking-[-0.015em]">My Nihongo Path</h2>
+                    </div>
+                    <div class="hidden lg:flex flex-1 justify-end items-center gap-8">
+                        <nav class="flex items-center gap-9">
+                            <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors" href="index.html">Home</a>
+                            <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Activities</a>
+                            <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">About</a>
+                            <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">FAQ</a>
+                        </nav>
+                    </div>
+                    <div class="lg:hidden">
+                        <span class="material-symbols-outlined text-muted-indigo">menu</span>
+                    </div>
+                </header>
+            </div>
+    </div>
+    <main class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-10">
+    <div class="layout-content-container flex flex-col w-full max-w-[1100px] gap-8">
+        <div class="flex flex-col gap-2 text-left">
+            <h1 class="text-brand-dark text-3xl font-black tracking-[-0.03em]">New Words</h1>
+            <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 text-muted-indigo">
+                <span class="text-brand-dark">English: <b>New Words</b></span>
+                <span class="text-brand-dark">Sinhala: <b>නව වචන</b></span>
+                <span class="text-primary flex items-center gap-2">
+                    Japanese: <b>新しい言葉</b>
+                    <button
+                        class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                        data-text="新しい言葉"
+                        aria-label="Play pronunciation"
+                        title="Play pronunciation"
+                    >
+                        <span class="material-symbols-outlined text-primary">volume_up</span>
+                    </button>
+                </span>
+            </div>
+            <p class="text-muted-indigo">Explore and practice new vocabulary across English, Sinhala, and Japanese.</p>
+        </div>
+
+        <!-- Callout and Hiragana grid -->
+        <div class="flex flex-col gap-4">
+            <div class="bg-sakura-pink/40 border border-brand-subtle rounded-lg px-4 py-3">
+                <p class="text-brand-dark font-semibold">
+                    Let’s learn 25 new words from the first 15 Hiragana letters.
+                </p>
+                <p class="text-muted-indigo text-sm">
+                    Start with あ–お, か–こ, さ–そ. Tap any kana to hear it.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-5 gap-3">
+                <!-- Row 1 -->
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="あ" title="あ (a)">
+                    <span class="text-primary text-3xl font-bold">あ</span>
+                    <span class="text-muted-indigo text-sm">a</span>
+                </button>
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="い" title="い (i)">
+                    <span class="text-primary text-3xl font-bold">い</span>
+                    <span class="text-muted-indigo text-sm">i</span>
+                </button>
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="う" title="う (u)">
+                    <span class="text-primary text-3xl font-bold">う</span>
+                    <span class="text-muted-indigo text-sm">u</span>
+                </button>
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="え" title="え (e)">
+                    <span class="text-primary text-3xl font-bold">え</span>
+                    <span class="text-muted-indigo text-sm">e</span>
+                </button>
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="お" title="お (o)">
+                    <span class="text-primary text-3xl font-bold">お</span>
+                    <span class="text-muted-indigo text-sm">o</span>
+                </button>
+
+                <!-- Row 2 -->
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="か" title="か (ka)">
+                    <span class="text-primary text-3xl font-bold">か</span>
+                    <span class="text-muted-indigo text-sm">ka</span>
+                </button>
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="き" title="き (ki)">
+                    <span class="text-primary text-3xl font-bold">き</span>
+                    <span class="text-muted-indigo text-sm">ki</span>
+                </button>
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="く" title="く (ku)">
+                    <span class="text-primary text-3xl font-bold">く</span>
+                    <span class="text-muted-indigo text-sm">ku</span>
+                </button>
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="け" title="け (ke)">
+                    <span class="text-primary text-3xl font-bold">け</span>
+                    <span class="text-muted-indigo text-sm">ke</span>
+                </button>
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="こ" title="こ (ko)">
+                    <span class="text-primary text-3xl font-bold">こ</span>
+                    <span class="text-muted-indigo text-sm">ko</span>
+                </button>
+
+                <!-- Row 3 -->
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="さ" title="さ (sa)">
+                    <span class="text-primary text-3xl font-bold">さ</span>
+                    <span class="text-muted-indigo text-sm">sa</span>
+                </button>
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="し" title="し (shi)">
+                    <span class="text-primary text-3xl font-bold">し</span>
+                    <span class="text-muted-indigo text-sm">shi</span>
+                </button>
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="す" title="す (su)">
+                    <span class="text-primary text-3xl font-bold">す</span>
+                    <span class="text-muted-indigo text-sm">su</span>
+                </button>
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="せ" title="せ (se)">
+                    <span class="text-primary text-3xl font-bold">せ</span>
+                    <span class="text-muted-indigo text-sm">se</span>
+                </button>
+                <button class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak" data-text="そ" title="そ (so)">
+                    <span class="text-primary text-3xl font-bold">そ</span>
+                    <span class="text-muted-indigo text-sm">so</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Practice instructions and button  -->
+        <div class="mt-4 bg-sakura-pink/40 border border-brand-subtle rounded-lg px-4 py-3 
+            flex items-center justify-between">
+            <div>
+                <p class="text-brand-dark font-semibold">
+                    Select the checkboxes for the words you want to study.
+                </p>
+                <p class="text-muted-indigo text-sm">
+                    After selecting, click the button below to practice only those words.
+                </p>
+            </div>
+
+                <button id="letsPracticeBtn" class="flex items-center gap-2 rounded-full bg-primary text-white font-bold px-5 py-2 hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed">
+                    <span class="material-symbols-outlined text-white">play_arrow</span>
+                    LET'S PRACTICE
+                </button>
+        </div>
+
+        <!-- Inside the section that lists your new word rows -->
+        <div class="space-y-3">
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Aki )</span>
+                <span class="text-primary font-semibold">あき</span>
+                <button class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak" data-text="あき" aria-label="Play pronunciation" title="Play pronunciation">
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Autumn</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">සරත් කාලය</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="あき"
+                    data-en="Autumn"
+                    data-si="සරත් කාලය"
+                    data-ro="Aki"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Aoi )</span>
+                <span class="text-primary font-semibold">あおい</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="あおい"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Blue</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">නිල් පාට</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="あおい"
+                    data-en="Blue"
+                    data-si="නිල් පාට"
+                    data-ro="Aoi"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Akai )</span>
+                <span class="text-primary font-semibold">あかい</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="あかい"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Red</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">රතු පාට</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="あかい"
+                    data-en="Red"
+                    data-si="රතු පාට"
+                    data-ro="Akai"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <!-- Kao -->
+                <span class="text-brand-dark">( Kao )</span>
+                <span class="text-primary font-semibold">かお</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="かお"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Face</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">මුහුණ</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="かお"
+                    data-en="Face"
+                    data-si="මුහුණ"
+                    data-ro="Kao"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Ki )</span>
+                <span class="text-primary font-semibold">き</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="き"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Tree</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">ගස</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="き"
+                    data-en="Tree"
+                    data-si="ගස"
+                    data-ro="Ki"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Ka )</span>
+                <span class="text-primary font-semibold">か</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="か"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Mosquito</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">මදුරුවා</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="か"
+                    data-en="Mosquito"
+                    data-si="මදුරුවා"
+                    data-ro="Ka"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Ai )</span>
+                <span class="text-primary font-semibold">あい</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="あい"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Love</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">ආදරය</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="あい"
+                    data-en="Love"
+                    data-si="ආදරය"
+                    data-ro="Ai"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Ashi )</span>
+                <span class="text-primary font-semibold">あし</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="あし"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Leg</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">කකුල</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="あし"
+                    data-en="Leg"
+                    data-si="කකුල"
+                    data-ro="Ashi"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Asoko )</span>
+                <span class="text-primary font-semibold">あそこ</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="あそこ"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Over there</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">අතන</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="あそこ"
+                    data-en="Over there"
+                    data-si="අතන"
+                    data-ro="Asoko"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Koko )</span>
+                <span class="text-primary font-semibold">ここ</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="ここ"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Here</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">මෙතන</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="ここ"
+                    data-en="Here"
+                    data-si="මෙතන"
+                    data-ro="Koko"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Soko )</span>
+                <span class="text-primary font-semibold">そこ</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="そこ"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">There</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">ඔතන</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="そこ"
+                    data-en="There"
+                    data-si="ඔතන"
+                    data-ro="Soko"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Asa )</span>
+                <span class="text-primary font-semibold">あさ</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="あさ"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Morning</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">උදය</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="あさ"
+                    data-en="Morning"
+                    data-si="උදය"
+                    data-ro="Asa"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Kesa )</span>
+                <span class="text-primary font-semibold">けさ</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="けさ"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Today Morning</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">අද උදේ</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="けさ"
+                    data-en="Today Morning"
+                    data-si="අද උදේ"
+                    data-ro="Kesa"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Ike )</span>
+                <span class="text-primary font-semibold">いけ</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="いけ"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Pond</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">පොකුණ</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="いけ"
+                    data-en="Pond"
+                    data-si="පොකුණ"
+                    data-ro="Ike"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Ika )</span>
+                <span class="text-primary font-semibold">いか</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="いか"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Cuttlefish</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">දැල්ලා</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="いか"
+                    data-en="Cuttlefish"
+                    data-si="දැල්ලා"
+                    data-ro="Ika"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Ishi )</span>
+                <span class="text-primary font-semibold">いし</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="いし"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Stone</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">ගල</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="いし"
+                    data-en="Stone"
+                    data-si="ගල"
+                    data-ro="Ishi"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Kusa )</span>
+                <span class="text-primary font-semibold">くさ</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="くさ"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Grass</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">තණකොල</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="くさ"
+                    data-en="Grass"
+                    data-si="තණකොල"
+                    data-ro="Kusa"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Kasa )</span>
+                <span class="text-primary font-semibold">かさ</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="かさ"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Umbrella</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">කුඩය</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="かさ"
+                    data-en="Umbrella"
+                    data-si="කුඩය"
+                    data-ro="Kasa"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Shi )</span>
+                <span class="text-primary font-semibold">し</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="し"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">4 | Poem</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">4 | කවිය</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="し"
+                    data-en="4 | Poem"
+                    data-si="4 | කවිය"
+                    data-ro="Shi"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Isu )</span>
+                <span class="text-primary font-semibold">いす</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="いす"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Chair</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">පුටුව</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="いす"
+                    data-en="Chair"
+                    data-si="පුටුව"
+                    data-ro="Isu"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Suika )</span>
+                <span class="text-primary font-semibold">すいか</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="すいか"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Watermelon</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">කොමඩු</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="すいか"
+                    data-en="Watermelon"
+                    data-si="කොමඩු"
+                    data-ro="Suika"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Sekai )</span>
+                <span class="text-primary font-semibold">せかい</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="せかい"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">World</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">ලෝකය</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="せかい"
+                    data-en="World"
+                    data-si="ලෝකය"
+                    data-ro="Sekai"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Kesu )</span>
+                <span class="text-primary font-semibold">けす</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="けす"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Erase</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">මකනවා</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="けす"
+                    data-en="Erase"
+                    data-si="මකනවා"
+                    data-ro="Kesu"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Osake )</span>
+                <span class="text-primary font-semibold">おさけ</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="おさけ"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Alcohol (Sake)</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">මත්පැන් (සකේ)</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="おさけ"
+                    data-en="Alcohol (Sake)"
+                    data-si="මත්පැන් (සකේ)"
+                    data-ro="Osake"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+            <div class="flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-3">
+                <span class="text-brand-dark">( Koe )</span>
+                <span class="text-primary font-semibold">こえ</span>
+                <button
+                    class="inline-flex items-center justify-center rounded-full border border-brand-subtle text-primary hover:bg-primary/10 px-2 py-1 transition jp-speak"
+                    data-text="こえ"
+                    aria-label="Play pronunciation"
+                    title="Play pronunciation"
+                >
+                    <span class="material-symbols-outlined text-primary">volume_up</span>
+                </button>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">Sound</span>
+                <span class="text-muted-indigo">-</span>
+                <span class="text-brand-dark">හඩ</span>
+                <input
+                    type="checkbox"
+                    class="ml-auto appearance-none w-7 h-7 border-2 border-primary rounded-lg checked:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition new-word-checkbox"
+                    data-jp="こえ"
+                    data-en="Sound"
+                    data-si="හඩ"
+                    data-ro="Koe"
+                    aria-label="Mark for practice"
+                    title="Mark for practice"
+                />
+            </div>
+
+        </div>
+           
+        
+    </div>
+</main>
+</body>
+</html>
+
+
+
+<!-- Script near the end of the file: saves selection and navigates -->
+<script>
+    (function () {
+        const practiceBtn = document.getElementById('letsPracticeBtn');
+        const boxes = () => Array.from(document.querySelectorAll('.new-word-checkbox'));
+
+        function getSelected() {
+            return boxes()
+                .filter(b => b.checked)
+                .map(b => ({
+                    jp: b.dataset.jp,
+                    en: b.dataset.en,
+                    si: b.dataset.si,
+                    ro: b.dataset.ro
+                }));
+        }
+
+        function updateButtonState() {
+            practiceBtn.disabled = getSelected().length === 0;
+        }
+
+        boxes().forEach(b => b.addEventListener('change', updateButtonState));
+        updateButtonState();
+
+        practiceBtn.addEventListener('click', function () {
+            const selected = getSelected();
+            if (selected.length === 0) return;
+            localStorage.setItem('practiceWords', JSON.stringify(selected));
+            // Navigate to the practice page
+            window.location.href = 'practiceWord.html';
+        });
+    })();
+</script>
