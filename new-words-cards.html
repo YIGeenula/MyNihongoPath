@@ -29,59 +29,156 @@
 <body class="bg-background-light font-display">
 <div class="min-h-screen px-4 sm:px-10 lg:px-20 xl:px-40 py-8">
     <header class="flex items-center justify-between border-b border-brand-subtle pb-4">
-        <h1 class="text-brand-dark text-2xl font-black">Hiragana new words</h1>
+        <h1 class="text-brand-dark text-2xl font-black">New words</h1>
         <a href="index.html" class="text-muted-indigo hover:text-primary">Back to Home</a>
     </header>
 
-    <section class="mt-6">
-        <p class="text-muted-indigo">Choose a set to start learning and practicing.</p>
+    <section class="mt-6 space-y-10">
+        <div class="space-y-4">
+            <h2 class="text-brand-dark text-xl font-black">Hiragana New Words</h2>
+            <p class="text-muted-indigo">Choose a set to start learning. Practice single sets or all in one.</p>
 
-        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Card 1: 25 words from first 15 Hiragana letters -->
-            <a href="new-words-one.html" class="group block bg-white rounded-lg border border-brand-subtle shadow-sm hover:shadow-md hover:border-primary/40 transition">
-                <div class="p-6 flex flex-col gap-3">
-                    <div class="flex items-center justify-between">
-                        <h2 class="text-brand-dark text-xl font-black">25 words from first 15 Hiragana letters</h2>
-                        <span class="text-white bg-primary rounded-full text-xs font-bold px-3 py-1">25 words</span>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <a href="new-words-one.html" class="group block bg-white rounded-lg border border-brand-subtle shadow-sm hover:shadow-md hover:border-primary/40 transition">
+                    <div class="p-6 flex flex-col gap-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-brand-dark text-lg font-black">First 15 letters</h3>
+                            <span class="text-white bg-primary rounded-full text-xs font-bold px-3 py-1">25 words</span>
+                        </div>
+                        <p class="text-muted-indigo">あ〜お、か〜こ、さ〜そ</p>
+                        <div class="mt-4">
+                            <span class="inline-flex items-center gap-2 rounded-full bg-primary text-white font-bold px-4 py-2">Open
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
                     </div>
-                    <p class="text-muted-indigo">
-                        Built from あ〜お、か〜こ、さ〜そ. Learn vocabulary and practice dictation.
-                    </p>
-                    <div class="flex items-center gap-2 mt-1">
-                        <span class="rounded-full bg-brand-subtle text-brand-dark text-xs px-2 py-1">あ〜お</span>
-                        <span class="rounded-full bg-brand-subtle text-brand-dark text-xs px-2 py-1">か〜こ</span>
-                        <span class="rounded-full bg-brand-subtle text-brand-dark text-xs px-2 py-1">さ〜そ</span>
+                </a>
+
+                <a href="new-words-two.html" class="group block bg-white rounded-lg border border-brand-subtle shadow-sm hover:shadow-md hover:border-primary/40 transition">
+                    <div class="p-6 flex flex-col gap-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-brand-dark text-lg font-black">Next 15 letters</h3>
+                            <span class="text-white bg-primary rounded-full text-xs font-bold px-3 py-1">Words & kana</span>
+                        </div>
+                        <p class="text-muted-indigo">た〜と、な〜の、は〜ほ</p>
+                        <div class="mt-4">
+                            <span class="inline-flex items-center gap-2 rounded-full bg-primary text-white font-bold px-4 py-2">Open
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
                     </div>
-                    <div class="mt-4">
-                        <span class="inline-flex items-center gap-2 rounded-full bg-primary text-white font-bold px-4 py-2">
-                            Open
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </span>
+                </a>
+
+                <div class="group bg-white rounded-lg border border-brand-subtle shadow-sm hover:shadow-md hover:border-primary/40 transition">
+                    <div class="p-6 flex flex-col gap-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-brand-dark text-lg font-black">All Hiragana Practice</h3>
+                            <span class="text-white bg-primary rounded-full text-xs font-bold px-3 py-1">All-in-one</span>
+                        </div>
+                        <p class="text-muted-indigo">Practice all words with the full hiragana chart.</p>
+                        <div class="grid grid-cols-5 gap-1 mt-2 text-center">
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">あ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">い</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">う</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">え</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">お</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">か</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">き</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">く</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">け</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">こ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">さ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">し</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">す</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">せ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">そ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">た</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">ち</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">つ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">て</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">と</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">な</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">に</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">ぬ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">ね</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">の</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">は</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">ひ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">ふ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">へ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">ほ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">ま</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">み</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">む</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">め</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">も</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">や</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">ゆ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">よ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">ら</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">り</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">る</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">れ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">ろ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">わ</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">を</span>
+                            <span class="rounded bg-brand-subtle text-brand-dark text-xs px-2 py-1">ん</span>
+                        </div>
+                        <div class="mt-4">
+                            <button id="practiceAllBtn" class="inline-flex items-center gap-2 rounded-full bg-primary text-white font-bold px-4 py-2">Practice All
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </a>
+            </div>
+        </div>
 
-            <!-- Card 2: Coming soon -->
-            <div class="bg-white rounded-lg border border-brand-subtle shadow-sm opacity-80">
-                <div class="p-6 flex flex-col gap-3">
-                    <div class="flex items-center justify-between">
-                        <h2 class="text-brand-dark text-xl font-black">Next 25 words (Hiragana 16–30)</h2>
-                        <span class="text-white bg-muted-indigo rounded-full text-xs font-bold px-3 py-1">Coming soon</span>
+        <div class="space-y-4">
+            <h2 class="text-brand-dark text-xl font-black">Katakana New Words</h2>
+            <p class="text-muted-indigo">Coming soon.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg border border-brand-subtle shadow-sm opacity-80">
+                    <div class="p-6 flex flex-col gap-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-brand-dark text-lg font-black">Basics</h3>
+                            <span class="text-white bg-muted-indigo rounded-full text-xs font-bold px-3 py-1">Coming soon</span>
+                        </div>
+                        <p class="text-muted-indigo">Practice core Katakana sets.</p>
                     </div>
-                    <p class="text-muted-indigo">
-                        More words built from た〜と、な〜の、は〜ほ. Stay tuned!
-                    </p>
-                    <div class="flex items-center gap-2 mt-1">
-                        <span class="rounded-full bg-brand-subtle text-brand-dark text-xs px-2 py-1">た〜と</span>
-                        <span class="rounded-full bg-brand-subtle text-brand-dark text-xs px-2 py-1">な〜の</span>
-                        <span class="rounded-full bg-brand-subtle text-brand-dark text-xs px-2 py-1">は〜ほ</span>
+                </div>
+                <div class="bg-white rounded-lg border border-brand-subtle shadow-sm opacity-80">
+                    <div class="p-6 flex flex-col gap-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-brand-dark text-lg font-black">Extended words</h3>
+                            <span class="text-white bg-muted-indigo rounded-full text-xs font-bold px-3 py-1">Coming soon</span>
+                        </div>
+                        <p class="text-muted-indigo">Learn borrowed words and practice.</p>
                     </div>
-                    <div class="mt-4">
-                        <span class="inline-flex items-center gap-2 rounded-full bg-muted-indigo text-white font-bold px-4 py-2 cursor-not-allowed">
-                            Coming soon
-                        </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <h2 class="text-brand-dark text-xl font-black">Kanji</h2>
+            <p class="text-muted-indigo">Coming soon.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg border border-brand-subtle shadow-sm opacity-80">
+                    <div class="p-6 flex flex-col gap-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-brand-dark text-lg font-black">N5 Kanji</h3>
+                            <span class="text-white bg-muted-indigo rounded-full text-xs font-bold px-3 py-1">Coming soon</span>
+                        </div>
+                        <p class="text-muted-indigo">Starter Kanji with readings and meanings.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg border border-brand-subtle shadow-sm opacity-80">
+                    <div class="p-6 flex flex-col gap-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-brand-dark text-lg font-black">Practice</h3>
+                            <span class="text-white bg-muted-indigo rounded-full text-xs font-bold px-3 py-1">Coming soon</span>
+                        </div>
+                        <p class="text-muted-indigo">Stroke order and recognition drills.</p>
                     </div>
                 </div>
             </div>
@@ -89,4 +186,51 @@
     </section>
 </div>
 </body>
+<script>
+    (function(){
+        function extractWordsFromHTML(htmlText){
+            const doc = new DOMParser().parseFromString(htmlText, 'text/html');
+            const nodes = doc.querySelectorAll('.new-word-checkbox');
+            return Array.from(nodes).map(n => ({
+                jp: n.dataset.jp,
+                en: n.dataset.en,
+                si: n.dataset.si,
+                ro: n.dataset.ro
+            })).filter(w => w.jp && w.en);
+        }
+
+        async function getAllHiraganaWords(){
+            const pages = ['new-words-one.html','new-words-two.html','new-words-three.html'];
+            const results = [];
+            for(const p of pages){
+                try{
+                    const res = await fetch(p);
+                    if(res.ok){
+                        const text = await res.text();
+                        results.push(...extractWordsFromHTML(text));
+                    }
+                }catch(e){/* ignore */}
+            }
+            const unique = [];
+            const seen = new Set();
+            for(const w of results){
+                const key = `${w.jp}|${w.en}`;
+                if(!seen.has(key)){
+                    seen.add(key);
+                    unique.push(w);
+                }
+            }
+            return unique.length ? unique : FALLBACK_HIRAGANA_WORDS;
+        }
+
+        const btn = document.getElementById('practiceAllBtn');
+        if(btn){
+            btn.addEventListener('click', async function(){
+                const all = await getAllHiraganaWords();
+                localStorage.setItem('practiceWords', JSON.stringify(all));
+                window.location.href = 'practiceWord.html';
+            });
+        }
+    })();
+</script>
 </html>
