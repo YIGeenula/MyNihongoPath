@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>New Words - My Nihongo Path</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/siteIcoRed.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b3b",
+                        "background-light": "#fcf8f8",
+                        "brand-dark": "#1b0d0f",
+                        "brand-light": "#fcf8f8",
+                        "brand-subtle": "#f3e7e8",
+                        "muted-indigo": "#5C6784"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display">
+    <div class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-5">
+        <div class="layout-content-container flex flex-col w-full max-w-[1100px]">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-brand-subtle px-6 sm:px-10 py-3">
+                <div class="flex items-center gap-4 text-brand-dark">
+                    <div class="size-5 text-primary">
+                        <img src="images/siteIcoRed.png" alt="siteIcon">
+                    </div>
+                    <h2 class="text-brand-dark text-lg font-bold leading-tight tracking-[-0.015em]">My Nihongo Path</h2>
+                </div>
+                <div class="hidden lg:flex flex-1 justify-end items-center gap-8">
+                    <nav class="flex items-center gap-9">
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="index.html">Home</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="activities.html">Activities</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="about.html">About</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="faq.html">FAQ</a>
+                    </nav>
+                </div>
+                <div class="lg:hidden">
+                    <span class="material-symbols-outlined text-muted-indigo">menu</span>
+                </div>
+            </header>
+        </div>
+    </div>
+    <main class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-10">
+        <div class="layout-content-container flex flex-col w-full max-w-[1100px] gap-8">
+            <div class="flex flex-col gap-2 text-left">
+                <h1 class="text-brand-dark text-3xl font-black tracking-[-0.03em]">Hiragana Letters</h1>
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 text-muted-indigo">
+                    <span class="text-brand-dark">English: <b>Second 15 Letters</b></span>
+                    <span class="text-brand-dark">Sinhala: <b>දෙවන අකුරු 15</b></span>
+                </div>
+                <p class="text-muted-indigo">Explore and practice hiragana letters across English, Sinhala, and
+                    Japanese.</p>
+            </div>
+
+            <!-- Callout and Hiragana grid -->
+            <div class="flex flex-col gap-4">
+                <div class="grid grid-cols-5 gap-3">
+                    <!-- Row 1 -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="た" title="た (ta)">
+                        <span class="text-primary text-3xl font-bold">た</span>
+                        <span class="text-brand-dark text-2xl font-black">ta</span>
+                        <span class="text-brand-dark text-2xl font-black">ත</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ち" title="ち (chi)">
+                        <span class="text-primary text-3xl font-bold">ち</span>
+                        <span class="text-brand-dark text-2xl font-black">chi</span>
+                        <span class="text-brand-dark text-2xl font-black">චි</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="つ" title="つ (tsu)">
+                        <span class="text-primary text-3xl font-bold">つ</span>
+                        <span class="text-brand-dark text-2xl font-black">tsu</span>
+                        <span class="text-brand-dark text-2xl font-black">ත්සු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="て" title="て (te)">
+                        <span class="text-primary text-3xl font-bold">て</span>
+                        <span class="text-brand-dark text-2xl font-black">te</span>
+                        <span class="text-brand-dark text-2xl font-black">තෙ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="と" title="と (to)">
+                        <span class="text-primary text-3xl font-bold">と</span>
+                        <span class="text-brand-dark text-2xl font-black">to</span>
+                        <span class="text-brand-dark text-2xl font-black">තො</span>
+                    </button>
+
+                    <!-- Row 2 -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="な" title="な (na)">
+                        <span class="text-primary text-3xl font-bold">な</span>
+                        <span class="text-brand-dark text-2xl font-black">na</span>
+                        <span class="text-brand-dark text-2xl font-black">න</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="に" title="に (ni)">
+                        <span class="text-primary text-3xl font-bold">に</span>
+                        <span class="text-brand-dark text-2xl font-black">ni</span>
+                        <span class="text-brand-dark text-2xl font-black">නි</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ぬ" title="ぬ (nu)">
+                        <span class="text-primary text-3xl font-bold">ぬ</span>
+                        <span class="text-brand-dark text-2xl font-black">nu</span>
+                        <span class="text-brand-dark text-2xl font-black">නු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ね" title="ね (ne)">
+                        <span class="text-primary text-3xl font-bold">ね</span>
+                        <span class="text-brand-dark text-2xl font-black">ne</span>
+                        <span class="text-brand-dark text-2xl font-black">නෙ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="の" title="の (no)">
+                        <span class="text-primary text-3xl font-bold">の</span>
+                        <span class="text-brand-dark text-2xl font-black">no</span>
+                        <span class="text-brand-dark text-2xl font-black">නො</span>
+                    </button>
+
+                    <!-- Row 3 -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="は" title="は (ha)">
+                        <span class="text-primary text-3xl font-bold">は</span>
+                        <span class="text-brand-dark text-2xl font-black">ha</span>
+                        <span class="text-brand-dark text-2xl font-black">හ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ひ" title="ひ (hi)">
+                        <span class="text-primary text-3xl font-bold">ひ</span>
+                        <span class="text-brand-dark text-2xl font-black">hi</span>
+                        <span class="text-brand-dark text-2xl font-black">හි</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ふ" title="ふ (fu)">
+                        <span class="text-primary text-3xl font-bold">ふ</span>
+                        <span class="text-brand-dark text-2xl font-black">fu</span>
+                        <span class="text-brand-dark text-2xl font-black">ෆු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="へ" title="へ (he)">
+                        <span class="text-primary text-3xl font-bold">へ</span>
+                        <span class="text-brand-dark text-2xl font-black">he</span>
+                        <span class="text-brand-dark text-2xl font-black">හෙ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ほ" title="ほ (ho)">
+                        <span class="text-primary text-3xl font-bold">ほ</span>
+                        <span class="text-brand-dark text-2xl font-black">ho</span>
+                        <span class="text-brand-dark text-2xl font-black">හො</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Practice instructions and button  -->
+            <div class="mt-4 bg-sakura-pink/40 border border-brand-subtle rounded-lg px-4 py-3 
+            flex items-center justify-between">
+                <div>
+                    <p class="text-brand-dark font-semibold">
+                        Click the button for to practice the letters.
+                    </p>
+                </div>
+
+                <button id="letsPracticeBtn"
+                    class="flex items-center gap-2 rounded-full bg-primary text-white font-bold px-5 py-2 hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed">
+                    <span class="material-symbols-outlined text-white">play_arrow</span>
+                    LET'S PRACTICE
+                </button>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex justify-between mt-4">
+                <a href="set01.html"
+                    class="flex items-center gap-2 text-muted-indigo hover:text-primary font-bold transition-colors">
+                    <span class="material-symbols-outlined">arrow_back</span> Previous Set
+                </a>
+                <a href="set03.html"
+                    class="flex items-center gap-2 text-muted-indigo hover:text-primary font-bold transition-colors">
+                    Next Set <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('letsPracticeBtn').addEventListener('click', function () {
+            const letters = [];
+            document.querySelectorAll('.jp-speak').forEach(btn => {
+                const spans = btn.querySelectorAll('span');
+                if (spans.length >= 3) {
+                    letters.push({
+                        jp: spans[0].textContent.trim(), // Kana
+                        en: spans[1].textContent.trim(), // Romaji
+                        si: spans[2].textContent.trim()  // Sinhala
+                    });
+                }
+            });
+
+            localStorage.setItem('practiceLetters', JSON.stringify(letters));
+            window.location.href = 'practiceLetters.html';
+        });
+    </script>
+
+</body>
+
+</html>

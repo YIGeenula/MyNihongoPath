@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>New Words - My Nihongo Path</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/siteIcoRed.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b3b",
+                        "background-light": "#fcf8f8",
+                        "brand-dark": "#1b0d0f",
+                        "brand-light": "#fcf8f8",
+                        "brand-subtle": "#f3e7e8",
+                        "muted-indigo": "#5C6784"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display">
+    <div class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-5">
+        <div class="layout-content-container flex flex-col w-full max-w-[1100px]">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-brand-subtle px-6 sm:px-10 py-3">
+                <div class="flex items-center gap-4 text-brand-dark">
+                    <div class="size-5 text-primary">
+                        <img src="images/siteIcoRed.png" alt="siteIcon">
+                    </div>
+                    <h2 class="text-brand-dark text-lg font-bold leading-tight tracking-[-0.015em]">My Nihongo Path</h2>
+                </div>
+                <div class="hidden lg:flex flex-1 justify-end items-center gap-8">
+                    <nav class="flex items-center gap-9">
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="index.html">Home</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="activities.html">Activities</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="about.html">About</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="faq.html">FAQ</a>
+                    </nav>
+                </div>
+                <div class="lg:hidden">
+                    <span class="material-symbols-outlined text-muted-indigo">menu</span>
+                </div>
+            </header>
+        </div>
+    </div>
+    <main class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-10">
+        <div class="layout-content-container flex flex-col w-full max-w-[1100px] gap-8">
+            <div class="flex flex-col gap-2 text-left">
+                <h1 class="text-brand-dark text-3xl font-black tracking-[-0.03em]">Hiragana Letters</h1>
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 text-muted-indigo">
+                    <span class="text-brand-dark">English: <b>All 46 Letters</b></span>
+                    <span class="text-brand-dark">Sinhala: <b>සියලුම අකුරු 46</b></span>
+                </div>
+                <p class="text-muted-indigo">Explore and practice hiragana letters across English, Sinhala, and
+                    Japanese.</p>
+            </div>
+
+            <!-- Callout and Hiragana grid -->
+            <div class="flex flex-col gap-4">
+                <div class="grid grid-cols-5 gap-3">
+                    <!-- Row 1: A-row -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="あ" title="あ (a)">
+                        <span class="text-primary text-3xl font-bold">あ</span>
+                        <span class="text-brand-dark text-2xl font-black">a</span>
+                        <span class="text-brand-dark text-2xl font-black">අ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="い" title="い (i)">
+                        <span class="text-primary text-3xl font-bold">い</span>
+                        <span class="text-brand-dark text-2xl font-black">i</span>
+                        <span class="text-brand-dark text-2xl font-black">ඉ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="う" title="う (u)">
+                        <span class="text-primary text-3xl font-bold">う</span>
+                        <span class="text-brand-dark text-2xl font-black">u</span>
+                        <span class="text-brand-dark text-2xl font-black">උ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="え" title="え (e)">
+                        <span class="text-primary text-3xl font-bold">え</span>
+                        <span class="text-brand-dark text-2xl font-black">e</span>
+                        <span class="text-brand-dark text-2xl font-black">එ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="お" title="お (o)">
+                        <span class="text-primary text-3xl font-bold">お</span>
+                        <span class="text-brand-dark text-2xl font-black">o</span>
+                        <span class="text-brand-dark text-2xl font-black">ඔ</span>
+                    </button>
+
+                    <!-- Row 2: Ka-row -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="か" title="か (ka)">
+                        <span class="text-primary text-3xl font-bold">か</span>
+                        <span class="text-brand-dark text-2xl font-black">ka</span>
+                        <span class="text-brand-dark text-2xl font-black">ක</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="き" title="き (ki)">
+                        <span class="text-primary text-3xl font-bold">き</span>
+                        <span class="text-brand-dark text-2xl font-black">ki</span>
+                        <span class="text-brand-dark text-2xl font-black">කි</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="く" title="く (ku)">
+                        <span class="text-primary text-3xl font-bold">く</span>
+                        <span class="text-brand-dark text-2xl font-black">ku</span>
+                        <span class="text-brand-dark text-2xl font-black">කු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="け" title="け (ke)">
+                        <span class="text-primary text-3xl font-bold">け</span>
+                        <span class="text-brand-dark text-2xl font-black">ke</span>
+                        <span class="text-brand-dark text-2xl font-black">කෙ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="こ" title="こ (ko)">
+                        <span class="text-primary text-3xl font-bold">こ</span>
+                        <span class="text-brand-dark text-2xl font-black">ko</span>
+                        <span class="text-brand-dark text-2xl font-black">කො</span>
+                    </button>
+
+                    <!-- Row 3: Sa-row -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="さ" title="さ (sa)">
+                        <span class="text-primary text-3xl font-bold">さ</span>
+                        <span class="text-brand-dark text-2xl font-black">sa</span>
+                        <span class="text-brand-dark text-2xl font-black">ස</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="し" title="し (shi)">
+                        <span class="text-primary text-3xl font-bold">し</span>
+                        <span class="text-brand-dark text-2xl font-black">shi</span>
+                        <span class="text-brand-dark text-2xl font-black">ෂි</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="す" title="す (su)">
+                        <span class="text-primary text-3xl font-bold">す</span>
+                        <span class="text-brand-dark text-2xl font-black">su</span>
+                        <span class="text-brand-dark text-2xl font-black">සු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="せ" title="せ (se)">
+                        <span class="text-primary text-3xl font-bold">せ</span>
+                        <span class="text-brand-dark text-2xl font-black">se</span>
+                        <span class="text-brand-dark text-2xl font-black">සෙ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="そ" title="そ (so)">
+                        <span class="text-primary text-3xl font-bold">そ</span>
+                        <span class="text-brand-dark text-2xl font-black">so</span>
+                        <span class="text-brand-dark text-2xl font-black">සො</span>
+                    </button>
+
+                    <!-- Row 4: Ta-row -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="た" title="た (ta)">
+                        <span class="text-primary text-3xl font-bold">た</span>
+                        <span class="text-brand-dark text-2xl font-black">ta</span>
+                        <span class="text-brand-dark text-2xl font-black">ත</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ち" title="ち (chi)">
+                        <span class="text-primary text-3xl font-bold">ち</span>
+                        <span class="text-brand-dark text-2xl font-black">chi</span>
+                        <span class="text-brand-dark text-2xl font-black">චි</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="つ" title="つ (tsu)">
+                        <span class="text-primary text-3xl font-bold">つ</span>
+                        <span class="text-brand-dark text-2xl font-black">tsu</span>
+                        <span class="text-brand-dark text-2xl font-black">ත්සු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="て" title="て (te)">
+                        <span class="text-primary text-3xl font-bold">て</span>
+                        <span class="text-brand-dark text-2xl font-black">te</span>
+                        <span class="text-brand-dark text-2xl font-black">තෙ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="と" title="と (to)">
+                        <span class="text-primary text-3xl font-bold">と</span>
+                        <span class="text-brand-dark text-2xl font-black">to</span>
+                        <span class="text-brand-dark text-2xl font-black">තො</span>
+                    </button>
+
+                    <!-- Row 5: Na-row -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="な" title="な (na)">
+                        <span class="text-primary text-3xl font-bold">な</span>
+                        <span class="text-brand-dark text-2xl font-black">na</span>
+                        <span class="text-brand-dark text-2xl font-black">න</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="に" title="に (ni)">
+                        <span class="text-primary text-3xl font-bold">に</span>
+                        <span class="text-brand-dark text-2xl font-black">ni</span>
+                        <span class="text-brand-dark text-2xl font-black">නි</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ぬ" title="ぬ (nu)">
+                        <span class="text-primary text-3xl font-bold">ぬ</span>
+                        <span class="text-brand-dark text-2xl font-black">nu</span>
+                        <span class="text-brand-dark text-2xl font-black">නු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ね" title="ね (ne)">
+                        <span class="text-primary text-3xl font-bold">ね</span>
+                        <span class="text-brand-dark text-2xl font-black">ne</span>
+                        <span class="text-brand-dark text-2xl font-black">නෙ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="の" title="の (no)">
+                        <span class="text-primary text-3xl font-bold">の</span>
+                        <span class="text-brand-dark text-2xl font-black">no</span>
+                        <span class="text-brand-dark text-2xl font-black">නො</span>
+                    </button>
+
+                    <!-- Row 6: Ha-row -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="は" title="は (ha)">
+                        <span class="text-primary text-3xl font-bold">は</span>
+                        <span class="text-brand-dark text-2xl font-black">ha</span>
+                        <span class="text-brand-dark text-2xl font-black">හ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ひ" title="ひ (hi)">
+                        <span class="text-primary text-3xl font-bold">ひ</span>
+                        <span class="text-brand-dark text-2xl font-black">hi</span>
+                        <span class="text-brand-dark text-2xl font-black">හි</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ふ" title="ふ (fu)">
+                        <span class="text-primary text-3xl font-bold">ふ</span>
+                        <span class="text-brand-dark text-2xl font-black">fu</span>
+                        <span class="text-brand-dark text-2xl font-black">ෆු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="へ" title="へ (he)">
+                        <span class="text-primary text-3xl font-bold">へ</span>
+                        <span class="text-brand-dark text-2xl font-black">he</span>
+                        <span class="text-brand-dark text-2xl font-black">හෙ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ほ" title="ほ (ho)">
+                        <span class="text-primary text-3xl font-bold">ほ</span>
+                        <span class="text-brand-dark text-2xl font-black">ho</span>
+                        <span class="text-brand-dark text-2xl font-black">හො</span>
+                    </button>
+
+                    <!-- Row 7: Ma-row -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ま" title="ま (ma)">
+                        <span class="text-primary text-3xl font-bold">ま</span>
+                        <span class="text-brand-dark text-2xl font-black">ma</span>
+                        <span class="text-brand-dark text-2xl font-black">ම</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="み" title="み (mi)">
+                        <span class="text-primary text-3xl font-bold">み</span>
+                        <span class="text-brand-dark text-2xl font-black">mi</span>
+                        <span class="text-brand-dark text-2xl font-black">මි</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="む" title="む (mu)">
+                        <span class="text-primary text-3xl font-bold">む</span>
+                        <span class="text-brand-dark text-2xl font-black">mu</span>
+                        <span class="text-brand-dark text-2xl font-black">මු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="め" title="め (me)">
+                        <span class="text-primary text-3xl font-bold">め</span>
+                        <span class="text-brand-dark text-2xl font-black">me</span>
+                        <span class="text-brand-dark text-2xl font-black">මෙ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="も" title="も (mo)">
+                        <span class="text-primary text-3xl font-bold">も</span>
+                        <span class="text-brand-dark text-2xl font-black">mo</span>
+                        <span class="text-brand-dark text-2xl font-black">මො</span>
+                    </button>
+
+                    <!-- Row 8: Ya-row -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="や" title="や (ya)">
+                        <span class="text-primary text-3xl font-bold">や</span>
+                        <span class="text-brand-dark text-2xl font-black">ya</span>
+                        <span class="text-brand-dark text-2xl font-black">ය</span>
+                    </button>
+                    <div class="invisible"></div> <!-- Empty -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ゆ" title="ゆ (yu)">
+                        <span class="text-primary text-3xl font-bold">ゆ</span>
+                        <span class="text-brand-dark text-2xl font-black">yu</span>
+                        <span class="text-brand-dark text-2xl font-black">යු</span>
+                    </button>
+                    <div class="invisible"></div> <!-- Empty -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="よ" title="よ (yo)">
+                        <span class="text-primary text-3xl font-bold">よ</span>
+                        <span class="text-brand-dark text-2xl font-black">yo</span>
+                        <span class="text-brand-dark text-2xl font-black">යො</span>
+                    </button>
+
+                    <!-- Row 9: Ra-row -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ら" title="ら (ra)">
+                        <span class="text-primary text-3xl font-bold">ら</span>
+                        <span class="text-brand-dark text-2xl font-black">ra</span>
+                        <span class="text-brand-dark text-2xl font-black">ර</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="り" title="り (ri)">
+                        <span class="text-primary text-3xl font-bold">り</span>
+                        <span class="text-brand-dark text-2xl font-black">ri</span>
+                        <span class="text-brand-dark text-2xl font-black">රි</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="る" title="る (ru)">
+                        <span class="text-primary text-3xl font-bold">る</span>
+                        <span class="text-brand-dark text-2xl font-black">ru</span>
+                        <span class="text-brand-dark text-2xl font-black">රු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="れ" title="れ (re)">
+                        <span class="text-primary text-3xl font-bold">れ</span>
+                        <span class="text-brand-dark text-2xl font-black">re</span>
+                        <span class="text-brand-dark text-2xl font-black">රෙ</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ろ" title="ろ (ro)">
+                        <span class="text-primary text-3xl font-bold">ろ</span>
+                        <span class="text-brand-dark text-2xl font-black">ro</span>
+                        <span class="text-brand-dark text-2xl font-black">රො</span>
+                    </button>
+
+                    <!-- Row 10: Wa-row -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="わ" title="わ (wa)">
+                        <span class="text-primary text-3xl font-bold">わ</span>
+                        <span class="text-brand-dark text-2xl font-black">wa</span>
+                        <span class="text-brand-dark text-2xl font-black">ව</span>
+                    </button>
+                    <div class="invisible"></div> <!-- Empty -->
+                    <div class="invisible"></div> <!-- Empty -->
+                    <div class="invisible"></div> <!-- Empty -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="を" title="を (wo)">
+                        <span class="text-primary text-3xl font-bold">を</span>
+                        <span class="text-brand-dark text-2xl font-black">wo</span>
+                        <span class="text-brand-dark text-2xl font-black">වො</span>
+                    </button>
+
+                    <!-- Row 11: N -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ん" title="ん (n)">
+                        <span class="text-primary text-3xl font-bold">ん</span>
+                        <span class="text-brand-dark text-2xl font-black">n</span>
+                        <span class="text-brand-dark text-2xl font-black">න්</span>
+                    </button>
+                    <div class="invisible"></div> <!-- Empty -->
+                    <div class="invisible"></div> <!-- Empty -->
+                    <div class="invisible"></div> <!-- Empty -->
+                    <div class="invisible"></div> <!-- Empty -->
+                </div>
+            </div>
+
+            <!-- Practice instructions and button  -->
+            <div class="mt-4 bg-sakura-pink/40 border border-brand-subtle rounded-lg px-4 py-3 
+            flex items-center justify-between">
+                <div>
+                    <p class="text-brand-dark font-semibold">
+                        Click the button for to practice the letters.
+                    </p>
+                </div>
+
+                <button id="letsPracticeBtn"
+                    class="flex items-center gap-2 rounded-full bg-primary text-white font-bold px-5 py-2 hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed">
+                    <span class="material-symbols-outlined text-white">play_arrow</span>
+                    LET'S PRACTICE
+                </button>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex justify-between mt-4">
+                <a href="set03.html"
+                    class="flex items-center gap-2 text-muted-indigo hover:text-primary font-bold transition-colors">
+                    <span class="material-symbols-outlined">arrow_back</span> Previous Set
+                </a>
+                <a href="activities.html"
+                    class="flex items-center gap-2 text-muted-indigo hover:text-primary font-bold transition-colors">
+                    Back to Menu <span class="material-symbols-outlined">grid_view</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('letsPracticeBtn').addEventListener('click', function () {
+            const letters = [];
+            document.querySelectorAll('.jp-speak').forEach(btn => {
+                const spans = btn.querySelectorAll('span');
+                if (spans.length >= 3) {
+                    letters.push({
+                        jp: spans[0].textContent.trim(), // Kana
+                        en: spans[1].textContent.trim(), // Romaji
+                        si: spans[2].textContent.trim()  // Sinhala
+                    });
+                }
+            });
+
+            localStorage.setItem('practiceLetters', JSON.stringify(letters));
+            window.location.href = 'practiceLetters.html';
+        });
+    </script>
+
+</body>
+
+</html>

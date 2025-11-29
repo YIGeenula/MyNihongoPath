@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About - My Nihongo Path</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="icon" type="image/x-icon" href="images/siteIcoRed.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b3b",
+                        "background-light": "#fcf8f8",
+                        "brand-dark": "#1b0d0f",
+                        "brand-light": "#fcf8f8",
+                        "brand-subtle": "#f3e7e8",
+                        "muted-indigo": "#5C6784"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display">
+    <div class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-5">
+        <div class="layout-content-container flex flex-col w-full max-w-[1100px]">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-brand-subtle px-6 sm:px-10 py-3">
+                <div class="flex items-center gap-4 text-brand-dark">
+                    <div class="size-5 text-primary">
+                        <img src="images/siteIcoRed.png" alt="siteIcon">
+                    </div>
+                    <h2 class="text-brand-dark text-lg font-bold leading-tight tracking-[-0.015em]">My Nihongo Path</h2>
+                </div>
+                <div class="hidden lg:flex flex-1 justify-end items-center gap-8">
+                    <nav class="flex items-center gap-9">
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="index.html">Home</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="activities.html">Activities</a>
+                        <a class="text-primary text-sm font-bold leading-normal" href="about.html">About</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="faq.html">FAQ</a>
+                    </nav>
+                </div>
+                <div class="lg:hidden">
+                    <span class="material-symbols-outlined text-muted-indigo">menu</span>
+                </div>
+            </header>
+        </div>
+    </div>
+
+    <main class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-10">
+        <div class="layout-content-container flex flex-col w-full max-w-[800px] gap-8">
+            <div class="flex flex-col gap-4 text-left">
+                <h1 class="text-brand-dark text-4xl font-black tracking-[-0.03em]">About Us</h1>
+                <p class="text-muted-indigo text-lg leading-relaxed">
+                    Welcome to My Nihongo Path, your companion in the journey of learning the Japanese language.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-brand-subtle p-8 shadow-sm">
+                <h2 class="text-brand-dark text-2xl font-bold mb-4">Our Mission</h2>
+                <p class="text-muted-indigo leading-relaxed mb-6">
+                    We aim to make learning Japanese Hiragana and vocabulary accessible, engaging, and effective for
+                    everyone.
+                    Whether you are a complete beginner or looking to brush up on your skills, our interactive tools are
+                    designed to help you succeed.
+                </p>
+
+                <h2 class="text-brand-dark text-2xl font-bold mb-4">Fan-Made Project</h2>
+                <div class="bg-primary/5 border-l-4 border-primary p-4 rounded-r-lg">
+                    <p class="text-brand-dark font-medium italic">
+                        "This website is a personal project created by a Japanese language enthusiast. It is an
+                        independent, fan-made platform and is not affiliated with, endorsed by, or connected to any
+                        government agency or official educational institution."
+                    </p>
+                </div>
+                <p class="text-muted-indigo leading-relaxed mt-6">
+                    This project was born out of a passion for the Japanese language and culture. It serves as a tool
+                    for self-study and community learning.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <h2 class="text-brand-dark text-2xl font-bold">Credits</h2>
+                <p class="text-muted-indigo">
+                    Designed & Developed by <a href="https://www.linkedin.com/in/yigeenula" target="_blank"
+                        class="text-primary hover:underline font-bold">Yasiru Isum Geenula</a> | <a
+                        href="https://codexblaze.netlify.app/" target="_blank"
+                        class="text-primary hover:underline font-bold">CodeXBlaze</a>
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

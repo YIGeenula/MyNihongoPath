@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FAQ - My Nihongo Path</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="icon" type="image/x-icon" href="images/siteIcoRed.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b3b",
+                        "background-light": "#fcf8f8",
+                        "brand-dark": "#1b0d0f",
+                        "brand-light": "#fcf8f8",
+                        "brand-subtle": "#f3e7e8",
+                        "muted-indigo": "#5C6784"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display">
+    <div class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-5">
+        <div class="layout-content-container flex flex-col w-full max-w-[1100px]">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-brand-subtle px-6 sm:px-10 py-3">
+                <div class="flex items-center gap-4 text-brand-dark">
+                    <div class="size-5 text-primary">
+                        <img src="images/siteIcoRed.png" alt="siteIcon">
+                    </div>
+                    <h2 class="text-brand-dark text-lg font-bold leading-tight tracking-[-0.015em]">My Nihongo Path</h2>
+                </div>
+                <div class="hidden lg:flex flex-1 justify-end items-center gap-8">
+                    <nav class="flex items-center gap-9">
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="index.html">Home</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="activities.html">Activities</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="about.html">About</a>
+                        <a class="text-primary text-sm font-bold leading-normal" href="faq.html">FAQ</a>
+                    </nav>
+                </div>
+                <div class="lg:hidden">
+                    <span class="material-symbols-outlined text-muted-indigo">menu</span>
+                </div>
+            </header>
+        </div>
+    </div>
+
+    <main class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-10">
+        <div class="layout-content-container flex flex-col w-full max-w-[800px] gap-8">
+            <div class="flex flex-col gap-4 text-left">
+                <h1 class="text-brand-dark text-4xl font-black tracking-[-0.03em]">Frequently Asked Questions</h1>
+                <p class="text-muted-indigo text-lg">
+                    Find answers to common questions about My Nihongo Path.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-xl border border-brand-subtle p-6 shadow-sm">
+                    <h3 class="text-brand-dark text-xl font-bold mb-2">Is this website free to use?</h3>
+                    <p class="text-muted-indigo">
+                        Yes, My Nihongo Path is completely free to use. It is a personal project created to help others
+                        learn Japanese.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-xl border border-brand-subtle p-6 shadow-sm">
+                    <h3 class="text-brand-dark text-xl font-bold mb-2">Will you add Katakana and Kanji?</h3>
+                    <p class="text-muted-indigo">
+                        Yes! We are currently focusing on Hiragana, but we plan to add Katakana and basic Kanji sets in
+                        future updates. Stay tuned!
+                    </p>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-xl border border-brand-subtle p-6 shadow-sm">
+                    <h3 class="text-brand-dark text-xl font-bold mb-2">How do I use the practice feature?</h3>
+                    <p class="text-muted-indigo">
+                        First, browse the Hiragana sets (Set 01, Set 02, etc.) to familiarize yourself with the letters.
+                        When you're ready, click the "LET'S PRACTICE" button on any set page. This will take you to a
+                        practice session where you can test your memory.
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

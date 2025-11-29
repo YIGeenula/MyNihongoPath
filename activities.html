@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Hiragana New Words - My Nihongo Path</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="icon" type="image/x-icon" href="images/siteIcoRed.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b3b",
+                        "background-light": "#fcf8f8",
+                        "brand-dark": "#1b0d0f",
+                        "brand-subtle": "#f3e7e8",
+                        "muted-indigo": "#5C6784"
+                    },
+                    fontFamily: { "display": ["Lexend", "sans-serif"] },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "1.5rem" }
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display">
+    <div class="min-h-screen px-4 sm:px-10 lg:px-20 xl:px-40 py-8">
+        <header class="flex items-center justify-between border-b border-brand-subtle pb-4">
+            <h1 class="text-brand-dark text-2xl font-black">Hiragana</h1>
+            <a href="index.html" class="text-muted-indigo hover:text-primary">Back to Home</a>
+        </header>
+
+        <section class="mt-6 space-y-10">
+            <div class="space-y-4">
+                <h2 class="text-brand-dark text-xl font-black">Hiragana Alphabet</h2>
+                <p class="text-muted-indigo">Choose a set to start learning. Practice single sets or all in one.</p>
+
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Active Card: Set 01 -->
+                    <a href="set01.html"
+                        class="group relative overflow-hidden bg-white rounded-2xl border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <!-- Decorative Background Character -->
+                        <div
+                            class="absolute -right-6 -top-6 opacity-[0.03] group-hover:opacity-10 transition-opacity rotate-12 select-none">
+                            <span class="text-[10rem] font-black text-brand-dark">あ</span>
+                        </div>
+
+                        <div class="p-6 relative z-10 flex flex-col h-full">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3
+                                        class="text-xl font-black text-brand-dark group-hover:text-primary transition-colors">
+                                        First 15 Letters</h3>
+                                    <p class="text-muted-indigo text-sm font-medium mt-1">පළමු අකුරු 15</p>
+                                </div>
+                                <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Set
+                                    01</span>
+                            </div>
+
+                            <div
+                                class="bg-background-light rounded-xl p-4 mb-6 border border-brand-subtle/50 flex-grow flex items-center justify-center">
+                                <p class="text-center text-brand-dark font-bold text-lg tracking-widest">あ-お • か-こ • さ-そ
+                                </p>
+                            </div>
+
+                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-brand-subtle/30">
+                                <span class="text-muted-indigo text-xs font-bold uppercase tracking-wider">15
+                                    Characters</span>
+                                <div class="flex items-center text-primary font-bold text-sm">
+                                    <span>Start Learning</span>
+                                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Placeholder: Future Sets -->
+                    <!-- Active Card: Set 02 -->
+                    <a href="set02.html"
+                        class="group relative overflow-hidden bg-white rounded-2xl border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <!-- Decorative Background Character -->
+                        <div
+                            class="absolute -right-6 -top-6 opacity-[0.03] group-hover:opacity-10 transition-opacity rotate-12 select-none">
+                            <span class="text-[10rem] font-black text-brand-dark">た</span>
+                        </div>
+
+                        <div class="p-6 relative z-10 flex flex-col h-full">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3
+                                        class="text-xl font-black text-brand-dark group-hover:text-primary transition-colors">
+                                        Second 15 Letters</h3>
+                                    <p class="text-muted-indigo text-sm font-medium mt-1">දෙවන අකුරු 15</p>
+                                </div>
+                                <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Set
+                                    02</span>
+                            </div>
+
+                            <div
+                                class="bg-background-light rounded-xl p-4 mb-6 border border-brand-subtle/50 flex-grow flex items-center justify-center">
+                                <p class="text-center text-brand-dark font-bold text-lg tracking-widest">た-と • な-の • は-ほ
+                                </p>
+                            </div>
+
+                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-brand-subtle/30">
+                                <span class="text-muted-indigo text-xs font-bold uppercase tracking-wider">15
+                                    Characters</span>
+                                <div class="flex items-center text-primary font-bold text-sm">
+                                    <span>Start Learning</span>
+                                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Placeholder: Future Sets -->
+                    <!-- Active Card: Set 03 -->
+                    <a href="set03.html"
+                        class="group relative overflow-hidden bg-white rounded-2xl border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <!-- Decorative Background Character -->
+                        <div
+                            class="absolute -right-6 -top-6 opacity-[0.03] group-hover:opacity-10 transition-opacity rotate-12 select-none">
+                            <span class="text-[10rem] font-black text-brand-dark">ま</span>
+                        </div>
+
+                        <div class="p-6 relative z-10 flex flex-col h-full">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3
+                                        class="text-xl font-black text-brand-dark group-hover:text-primary transition-colors">
+                                        Last 16 Letters</h3>
+                                    <p class="text-muted-indigo text-sm font-medium mt-1">අවසාන අකුරු 16</p>
+                                </div>
+                                <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Set
+                                    03</span>
+                            </div>
+
+                            <div
+                                class="bg-background-light rounded-xl p-4 mb-6 border border-brand-subtle/50 flex-grow flex items-center justify-center">
+                                <p class="text-center text-brand-dark font-bold text-lg tracking-widest">ま-も • や-よ • ら-ん
+                                </p>
+                            </div>
+
+                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-brand-subtle/30">
+                                <span class="text-muted-indigo text-xs font-bold uppercase tracking-wider">16
+                                    Characters</span>
+                                <div class="flex items-center text-primary font-bold text-sm">
+                                    <span>Start Learning</span>
+                                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Placeholder: Future Sets -->
+                    <!-- Active Card: Set 04 -->
+                    <a href="set04.html"
+                        class="group relative overflow-hidden bg-white rounded-2xl border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <!-- Decorative Background Character -->
+                        <div
+                            class="absolute -right-6 -top-6 opacity-[0.03] group-hover:opacity-10 transition-opacity rotate-12 select-none">
+                            <span class="text-[10rem] font-black text-brand-dark">ん</span>
+                        </div>
+
+                        <div class="p-6 relative z-10 flex flex-col h-full">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3
+                                        class="text-xl font-black text-brand-dark group-hover:text-primary transition-colors">
+                                        All 46 Letters</h3>
+                                    <p class="text-muted-indigo text-sm font-medium mt-1">සියලුම අකුරු 46</p>
+                                </div>
+                                <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Set
+                                    04</span>
+                            </div>
+
+                            <div
+                                class="bg-background-light rounded-xl p-4 mb-6 border border-brand-subtle/50 flex-grow flex items-center justify-center">
+                                <p class="text-center text-brand-dark font-bold text-lg tracking-widest">あ-ん (All)
+                                </p>
+                            </div>
+
+                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-brand-subtle/30">
+                                <span class="text-muted-indigo text-xs font-bold uppercase tracking-wider">46
+                                    Characters</span>
+                                <div class="flex items-center text-primary font-bold text-sm">
+                                    <span>Start Learning</span>
+                                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Placeholder: Future Sets -->
+                    <div
+                        class="group relative overflow-hidden bg-background-light rounded-2xl border border-brand-subtle border-dashed flex flex-col items-center justify-center p-8 text-center opacity-60 hover:opacity-100 transition-all duration-300">
+                        <div
+                            class="w-16 h-16 rounded-full bg-brand-subtle flex items-center justify-center mb-4 text-muted-indigo group-hover:text-primary group-hover:bg-primary/10 transition-colors">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-dark">Next Set</h3>
+                        <p class="text-muted-indigo text-sm mt-2">Coming soon...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
