@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Long Vowels (Chōon) - My Nihongo Path</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/siteIcoRed.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b3b",
+                        "background-light": "#fcf8f8",
+                        "brand-dark": "#1b0d0f",
+                        "brand-light": "#fcf8f8",
+                        "brand-subtle": "#f3e7e8",
+                        "muted-indigo": "#5C6784"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .slide-enter {
+            animation: slideIn 0.3s ease-out forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display">
+    <div class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-5">
+        <div class="layout-content-container flex flex-col w-full max-w-[1100px]">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-brand-subtle px-6 sm:px-10 py-3">
+                <div class="flex items-center gap-4 text-brand-dark">
+                    <div class="size-5 text-primary">
+                        <img src="images/siteIcoRed.png" alt="siteIcon">
+                    </div>
+                    <h2 class="text-brand-dark text-lg font-bold leading-tight tracking-[-0.015em]">My Nihongo Path</h2>
+                </div>
+                <div class="hidden lg:flex flex-1 justify-end items-center gap-8">
+                    <nav class="flex items-center gap-9">
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="index.html">Home</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="activities.html">Activities</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="about.html">About</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="faq.html">FAQ</a>
+                    </nav>
+                </div>
+                <div class="lg:hidden">
+                    <span class="material-symbols-outlined text-muted-indigo">menu</span>
+                </div>
+            </header>
+        </div>
+    </div>
+    <main class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-10">
+        <div class="layout-content-container flex flex-col w-full max-w-[1100px] gap-8">
+            <div class="flex flex-col gap-2 text-left">
+                <h1 class="text-brand-dark text-3xl font-black tracking-[-0.03em]">Long Vowels (Chōon)</h1>
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 text-muted-indigo">
+                    <span class="text-brand-dark">English: <b>Long Vowels</b></span>
+                    <span class="text-brand-dark">Sinhala: <b>හිරගනා අකුරු දීර්ඝ කිරීම</b></span>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-brand-subtle shadow-sm space-y-4">
+                    <div>
+                        <h3 class="text-brand-dark font-bold text-lg mb-2">How to lengthen sounds</h3>
+                        <p class="text-muted-indigo leading-relaxed">
+                            In Hiragana, we lengthen the vowel sounds by adding specific letters (あ, い, う) after the
+                            character.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-brand-subtle">
+                        <h3 class="text-brand-dark font-bold text-lg mb-2">දීර්ඝ කරන ආකාරය</h3>
+                        <p class="text-muted-indigo leading-relaxed">
+                            හිරගනා අකුරක් දීර්ඝ කිරීම සඳහා එම අකුරට අදාළ ස්වරය (あ, い, හෝ う) අකුරට පසුව යොදනු ලැබේ.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="carousel-container" class="relative min-h-[600px]">
+
+                <!-- Slide 1: A Sound -->
+                <div class="rule-slide" data-index="0">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="bg-brand-subtle text-brand-dark text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Rule
+                                    01</span>
+                                <h2 class="text-brand-dark text-xl font-black">Lengthening 'a' sound (あ)</h2>
+                            </div>
+                            <span class="text-muted-indigo text-sm font-medium">1 / 5</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-brand-subtle shadow-sm">
+                            <p class="text-muted-indigo">To lengthen any letter ending with 'a' sound, add <b>あ</b>
+                                after it.
+                                (あ ප්‍රාණාක්ෂරය යටතේ එන ඕනෑම අකුරක් දීර්ඝ කිරීමට අදාළ අකුරට පිටුපසින් あ අකුරක් යොදනු
+                                ලබයි.)</p>
+                        </div>
+                        <h3 class="text-brand-dark font-bold text-lg mt-2">Mechanism (ක්‍රියාත්මක වන ආකාරය)</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div
+                                class="flex items-center justify-center gap-4 bg-white rounded-lg border border-brand-subtle shadow-sm p-4">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-brand-dark text-3xl font-black">か</span>
+                                    <span class="text-muted-indigo text-lg">ka / ක</span>
+                                </div>
+                                <span class="material-symbols-outlined text-muted-indigo">arrow_forward</span>
+                                <div class="flex flex-col items-center">
+                                    <span class="text-primary text-3xl font-black">かあ</span>
+                                    <span class="text-brand-dark text-lg font-bold">kā / කා</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center justify-center gap-4 bg-white rounded-lg border border-brand-subtle shadow-sm p-4">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-brand-dark text-3xl font-black">ま</span>
+                                    <span class="text-muted-indigo text-lg">ma / ම</span>
+                                </div>
+                                <span class="material-symbols-outlined text-muted-indigo">arrow_forward</span>
+                                <div class="flex flex-col items-center">
+                                    <span class="text-primary text-3xl font-black">まあ</span>
+                                    <span class="text-brand-dark text-lg font-bold">mā / මා</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-brand-dark font-bold text-lg mt-2">Word Examples (උදාහරණ වචන)</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="おかあさん" title="okāsan">
+                                <span class="text-primary text-2xl font-bold">おかあさん</span>
+                                <span class="text-brand-dark text-lg font-black">okāsan</span>
+                                <span class="text-brand-dark text-lg font-black">අම්මා (වෙනකෙනෙකුගේ)</span>
+                                <span class="text-brand-dark text-lg font-black">Mother (Someone's mother)</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="おばあさん" title="obāsan">
+                                <span class="text-primary text-2xl font-bold">おばあさん</span>
+                                <span class="text-brand-dark text-lg font-black">obāsan</span>
+                                <span class="text-brand-dark text-lg font-black">ආච්චි (වෙනකෙනෙකුගේ)</span>
+                                <span class="text-brand-dark text-lg font-black">Grandmother (Someone's
+                                    grandmother)</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: I Sound -->
+                <div class="rule-slide hidden" data-index="1">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="bg-brand-subtle text-brand-dark text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Rule
+                                    02</span>
+                                <h2 class="text-brand-dark text-xl font-black">Lengthening 'i' sound (い)</h2>
+                            </div>
+                            <span class="text-muted-indigo text-sm font-medium">2 / 5</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-brand-subtle shadow-sm">
+                            <p class="text-muted-indigo">To lengthen any letter ending with 'i' sound, add <b>い</b>
+                                after it.
+                                (い ප්‍රාණාක්ෂරය යටතේ එන ඕනෑම අකුරක් දීර්ඝ කිරීමට අදාළ අකුරට පිටුපසින් い අකුරක් යොදනු
+                                ලබයි.)</p>
+                        </div>
+                        <h3 class="text-brand-dark font-bold text-lg mt-2">Mechanism (ක්‍රියාත්මක වන ආකාරය)</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div
+                                class="flex items-center justify-center gap-4 bg-white rounded-lg border border-brand-subtle shadow-sm p-4">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-brand-dark text-3xl font-black">し</span>
+                                    <span class="text-muted-indigo text-lg">shi / ෂි</span>
+                                </div>
+                                <span class="material-symbols-outlined text-muted-indigo">arrow_forward</span>
+                                <div class="flex flex-col items-center">
+                                    <span class="text-primary text-3xl font-black">しい</span>
+                                    <span class="text-brand-dark text-lg font-bold">shii / ෂී</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center justify-center gap-4 bg-white rounded-lg border border-brand-subtle shadow-sm p-4">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-brand-dark text-3xl font-black">に</span>
+                                    <span class="text-muted-indigo text-lg">ni / නි</span>
+                                </div>
+                                <span class="material-symbols-outlined text-muted-indigo">arrow_forward</span>
+                                <div class="flex flex-col items-center">
+                                    <span class="text-primary text-3xl font-black">にい</span>
+                                    <span class="text-brand-dark text-lg font-bold">nii / නී</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-brand-dark font-bold text-lg mt-2">Word Examples (උදාහරණ වචන)</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="おじいさん" title="ojīsan">
+                                <span class="text-primary text-2xl font-bold">おじいさん</span>
+                                <span class="text-brand-dark text-lg font-black">ojīsan</span>
+                                <span class="text-brand-dark text-lg font-black">සීයා (වෙනකෙනෙකුගේ)</span>
+                                <span class="text-brand-dark text-lg font-black">Grandfather (Someone's
+                                    grandfather)</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="きいろ" title="kiiro">
+                                <span class="text-primary text-2xl font-bold">きいろ</span>
+                                <span class="text-brand-dark text-lg font-black">kiiro</span>
+                                <span class="text-brand-dark text-lg font-black">කහ පාට</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="いいえ" title="iie">
+                                <span class="text-primary text-2xl font-bold">いいえ</span>
+                                <span class="text-brand-dark text-lg font-black">iie</span>
+                                <span class="text-brand-dark text-lg font-black">නැහැ</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide  3: U Sound -->
+                <div class="rule-slide hidden" data-index="2">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="bg-brand-subtle text-brand-dark text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Rule
+                                    03</span>
+                                <h2 class="text-brand-dark text-xl font-black">Lengthening 'u' sound (う)</h2>
+                            </div>
+                            <span class="text-muted-indigo text-sm font-medium">3 / 5</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-brand-subtle shadow-sm">
+                            <p class="text-muted-indigo">To lengthen any letter ending with 'u' sound, add <b>う</b>
+                                after it.
+                                (う ප්‍රාණාක්ෂරය යටතේ එන ඕනෑම අකුරක් දීර්ඝ කිරීමට අදාළ අකුරට පිටුපසින් う අකුරක් යොදනු
+                                ලබයි.)</p>
+                        </div>
+                        <h3 class="text-brand-dark font-bold text-lg mt-2">Mechanism (ක්‍රියාත්මක වන ආකාරය)</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div
+                                class="flex items-center justify-center gap-4 bg-white rounded-lg border border-brand-subtle shadow-sm p-4">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-brand-dark text-3xl font-black">ぬ</span>
+                                    <span class="text-muted-indigo text-lg">nu / නු</span>
+                                </div>
+                                <span class="material-symbols-outlined text-muted-indigo">arrow_forward</span>
+                                <div class="flex flex-col items-center">
+                                    <span class="text-primary text-3xl font-black">ぬう</span>
+                                    <span class="text-brand-dark text-lg font-bold">nū / නූ</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center justify-center gap-4 bg-white rounded-lg border border-brand-subtle shadow-sm p-4">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-brand-dark text-3xl font-black">つ</span>
+                                    <span class="text-muted-indigo text-lg">tsu / ත්සු</span>
+                                </div>
+                                <span class="material-symbols-outlined text-muted-indigo">arrow_forward</span>
+                                <div class="flex flex-col items-center">
+                                    <span class="text-primary text-3xl font-black">つう</span>
+                                    <span class="text-brand-dark text-lg font-bold">tsū / ත්සූ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-brand-dark font-bold text-lg mt-2">Word Examples (උදාහරණ වචන)</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="すうじ" title="sūji">
+                                <span class="text-primary text-2xl font-bold">すうじ</span>
+                                <span class="text-brand-dark text-lg font-black">sūji</span>
+                                <span class="text-brand-dark text-lg font-black">ඉලක්කම්</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="くうき" title="kūki">
+                                <span class="text-primary text-2xl font-bold">くうき</span>
+                                <span class="text-brand-dark text-lg font-black">kūki</span>
+                                <span class="text-brand-dark text-lg font-black">වාතය</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="じゅう" title="jū">
+                                <span class="text-primary text-2xl font-bold">じゅう</span>
+                                <span class="text-brand-dark text-lg font-black">jū</span>
+                                <span class="text-brand-dark text-lg font-black">දහය</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: E Sound Method 1 -->
+                <div class="rule-slide hidden" data-index="3">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="bg-brand-subtle text-brand-dark text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Rule
+                                    04</span>
+                                <span
+                                    class="bg-primary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Method
+                                    01</span>
+                                <h2 class="text-brand-dark text-xl font-black">Lengthening 'e' sound (え)</h2>
+                            </div>
+                            <span class="text-muted-indigo text-sm font-medium">4 / 5</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-brand-subtle shadow-sm">
+                            <p class="text-muted-indigo">To lengthen 'e' sound, add <b>え</b> after it. <b>Note:</b> This
+                                rule applies to a few specific words only.
+                                (え ප්‍රාණාක්ෂරය දීර්ඝ කිරීමට අදාළ අකුරට පිටුපසින් <b>え</b> අකුර යොදනු ලබයි. නමුත් මෙය
+                                ඉතාම සීමිත වචන කිහිපයකට පමණක් සීමා වේ.)</p>
+                        </div>
+                        <h3 class="text-brand-dark font-bold text-lg mt-2">Mechanism (ක්‍රියාත්මක වන ආකාරය)</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div
+                                class="flex items-center justify-center gap-4 bg-white rounded-lg border border-brand-subtle shadow-sm p-4">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-brand-dark text-3xl font-black">ね</span>
+                                    <span class="text-muted-indigo text-lg">ne / නෙ</span>
+                                </div>
+                                <span class="material-symbols-outlined text-muted-indigo">arrow_forward</span>
+                                <div class="flex flex-col items-center">
+                                    <span class="text-primary text-3xl font-black">ねえ</span>
+                                    <span class="text-brand-dark text-lg font-bold">nē / නේ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-brand-dark font-bold text-lg mt-2">Word Examples (උදාහරණ වචන)</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="おねえさん" title="onēsan">
+                                <span class="text-primary text-2xl font-bold">おねえさん</span>
+                                <span class="text-brand-dark text-lg font-black">onēsan</span>
+                                <span class="text-brand-dark text-lg font-black">අක්කා</span>
+                                <span class="text-brand-dark text-lg font-black">Older sister</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="ええ" title="ē">
+                                <span class="text-primary text-2xl font-bold">ええ</span>
+                                <span class="text-brand-dark text-lg font-black">ē</span>
+                                <span class="text-brand-dark text-lg font-black">ඔව්</span>
+                                <span class="text-brand-dark text-lg font-black">Yes</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: E Sound Method 2 -->
+                <div class="rule-slide hidden" data-index="4">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="bg-brand-subtle text-brand-dark text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Rule
+                                    04</span>
+                                <span
+                                    class="bg-primary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Method
+                                    02</span>
+                                <h2 class="text-brand-dark text-xl font-black">Lengthening 'e' sound (い)</h2>
+                            </div>
+                            <span class="text-muted-indigo text-sm font-medium">5 / 5</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-brand-subtle shadow-sm">
+                            <p class="text-muted-indigo">To lengthen 'e' sound, add <b>い</b> after it. This is the more
+                                common method.
+                                (ඒ ශබ්දය දීර්ඝ කිරීමට අදාළ අකුරට පිටුපසින් <b>い</b> අකුර යොදනු ලබයි. මෙය වඩාත් බහුලව
+                                භාවිතා වන ක්‍රමයයි.)</p>
+                        </div>
+                        <h3 class="text-brand-dark font-bold text-lg mt-2">Mechanism (ක්‍රියාත්මක වන ආකාරය)</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div
+                                class="flex items-center justify-center gap-4 bg-white rounded-lg border border-brand-subtle shadow-sm p-4">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-brand-dark text-3xl font-black">け</span>
+                                    <span class="text-muted-indigo text-lg">ke / කෙ</span>
+                                </div>
+                                <span class="material-symbols-outlined text-muted-indigo">arrow_forward</span>
+                                <div class="flex flex-col items-center">
+                                    <span class="text-primary text-3xl font-black">けい</span>
+                                    <span class="text-brand-dark text-lg font-bold">kei / කේ</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center justify-center gap-4 bg-white rounded-lg border border-brand-subtle shadow-sm p-4">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-brand-dark text-3xl font-black">せ</span>
+                                    <span class="text-muted-indigo text-lg">se / සෙ</span>
+                                </div>
+                                <span class="material-symbols-outlined text-muted-indigo">arrow_forward</span>
+                                <div class="flex flex-col items-center">
+                                    <span class="text-primary text-3xl font-black">せい</span>
+                                    <span class="text-brand-dark text-lg font-bold">sei / සේ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-brand-dark font-bold text-lg mt-2">Word Examples (උදාහරණ වචන)</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="せんせい" title="sensei">
+                                <span class="text-primary text-2xl font-bold">せんせい</span>
+                                <span class="text-brand-dark text-lg font-black">sensei</span>
+                                <span class="text-brand-dark text-lg font-black">ගුරුවරයා</span>
+                                <span class="text-brand-dark text-lg font-black">Teacher</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="けいざいがく" title="keizaigaku">
+                                <span class="text-primary text-2xl font-bold">けいざいがく</span>
+                                <span class="text-brand-dark text-lg font-black">keizaigaku</span>
+                                <span class="text-brand-dark text-lg font-black">ආර්ථික විද්‍යාව</span>
+                                <span class="text-brand-dark text-lg font-black">Economics</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="えいが" title="eiga">
+                                <span class="text-primary text-2xl font-bold">えいが</span>
+                                <span class="text-brand-dark text-lg font-black">eiga</span>
+                                <span class="text-brand-dark text-lg font-black">චිත්‍රපටය</span>
+                                <span class="text-brand-dark text-lg font-black">Movie</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="flex items-center justify-center gap-4 mt-8">
+                    <button id="prevBtn"
+                        class="p-2 rounded-full bg-white border border-brand-subtle shadow-sm hover:shadow-md text-muted-indigo disabled:opacity-50 disabled:cursor-not-allowed transition">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                    </button>
+                    <div class="flex gap-2" id="dotsContainer">
+                        <button class="w-3 h-3 rounded-full bg-primary transition-colors" data-slide="0"></button>
+                        <button class="w-3 h-3 rounded-full bg-brand-subtle transition-colors" data-slide="1"></button>
+                        <button class="w-3 h-3 rounded-full bg-brand-subtle transition-colors" data-slide="2"></button>
+                        <button class="w-3 h-3 rounded-full bg-brand-subtle transition-colors" data-slide="3"></button>
+                        <button class="w-3 h-3 rounded-full bg-brand-subtle transition-colors" data-slide="4"></button>
+                    </div>
+                    <button id="nextBtn"
+                        class="p-2 rounded-full bg-white border border-brand-subtle shadow-sm hover:shadow-md text-muted-indigo disabled:opacity-50 disabled:cursor-not-allowed transition">
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Practice instructions and button -->
+            <div
+                class="mt-4 bg-sakura-pink/40 border border-brand-subtle rounded-lg px-4 py-3 flex items-center justify-between">
+                <div>
+                    <p class="text-brand-dark font-semibold">
+                        Click the button for to practice the words.
+                    </p>
+                </div>
+                <button id="letsPracticeBtn"
+                    class="flex items-center gap-2 rounded-full bg-primary text-white font-bold px-5 py-2 hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed">
+                    <span class="material-symbols-outlined text-white">play_arrow</span>
+                    LET'S PRACTICE
+                </button>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex justify-between mt-4">
+                <a href="activities.html"
+                    class="flex items-center gap-2 text-muted-indigo hover:text-primary font-bold transition-colors">
+                    <span class="material-symbols-outlined">arrow_back</span> Back to Activities
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('letsPracticeBtn').addEventListener('click', function () {
+                const letters = [];
+                document.querySelectorAll('.jp-speak').forEach(btn => {
+                    const spans = btn.querySelectorAll('span');
+                    if (spans.length >= 3) {
+                        letters.push({
+                            jp: spans[0].textContent.trim(),
+                            en: spans[1].textContent.trim(),
+                            si: spans[2].textContent.trim()
+                        });
+                    }
+                });
+                localStorage.setItem('practiceLetters', JSON.stringify(letters));
+                window.location.href = 'practiceLetters.html';
+            });
+
+            const slides = document.querySelectorAll('.rule-slide');
+            const dots = document.querySelectorAll('#dotsContainer button');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const container = document.getElementById('carousel-container');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            function updateSlide(index) {
+                slides.forEach(slide => slide.classList.add('hidden'));
+                slides[index].classList.remove('hidden');
+                slides[index].classList.add('slide-enter');
+
+                setTimeout(() => {
+                    slides[index].classList.remove('slide-enter');
+                }, 300);
+
+                dots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.remove('bg-brand-subtle');
+                        dot.classList.add('bg-primary');
+                    } else {
+                        dot.classList.add('bg-brand-subtle');
+                        dot.classList.remove('bg-primary');
+                    }
+                });
+
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === totalSlides - 1;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSlide(currentSlide);
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    updateSlide(currentSlide);
+                }
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateSlide(currentSlide);
+                });
+            });
+
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            container.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            container.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    if (currentSlide < totalSlides - 1) {
+                        currentSlide++;
+                        updateSlide(currentSlide);
+                    }
+                }
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    if (currentSlide > 0) {
+                        currentSlide--;
+                        updateSlide(currentSlide);
+                    }
+                }
+            }
+
+            updateSlide(0);
+        });
+    </script>
+
+</body>
+
+</html>

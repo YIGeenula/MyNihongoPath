@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Yoon (Contracted Sounds) - My Nihongo Path</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/siteIcoRed.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b3b",
+                        "background-light": "#fcf8f8",
+                        "brand-dark": "#1b0d0f",
+                        "brand-light": "#fcf8f8",
+                        "brand-subtle": "#f3e7e8",
+                        "muted-indigo": "#5C6784"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display">
+    <div class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-5">
+        <div class="layout-content-container flex flex-col w-full max-w-[1100px]">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-brand-subtle px-6 sm:px-10 py-3">
+                <div class="flex items-center gap-4 text-brand-dark">
+                    <div class="size-5 text-primary">
+                        <img src="images/siteIcoRed.png" alt="siteIcon">
+                    </div>
+                    <h2 class="text-brand-dark text-lg font-bold leading-tight tracking-[-0.015em]">My Nihongo Path</h2>
+                </div>
+                <div class="hidden lg:flex flex-1 justify-end items-center gap-8">
+                    <nav class="flex items-center gap-9">
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="index.html">Home</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="activities.html">Activities</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="about.html">About</a>
+                        <a class="text-muted-indigo text-sm font-medium leading-normal hover:text-primary transition-colors"
+                            href="faq.html">FAQ</a>
+                    </nav>
+                </div>
+                <div class="lg:hidden">
+                    <span class="material-symbols-outlined text-muted-indigo">menu</span>
+                </div>
+            </header>
+        </div>
+    </div>
+    <main class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center py-10">
+        <div class="layout-content-container flex flex-col w-full max-w-[1100px] gap-8">
+            <div class="flex flex-col gap-2 text-left">
+                <h1 class="text-brand-dark text-3xl font-black tracking-[-0.03em]">Yoon (Contracted Sounds)</h1>
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 text-muted-indigo">
+                    <span class="text-brand-dark">English: <b>Contracted Sounds</b></span>
+                    <span class="text-brand-dark">Sinhala: <b>යූන් අකුරු (බැඳි අකුරු)</b></span>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-brand-subtle shadow-sm space-y-4">
+                    <div>
+                        <h3 class="text-brand-dark font-bold text-lg mb-2">How they are formed</h3>
+                        <p class="text-muted-indigo leading-relaxed">
+                            These letters are made by placing small <b>ya (ゃ)</b>, <b>yu (ゅ)</b>, or <b>yo (ょ)</b> after
+                            the <i>-i</i> column letters (like ki, shi, chi, etc.).
+                            <br>
+                            <span class="font-medium text-primary">Example:</span> <b>Ki (き)</b> + <b>ya (ゃ)</b> =
+                            <b>Kya (きゃ)</b>.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-brand-subtle">
+                        <h3 class="text-brand-dark font-bold text-lg mb-2">සාදන ආකාරය</h3>
+                        <p class="text-muted-indigo leading-relaxed">
+                            මෙම අකුරු නිර්මාණය වී ඇත්තේ <i>-i</i> තීරුවේ අකුරු (ki, shi, chi වැනි) වලට පසුව කුඩා <b>ya
+                                (ゃ)</b>, <b>yu (ゅ)</b>, හෝ <b>yo (ょ)</b> යෙදීමෙනි.
+                            <br>
+                            <span class="font-medium text-primary">උදාහරණ:</span> <b>Ki (き)</b> + <b>ya (ゃ)</b> = <b>Kya
+                                (きゃ)</b>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Callout and Hiragana grid -->
+            <div class="flex flex-col gap-4">
+                <div class="flex items-center gap-3 mb-4">
+                    <span
+                        class="bg-brand-subtle text-brand-dark text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Yoon</span>
+                    <h2 class="text-brand-dark text-xl font-black">Contracted Sounds</h2>
+                </div>
+                <div class="grid grid-cols-3 gap-3">
+
+                    <!-- K Group -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="きゃ" title="きゃ (kya)">
+                        <span class="text-primary text-3xl font-bold">きゃ</span>
+                        <span class="text-brand-dark text-2xl font-black">kya</span>
+                        <span class="text-brand-dark text-2xl font-black">ක්‍යා</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="きゅ" title="きゅ (kyu)">
+                        <span class="text-primary text-3xl font-bold">きゅ</span>
+                        <span class="text-brand-dark text-2xl font-black">kyu</span>
+                        <span class="text-brand-dark text-2xl font-black">ක්‍යු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="きょ" title="きょ (kyo)">
+                        <span class="text-primary text-3xl font-bold">きょ</span>
+                        <span class="text-brand-dark text-2xl font-black">kyo</span>
+                        <span class="text-brand-dark text-2xl font-black">ක්‍යො</span>
+                    </button>
+
+                    <!-- S Group -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="しゃ" title="しゃ (sha)">
+                        <span class="text-primary text-3xl font-bold">しゃ</span>
+                        <span class="text-brand-dark text-2xl font-black">sha</span>
+                        <span class="text-brand-dark text-2xl font-black">ෂා</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="しゅ" title="しゅ (shu)">
+                        <span class="text-primary text-3xl font-bold">しゅ</span>
+                        <span class="text-brand-dark text-2xl font-black">shu</span>
+                        <span class="text-brand-dark text-2xl font-black">ෂු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="しょ" title="しょ (sho)">
+                        <span class="text-primary text-3xl font-bold">しょ</span>
+                        <span class="text-brand-dark text-2xl font-black">sho</span>
+                        <span class="text-brand-dark text-2xl font-black">ෂො</span>
+                    </button>
+
+                    <!-- C Group -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ちゃ" title="ちゃ (cha)">
+                        <span class="text-primary text-3xl font-bold">ちゃ</span>
+                        <span class="text-brand-dark text-2xl font-black">cha</span>
+                        <span class="text-brand-dark text-2xl font-black">චා</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ちゅ" title="ちゅ (chu)">
+                        <span class="text-primary text-3xl font-bold">ちゅ</span>
+                        <span class="text-brand-dark text-2xl font-black">chu</span>
+                        <span class="text-brand-dark text-2xl font-black">චු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ちょ" title="ちょ (cho)">
+                        <span class="text-primary text-3xl font-bold">ちょ</span>
+                        <span class="text-brand-dark text-2xl font-black">cho</span>
+                        <span class="text-brand-dark text-2xl font-black">චො</span>
+                    </button>
+
+                    <!-- N Group -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="にゃ" title="にゃ (nya)">
+                        <span class="text-primary text-3xl font-bold">にゃ</span>
+                        <span class="text-brand-dark text-2xl font-black">nya</span>
+                        <span class="text-brand-dark text-2xl font-black">න්‍යා</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="にゅ" title="にゅ (nyu)">
+                        <span class="text-primary text-3xl font-bold">にゅ</span>
+                        <span class="text-brand-dark text-2xl font-black">nyu</span>
+                        <span class="text-brand-dark text-2xl font-black">න්‍යු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="にょ" title="にょ (nyo)">
+                        <span class="text-primary text-3xl font-bold">にょ</span>
+                        <span class="text-brand-dark text-2xl font-black">nyo</span>
+                        <span class="text-brand-dark text-2xl font-black">න්‍යො</span>
+                    </button>
+
+                    <!-- H Group -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ひゃ" title="ひゃ (hya)">
+                        <span class="text-primary text-3xl font-bold">ひゃ</span>
+                        <span class="text-brand-dark text-2xl font-black">hya</span>
+                        <span class="text-brand-dark text-2xl font-black">හ්‍යා</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ひゅ" title="ひゅ (hyu)">
+                        <span class="text-primary text-3xl font-bold">ひゅ</span>
+                        <span class="text-brand-dark text-2xl font-black">hyu</span>
+                        <span class="text-brand-dark text-2xl font-black">හ්‍යු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ひょ" title="ひょ (hyo)">
+                        <span class="text-primary text-3xl font-bold">ひょ</span>
+                        <span class="text-brand-dark text-2xl font-black">hyo</span>
+                        <span class="text-brand-dark text-2xl font-black">හ්‍යො</span>
+                    </button>
+
+                    <!-- M Group -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="みゃ" title="みゃ (mya)">
+                        <span class="text-primary text-3xl font-bold">みゃ</span>
+                        <span class="text-brand-dark text-2xl font-black">mya</span>
+                        <span class="text-brand-dark text-2xl font-black">ම්‍යා</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="みゅ" title="みゅ (myu)">
+                        <span class="text-primary text-3xl font-bold">みゅ</span>
+                        <span class="text-brand-dark text-2xl font-black">myu</span>
+                        <span class="text-brand-dark text-2xl font-black">ම්‍යු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="みょ" title="みょ (myo)">
+                        <span class="text-primary text-3xl font-bold">みょ</span>
+                        <span class="text-brand-dark text-2xl font-black">myo</span>
+                        <span class="text-brand-dark text-2xl font-black">ම්‍යො</span>
+                    </button>
+
+                    <!-- R Group -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="りゃ" title="りゃ (rya)">
+                        <span class="text-primary text-3xl font-bold">りゃ</span>
+                        <span class="text-brand-dark text-2xl font-black">rya</span>
+                        <span class="text-brand-dark text-2xl font-black">ර්‍යා</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="りゅ" title="りゅ (ryu)">
+                        <span class="text-primary text-3xl font-bold">りゅ</span>
+                        <span class="text-brand-dark text-2xl font-black">ryu</span>
+                        <span class="text-brand-dark text-2xl font-black">ර්‍යු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="りょ" title="りょ (ryo)">
+                        <span class="text-primary text-3xl font-bold">りょ</span>
+                        <span class="text-brand-dark text-2xl font-black">ryo</span>
+                        <span class="text-brand-dark text-2xl font-black">ර්‍යො</span>
+                    </button>
+
+                    <!-- G Group -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ぎゃ" title="ぎゃ (gya)">
+                        <span class="text-primary text-3xl font-bold">ぎゃ</span>
+                        <span class="text-brand-dark text-2xl font-black">gya</span>
+                        <span class="text-brand-dark text-2xl font-black">ග්‍යා</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ぎゅ" title="ぎゅ (gyu)">
+                        <span class="text-primary text-3xl font-bold">ぎゅ</span>
+                        <span class="text-brand-dark text-2xl font-black">gyu</span>
+                        <span class="text-brand-dark text-2xl font-black">ග්‍යු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ぎょ" title="ぎょ (gyo)">
+                        <span class="text-primary text-3xl font-bold">ぎょ</span>
+                        <span class="text-brand-dark text-2xl font-black">gyo</span>
+                        <span class="text-brand-dark text-2xl font-black">ග්‍යො</span>
+                    </button>
+
+                    <!-- J Group -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="じゃ" title="じゃ (ja)">
+                        <span class="text-primary text-3xl font-bold">じゃ</span>
+                        <span class="text-brand-dark text-2xl font-black">ja</span>
+                        <span class="text-brand-dark text-2xl font-black">ජා</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="じゅ" title="じゅ (ju)">
+                        <span class="text-primary text-3xl font-bold">じゅ</span>
+                        <span class="text-brand-dark text-2xl font-black">ju</span>
+                        <span class="text-brand-dark text-2xl font-black">ජු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="じょ" title="じょ (jo)">
+                        <span class="text-primary text-3xl font-bold">じょ</span>
+                        <span class="text-brand-dark text-2xl font-black">jo</span>
+                        <span class="text-brand-dark text-2xl font-black">ජො</span>
+                    </button>
+
+                    <!-- B Group -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="びゃ" title="びゃ (bya)">
+                        <span class="text-primary text-3xl font-bold">びゃ</span>
+                        <span class="text-brand-dark text-2xl font-black">bya</span>
+                        <span class="text-brand-dark text-2xl font-black">බ්‍යා</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="びゅ" title="びゅ (byu)">
+                        <span class="text-primary text-3xl font-bold">びゅ</span>
+                        <span class="text-brand-dark text-2xl font-black">byu</span>
+                        <span class="text-brand-dark text-2xl font-black">බ්‍යු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="びょ" title="びょ (byo)">
+                        <span class="text-primary text-3xl font-bold">びょ</span>
+                        <span class="text-brand-dark text-2xl font-black">byo</span>
+                        <span class="text-brand-dark text-2xl font-black">බ්‍යො</span>
+                    </button>
+
+                    <!-- P Group -->
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ぴゃ" title="ぴゃ (pya)">
+                        <span class="text-primary text-3xl font-bold">ぴゃ</span>
+                        <span class="text-brand-dark text-2xl font-black">pya</span>
+                        <span class="text-brand-dark text-2xl font-black">ප්‍යා</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ぴゅ" title="ぴゅ (pyu)">
+                        <span class="text-primary text-3xl font-bold">ぴゅ</span>
+                        <span class="text-brand-dark text-2xl font-black">pyu</span>
+                        <span class="text-brand-dark text-2xl font-black">ප්‍යු</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                        data-text="ぴょ" title="ぴょ (pyo)">
+                        <span class="text-primary text-3xl font-bold">ぴょ</span>
+                        <span class="text-brand-dark text-2xl font-black">pyo</span>
+                        <span class="text-brand-dark text-2xl font-black">ප්‍යො</span>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- Practice instructions and button  -->
+            <div class="mt-4 bg-sakura-pink/40 border border-brand-subtle rounded-lg px-4 py-3 
+            flex items-center justify-between">
+                <div>
+                    <p class="text-brand-dark font-semibold">
+                        Click the button for to practice the letters.
+                    </p>
+                </div>
+
+                <button id="letsPracticeBtn"
+                    class="flex items-center gap-2 rounded-full bg-primary text-white font-bold px-5 py-2 hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed">
+                    <span class="material-symbols-outlined text-white">play_arrow</span>
+                    LET'S PRACTICE
+                </button>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex justify-between mt-4">
+                <a href="activities.html"
+                    class="flex items-center gap-2 text-muted-indigo hover:text-primary font-bold transition-colors">
+                    <span class="material-symbols-outlined">arrow_back</span> Back to Activities
+                </a>
+                <a href="set07.html"
+                    class="flex items-center gap-2 text-muted-indigo hover:text-primary font-bold transition-colors">
+                    Next Set <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('letsPracticeBtn').addEventListener('click', function () {
+            const letters = [];
+            document.querySelectorAll('.jp-speak').forEach(btn => {
+                const spans = btn.querySelectorAll('span');
+                if (spans.length >= 3) {
+                    letters.push({
+                        jp: spans[0].textContent.trim(), // Kana
+                        en: spans[1].textContent.trim(), // Romaji
+                        si: spans[2].textContent.trim()  // Sinhala
+                    });
+                }
+            });
+
+            localStorage.setItem('practiceLetters', JSON.stringify(letters));
+            window.location.href = 'practiceLetters.html';
+        });
+    </script>
+
+</body>
+
+</html>
