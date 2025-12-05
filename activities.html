@@ -13,425 +13,403 @@
     </script>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Hiragana New Words - My Nihongo Path</title>
+    <title>Activities - My Nihongo Path</title>
+    <!-- Tailwind & Fonts -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="icon" type="image/x-icon" href="images/siteIcoRed.png">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+Sinhala:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <script>
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#ee2b3b",
-                        "background-light": "#fcf8f8",
-                        "brand-dark": "#1b0d0f",
-                        "brand-subtle": "#f3e7e8",
-                        "muted-indigo": "#5C6784"
+                        primary: "#EE2B3B", // Japan Red
+                        "primary-dark": "#C41E2B",
+                        secondary: "#1A1A1A",
+                        accent: "#FF9AA2", // Sakura Pink
+                        "accent-light": "#FFB7B2",
+                        "bg-light": "#FAFAFA",
+                        "text-main": "#2D3748",
+                        "text-muted": "#718096",
                     },
-                    fontFamily: { "display": ["Lexend", "sans-serif"] },
-                    borderRadius: { "DEFAULT": "1rem", "lg": "1.5rem" }
-                }
-            }
+                    fontFamily: {
+                        sans: ["Lexend", "sans-serif"],
+                        jp: ["Noto Sans JP", "sans-serif"],
+                        sinhala: ["Noto Sans Sinhala", "sans-serif"],
+                    },
+                },
+            },
         };
     </script>
     <style>
         body {
             font-family: 'Lexend', sans-serif;
         }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
     </style>
 </head>
 
-<body class="bg-background-light font-display">
-    <div class="min-h-screen px-4 sm:px-10 lg:px-20 xl:px-40 py-8">
-        <header class="flex items-center justify-between border-b border-brand-subtle pb-4">
-            <h1 class="text-brand-dark text-2xl font-black">Hiragana</h1>
-            <a href="index.html" class="text-muted-indigo hover:text-primary">Back to Home</a>
-        </header>
+<body class="bg-bg-light text-text-main antialiased selection:bg-primary selection:text-white">
 
-        <section class="mt-6 space-y-10">
-            <div class="space-y-4">
-                <div class="flex items-center gap-3 mb-2">
-                    <span
-                        class="bg-primary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Part
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer"
+                    onclick="window.location.href='index.html'">
+                    <img class="h-10 w-10 md:h-12 md:w-12" src="images/siteIcoRed.png" alt="Logo">
+                    <span class="font-bold text-2xl tracking-tight text-secondary">My <span
+                            class="text-primary">Nihongo</span> Path</span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-600 hover:text-primary font-medium text-lg hover:bg-gray-50 px-3 py-2 rounded-lg transition-colors">Home</a>
+                    <a href="activities.html"
+                        class="text-primary font-semibold text-lg hover:bg-gray-50 px-3 py-2 rounded-lg transition-colors bg-gray-50">Activities</a>
+                    <a href="about.html"
+                        class="text-gray-600 hover:text-primary font-medium text-lg hover:bg-gray-50 px-3 py-2 rounded-lg transition-colors">About</a>
+                    <a href="faq.html"
+                        class="text-gray-600 hover:text-primary font-medium text-lg hover:bg-gray-50 px-3 py-2 rounded-lg transition-colors">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-black text-secondary mb-4">Learning Activities</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Select a path to start your Japanese journey. Choose from
+                character lessons, vocabulary drills, and more.</p>
+        </div>
+
+        <!-- Toggle / Filter -->
+        <div class="flex justify-center gap-4 mb-12">
+            <button id="btn-all" onclick="filterContent('all')"
+                class="px-6 py-2 bg-secondary text-white rounded-full font-bold shadow-lg transform hover:-translate-y-0.5 transition-all outline-none border border-transparent">All</button>
+            <button id="btn-hiragana" onclick="filterContent('hiragana')"
+                class="px-6 py-2 bg-white text-gray-600 border border-gray-200 rounded-full font-bold hover:border-primary hover:text-primary transition-all outline-none">Hiragana</button>
+            <button id="btn-vocab" onclick="filterContent('vocab')"
+                class="px-6 py-2 bg-white text-gray-600 border border-gray-200 rounded-full font-bold hover:border-primary hover:text-primary transition-all outline-none">Vocabulary</button>
+        </div>
+
+        <!-- Section: Hiragana Lessons -->
+        <div id="section-hiragana" class="mb-20 transition-opacity duration-300">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-2xl">school</span>
+                </div>
+                <h2 class="text-2xl font-bold text-secondary">Hiragana Lessons</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <!-- Set 01 -->
+                <a href="set01.html"
+                    class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-10 -mt-10 group-hover:bg-primary/10 transition-colors">
+                    </div>
+                    <span class="inline-block px-3 py-1 rounded-full bg-red-50 text-primary text-xs font-bold mb-4">Set
                         01</span>
-                    <h2 class="text-brand-dark text-xl font-black">Basic Hiragana</h2>
-                </div>
-                <p class="text-muted-indigo">The main 46 characters of the Hiragana alphabet.
-                    <br>
-                    (මූලික හිරගනා අකුරු 46.)
-                </p>
+                    <h3 class="text-xl font-bold text-secondary mb-2 group-hover:text-primary transition-colors">Basic
+                        Hiragana (1)</h3>
+                    <p class="text-gray-500 text-sm mb-4">First 15 characters. The foundation of your journey.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span
+                            class="text-2xl font-black text-gray-200 group-hover:text-primary/20 transition-colors">あ-そ</span>
+                        <span
+                            class="material-symbols-outlined text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+                    </div>
+                </a>
 
-                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                    <!-- Set 01 -->
-                    <a href="set01.html"
-                        class="group relative overflow-hidden bg-white rounded-2xl border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute -right-6 -top-6 opacity-[0.03] group-hover:opacity-10 transition-opacity rotate-12 select-none">
-                            <span class="text-[10rem] font-black text-brand-dark">あ</span>
-                        </div>
-                        <div class="p-6 relative z-10 flex flex-col h-full">
-                            <div class="flex items-start justify-between mb-4">
-                                <div>
-                                    <h3
-                                        class="text-xl font-black text-brand-dark group-hover:text-primary transition-colors">
-                                        First 15 Letters</h3>
-                                    <p class="text-muted-indigo text-sm font-medium mt-1">පළමු අකුරු 15</p>
-                                </div>
-                                <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Set
-                                    01</span>
-                            </div>
-                            <div
-                                class="bg-background-light rounded-xl p-4 mb-6 border border-brand-subtle/50 flex-grow flex items-center justify-center">
-                                <p class="text-center text-brand-dark font-bold text-lg tracking-widest">あ-お • か-こ • さ-そ
-                                </p>
-                            </div>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-brand-subtle/30">
-                                <span class="text-muted-indigo text-xs font-bold uppercase tracking-wider">15
-                                    Characters</span>
-                                <div class="flex items-center text-primary font-bold text-sm">
-                                    <span>Start Learning</span>
-                                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Set 02 -->
-                    <a href="set02.html"
-                        class="group relative overflow-hidden bg-white rounded-2xl border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute -right-6 -top-6 opacity-[0.03] group-hover:opacity-10 transition-opacity rotate-12 select-none">
-                            <span class="text-[10rem] font-black text-brand-dark">た</span>
-                        </div>
-                        <div class="p-6 relative z-10 flex flex-col h-full">
-                            <div class="flex items-start justify-between mb-4">
-                                <div>
-                                    <h3
-                                        class="text-xl font-black text-brand-dark group-hover:text-primary transition-colors">
-                                        Second 15 Letters</h3>
-                                    <p class="text-muted-indigo text-sm font-medium mt-1">දෙවන අකුරු 15</p>
-                                </div>
-                                <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Set
-                                    02</span>
-                            </div>
-                            <div
-                                class="bg-background-light rounded-xl p-4 mb-6 border border-brand-subtle/50 flex-grow flex items-center justify-center">
-                                <p class="text-center text-brand-dark font-bold text-lg tracking-widest">た-と • な-の • は-ほ
-                                </p>
-                            </div>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-brand-subtle/30">
-                                <span class="text-muted-indigo text-xs font-bold uppercase tracking-wider">15
-                                    Characters</span>
-                                <div class="flex items-center text-primary font-bold text-sm">
-                                    <span>Start Learning</span>
-                                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Set 03 -->
-                    <a href="set03.html"
-                        class="group relative overflow-hidden bg-white rounded-2xl border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute -right-6 -top-6 opacity-[0.03] group-hover:opacity-10 transition-opacity rotate-12 select-none">
-                            <span class="text-[10rem] font-black text-brand-dark">ま</span>
-                        </div>
-                        <div class="p-6 relative z-10 flex flex-col h-full">
-                            <div class="flex items-start justify-between mb-4">
-                                <div>
-                                    <h3
-                                        class="text-xl font-black text-brand-dark group-hover:text-primary transition-colors">
-                                        Last 16 Letters</h3>
-                                    <p class="text-muted-indigo text-sm font-medium mt-1">අවසාන අකුරු 16</p>
-                                </div>
-                                <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Set
-                                    03</span>
-                            </div>
-                            <div
-                                class="bg-background-light rounded-xl p-4 mb-6 border border-brand-subtle/50 flex-grow flex items-center justify-center">
-                                <p class="text-center text-brand-dark font-bold text-lg tracking-widest">ま-も • や-よ • ら-ん
-                                </p>
-                            </div>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-brand-subtle/30">
-                                <span class="text-muted-indigo text-xs font-bold uppercase tracking-wider">16
-                                    Characters</span>
-                                <div class="flex items-center text-primary font-bold text-sm">
-                                    <span>Start Learning</span>
-                                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Set 04 -->
-                    <a href="set04.html"
-                        class="group relative overflow-hidden bg-white rounded-2xl border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute -right-6 -top-6 opacity-[0.03] group-hover:opacity-10 transition-opacity rotate-12 select-none">
-                            <span class="text-[10rem] font-black text-brand-dark">ん</span>
-                        </div>
-                        <div class="p-6 relative z-10 flex flex-col h-full">
-                            <div class="flex items-start justify-between mb-4">
-                                <div>
-                                    <h3
-                                        class="text-xl font-black text-brand-dark group-hover:text-primary transition-colors">
-                                        All 46 Letters</h3>
-                                    <p class="text-muted-indigo text-sm font-medium mt-1">සියලුම අකුරු 46</p>
-                                </div>
-                                <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Set
-                                    04</span>
-                            </div>
-                            <div
-                                class="bg-background-light rounded-xl p-4 mb-6 border border-brand-subtle/50 flex-grow flex items-center justify-center">
-                                <p class="text-center text-brand-dark font-bold text-lg tracking-widest">あ-ん (All)</p>
-                            </div>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-brand-subtle/30">
-                                <span class="text-muted-indigo text-xs font-bold uppercase tracking-wider">46
-                                    Characters</span>
-                                <div class="flex items-center text-primary font-bold text-sm">
-                                    <span>Start Learning</span>
-                                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Part 2: Dakuten & Handakuten -->
-            <div class="space-y-4 pt-8 border-t border-brand-subtle">
-                <div class="flex items-center gap-3 mb-2">
-                    <span
-                        class="bg-primary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Part
+                <!-- Set 02 -->
+                <a href="set02.html"
+                    class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-10 -mt-10 group-hover:bg-primary/10 transition-colors">
+                    </div>
+                    <span class="inline-block px-3 py-1 rounded-full bg-red-50 text-primary text-xs font-bold mb-4">Set
                         02</span>
-                    <h2 class="text-brand-dark text-xl font-black">Dakuten & Handakuten</h2>
-                </div>
-                <p class="text-muted-indigo">Voiced sounds (Tenten ゛) and Semi-voiced sounds (Maru ゜).
-                    <br>
-                    (තෙන්තෙන් සහ මරු අකුරු.)
-                </p>
+                    <h3 class="text-xl font-bold text-secondary mb-2 group-hover:text-primary transition-colors">Basic
+                        Hiragana (2)</h3>
+                    <p class="text-gray-500 text-sm mb-4">Next 15 characters to expand your reading skills.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span
+                            class="text-2xl font-black text-gray-200 group-hover:text-primary/20 transition-colors">た-ほ</span>
+                        <span
+                            class="material-symbols-outlined text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+                    </div>
+                </a>
 
-                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                    <!-- Set 05 (Tenten & Maru) -->
-                    <a href="set05.html"
-                        class="group relative overflow-hidden bg-white rounded-2xl border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute -right-6 -top-6 opacity-[0.03] group-hover:opacity-10 transition-opacity rotate-12 select-none">
-                            <span class="text-[10rem] font-black text-brand-dark">が</span>
-                        </div>
-                        <div class="p-6 relative z-10 flex flex-col h-full">
-                            <div class="flex items-start justify-between mb-4">
-                                <div>
-                                    <h3
-                                        class="text-xl font-black text-brand-dark group-hover:text-primary transition-colors">
-                                        Dakuten & Handakuten</h3>
-                                    <p class="text-muted-indigo text-sm font-medium mt-1">Tenten & Maru Characters</p>
-                                </div>
-                                <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Set
-                                    05</span>
-                            </div>
-                            <div
-                                class="bg-background-light rounded-xl p-4 mb-6 border border-brand-subtle/50 flex-grow flex items-center justify-center">
-                                <p class="text-center text-brand-dark font-bold text-lg tracking-widest">が-ご • ざ-ぞ • だ-ど
-                                    • ば-ぼ • ぱ-ぽ</p>
-                            </div>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-brand-subtle/30">
-                                <span class="text-muted-indigo text-xs font-bold uppercase tracking-wider">25
-                                    Characters</span>
-                                <div class="flex items-center text-primary font-bold text-sm">
-                                    <span>Start Learning</span>
-                                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Part 3: Yoon (Contracted Sounds) -->
-            <div class="space-y-4 pt-8 border-t border-brand-subtle">
-                <div class="flex items-center gap-3 mb-2">
-                    <span
-                        class="bg-primary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Part
+                <!-- Set 03 -->
+                <a href="set03.html"
+                    class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-10 -mt-10 group-hover:bg-primary/10 transition-colors">
+                    </div>
+                    <span class="inline-block px-3 py-1 rounded-full bg-red-50 text-primary text-xs font-bold mb-4">Set
                         03</span>
-                    <h2 class="text-brand-dark text-xl font-black">Yoon (Contracted Sounds)</h2>
-                </div>
-                <p class="text-muted-indigo">Combination sounds using small ya, yu, yo.
-                    <br>
-                    (යා, යු, යො අකුරු කුඩාවට යෙදීම.)
-                </p>
+                    <h3 class="text-xl font-bold text-secondary mb-2 group-hover:text-primary transition-colors">Basic
+                        Hiragana (3)</h3>
+                    <p class="text-gray-500 text-sm mb-4">Final basic characters to complete the chart.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span
+                            class="text-2xl font-black text-gray-200 group-hover:text-primary/20 transition-colors">ま-ん</span>
+                        <span
+                            class="material-symbols-outlined text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+                    </div>
+                </a>
 
-                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                    <!-- Set 06 (Yoon) -->
-                    <a href="set06.html"
-                        class="group relative overflow-hidden bg-white rounded-2xl border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute -right-6 -top-6 opacity-[0.03] group-hover:opacity-10 transition-opacity rotate-12 select-none">
-                            <span class="text-[10rem] font-black text-brand-dark">き</span>
-                        </div>
-                        <div class="p-6 relative z-10 flex flex-col h-full">
-                            <div class="flex items-start justify-between mb-4">
-                                <div>
-                                    <h3
-                                        class="text-xl font-black text-brand-dark group-hover:text-primary transition-colors">
-                                        Yoon Characters</h3>
-                                    <p class="text-muted-indigo text-sm font-medium mt-1">Contracted Sounds</p>
-                                </div>
-                                <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Set
-                                    06</span>
-                            </div>
-                            <div
-                                class="bg-background-light rounded-xl p-4 mb-6 border border-brand-subtle/50 flex-grow flex items-center justify-center">
-                                <p class="text-center text-brand-dark font-bold text-lg tracking-widest">きゃ-きょ • しゃ-しょ •
-                                    ちゃ-ちょ</p>
-                            </div>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-brand-subtle/30">
-                                <span class="text-muted-indigo text-xs font-bold uppercase tracking-wider">33
-                                    Characters</span>
-                                <div class="flex items-center text-primary font-bold text-sm">
-                                    <span>Start Learning</span>
-                                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Part 4: Long Vowels (Chōon) -->
-            <div class="space-y-4 pt-8 border-t border-brand-subtle">
-                <div class="flex items-center gap-3 mb-2">
+                <!-- Set 04 -->
+                <a href="set04.html"
+                    class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -mr-10 -mt-10 group-hover:bg-blue-100 transition-colors">
+                    </div>
                     <span
-                        class="bg-primary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Part
-                        04</span>
-                    <h2 class="text-brand-dark text-xl font-black">Long Vowels (Chōon)</h2>
-                </div>
-                <p class="text-muted-indigo">Rules for lengthening vowel sounds.
-                    <br>
-                    (දීර්ඝ ස්වර සඳහා නීති.)
-                </p>
+                        class="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold mb-4">Review</span>
+                    <h3 class="text-xl font-bold text-secondary mb-2 group-hover:text-blue-600 transition-colors">
+                        Complete Chart</h3>
+                    <p class="text-gray-500 text-sm mb-4">Review all 46 basic Hiragana characters in one place.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span
+                            class="text-2xl font-black text-gray-200 group-hover:text-blue-200 transition-colors">All</span>
+                        <span
+                            class="material-symbols-outlined text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all">arrow_forward</span>
+                    </div>
+                </a>
 
-                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                    <!-- Set 07 (Long Vowels) -->
-                    <a href="set07.html"
-                        class="group relative overflow-hidden bg-white rounded-2xl border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute -right-6 -top-6 opacity-[0.03] group-hover:opacity-10 transition-opacity rotate-12 select-none">
-                            <span class="text-[10rem] font-black text-brand-dark">あ</span>
-                        </div>
-                        <div class="p-6 relative z-10 flex flex-col h-full">
-                            <div class="flex items-start justify-between mb-4">
-                                <div>
-                                    <h3
-                                        class="text-xl font-black text-brand-dark group-hover:text-primary transition-colors">
-                                        Long Vowels</h3>
-                                    <p class="text-muted-indigo text-sm font-medium mt-1">Chōon Rules</p>
-                                </div>
-                                <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Set
-                                    07</span>
-                            </div>
-                            <div
-                                class="bg-background-light rounded-xl p-4 mb-6 border border-brand-subtle/50 flex-grow flex items-center justify-center">
-                                <p class="text-center text-brand-dark font-bold text-lg tracking-widest">あ • い • う Rules
-                                </p>
-                            </div>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-brand-subtle/30">
-                                <span class="text-muted-indigo text-xs font-bold uppercase tracking-wider">14
-                                    Words</span>
-                                <div class="flex items-center text-primary font-bold text-sm">
-                                    <span>Start Learning</span>
-                                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Part 5: Double Consonants (Sokuon) -->
-            <div class="space-y-4 pt-8 border-t border-brand-subtle">
-                <div class="flex items-center gap-3 mb-2">
-                    <span
-                        class="bg-primary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Part
+                <!-- Set 05 -->
+                <a href="set05.html"
+                    class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-10 -mt-10 group-hover:bg-primary/10 transition-colors">
+                    </div>
+                    <span class="inline-block px-3 py-1 rounded-full bg-red-50 text-primary text-xs font-bold mb-4">Set
                         05</span>
-                    <h2 class="text-brand-dark text-xl font-black">Double Consonants (Sokuon)</h2>
-                </div>
-                <p class="text-muted-indigo">Rules for double consonants using small 'tsu'.
-                    <br>
-                    (ද්විත්ව ව්‍යාංජන අකුරු (කුඩා tsu).)
-                </p>
+                    <h3 class="text-xl font-bold text-secondary mb-2 group-hover:text-primary transition-colors">Dakuten
+                        & Handakuten</h3>
+                    <p class="text-gray-500 text-sm mb-4">Learn voiced sounds (tenten) and semi-voiced sounds (maru).
+                    </p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span
+                            class="text-2xl font-black text-gray-200 group-hover:text-primary/20 transition-colors">が-ぽ</span>
+                        <span
+                            class="material-symbols-outlined text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+                    </div>
+                </a>
 
-                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                    <!-- Set 08 (Sokuon) -->
-                    <a href="set08.html"
-                        class="group relative overflow-hidden bg-white rounded-2xl border border-brand-subtle shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute -right-6 -top-6 opacity-[0.03] group-hover:opacity-10 transition-opacity rotate-12 select-none">
-                            <span class="text-[10rem] font-black text-brand-dark">っ</span>
-                        </div>
-                        <div class="p-6 relative z-10 flex flex-col h-full">
-                            <div class="flex items-start justify-between mb-4">
-                                <div>
-                                    <h3
-                                        class="text-xl font-black text-brand-dark group-hover:text-primary transition-colors">
-                                        Sokuon Rules</h3>
-                                    <p class="text-muted-indigo text-sm font-medium mt-1">Double Consonants</p>
-                                </div>
-                                <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Set
-                                    08</span>
-                            </div>
-                            <div
-                                class="bg-background-light rounded-xl p-4 mb-6 border border-brand-subtle/50 flex-grow flex items-center justify-center">
-                                <p class="text-center text-brand-dark font-bold text-lg tracking-widest">Small っ Rules
-                                </p>
-                            </div>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-brand-subtle/30">
-                                <span class="text-muted-indigo text-xs font-bold uppercase tracking-wider">4
-                                    Words</span>
-                                <div class="flex items-center text-primary font-bold text-sm">
-                                    <span>Start Learning</span>
-                                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                <!-- Set 06 -->
+                <a href="set06.html"
+                    class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-10 -mt-10 group-hover:bg-primary/10 transition-colors">
+                    </div>
+                    <span class="inline-block px-3 py-1 rounded-full bg-red-50 text-primary text-xs font-bold mb-4">Set
+                        06</span>
+                    <h3 class="text-xl font-bold text-secondary mb-2 group-hover:text-primary transition-colors">Yoon
+                        (Combined)</h3>
+                    <p class="text-gray-500 text-sm mb-4">Contracted sounds using small ya, yu, yo.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span
+                            class="text-2xl font-black text-gray-200 group-hover:text-primary/20 transition-colors">きゃ</span>
+                        <span
+                            class="material-symbols-outlined text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+                    </div>
+                </a>
+
+                <!-- Set 07 -->
+                <a href="set07.html"
+                    class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-10 -mt-10 group-hover:bg-primary/10 transition-colors">
+                    </div>
+                    <span class="inline-block px-3 py-1 rounded-full bg-red-50 text-primary text-xs font-bold mb-4">Set
+                        07</span>
+                    <h3 class="text-xl font-bold text-secondary mb-2 group-hover:text-primary transition-colors">Long
+                        Vowels</h3>
+                    <p class="text-gray-500 text-sm mb-4">Rules for Chōon (lengthening sounds) with examples.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span
+                            class="text-2xl font-black text-gray-200 group-hover:text-primary/20 transition-colors">ー</span>
+                        <span
+                            class="material-symbols-outlined text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+                    </div>
+                </a>
+
+                <!-- Set 08 -->
+                <a href="set08.html"
+                    class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-10 -mt-10 group-hover:bg-primary/10 transition-colors">
+                    </div>
+                    <span class="inline-block px-3 py-1 rounded-full bg-red-50 text-primary text-xs font-bold mb-4">Set
+                        08</span>
+                    <h3 class="text-xl font-bold text-secondary mb-2 group-hover:text-primary transition-colors">Sokuon
+                    </h3>
+                    <p class="text-gray-500 text-sm mb-4">Double consonants using the small 'tsu' character.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span
+                            class="text-2xl font-black text-gray-200 group-hover:text-primary/20 transition-colors">っ</span>
+                        <span
+                            class="material-symbols-outlined text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Section: Vocabulary Practice -->
+        <div id="section-vocab" class="mb-20 transition-opacity duration-300">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-2xl">menu_book</span>
+                </div>
+                <h2 class="text-2xl font-bold text-secondary">Vocabulary Practice</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Vocab Set 1 -->
+                <a href="practiceWords_set01.html"
+                    class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center">
+                    <div
+                        class="w-14 h-14 rounded-full bg-green-50 text-green-600 flex items-center justify-center mb-4 group-hover:bg-green-100 transition-colors">
+                        <span class="material-symbols-outlined">psychology</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-secondary mb-1">Set 01 Words</h3>
+                    <p class="text-sm text-gray-500 mb-4">Basic nouns and greetings.</p>
+                    <span class="text-xs font-bold text-green-600 bg-green-50 px-3 py-1 rounded-full">Practice
+                        Now</span>
+                </a>
+
+                <!-- Vocab Set 2 -->
+                <a href="practiceWords_set02.html"
+                    class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center">
+                    <div
+                        class="w-14 h-14 rounded-full bg-green-50 text-green-600 flex items-center justify-center mb-4 group-hover:bg-green-100 transition-colors">
+                        <span class="material-symbols-outlined">psychology</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-secondary mb-1">Set 02 Words</h3>
+                    <p class="text-sm text-gray-500 mb-4">Objects and places.</p>
+                    <span class="text-xs font-bold text-green-600 bg-green-50 px-3 py-1 rounded-full">Practice
+                        Now</span>
+                </a>
+
+                <!-- Vocab Set 3 -->
+                <a href="practiceWords_set03.html"
+                    class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center">
+                    <div
+                        class="w-14 h-14 rounded-full bg-green-50 text-green-600 flex items-center justify-center mb-4 group-hover:bg-green-100 transition-colors">
+                        <span class="material-symbols-outlined">psychology</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-secondary mb-1">Set 03 Words</h3>
+                    <p class="text-sm text-gray-500 mb-4">Verbs and daily life.</p>
+                    <span class="text-xs font-bold text-green-600 bg-green-50 px-3 py-1 rounded-full">Practice
+                        Now</span>
+                </a>
+
+                <!-- Vocab Set 4 -->
+                <a href="practiceWords_set04.html"
+                    class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center">
+                    <div
+                        class="w-14 h-14 rounded-full bg-green-50 text-green-600 flex items-center justify-center mb-4 group-hover:bg-green-100 transition-colors">
+                        <span class="material-symbols-outlined">psychology</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-secondary mb-1">Set 04 Words</h3>
+                    <p class="text-sm text-gray-500 mb-4">Mixed vocabulary review.</p>
+                    <span class="text-xs font-bold text-green-600 bg-green-50 px-3 py-1 rounded-full">Practice
+                        Now</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <div class="flex items-center gap-3">
+                    <img src="images/siteIcoRed.png" alt="Logo"
+                        class="w-10 h-10 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                    <span class="font-bold text-xl text-gray-800">My Nihongo Path</span>
+                </div>
+                <div class="flex gap-8 text-sm font-medium text-gray-500">
+                    <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                    <a href="activities.html" class="hover:text-primary transition-colors">Activities</a>
+                    <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                    <a href="faq.html" class="hover:text-primary transition-colors">FAQ</a>
                 </div>
             </div>
-        </section>
-    </div>
+
+            <div
+                class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+                <p>&copy; 2025 My Nihongo Path. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function filterContent(category) {
+            const btnAll = document.getElementById('btn-all');
+            const btnHiragana = document.getElementById('btn-hiragana');
+            const btnVocab = document.getElementById('btn-vocab');
+
+            const sectionHiragana = document.getElementById('section-hiragana');
+            const sectionVocab = document.getElementById('section-vocab');
+
+            // Styles
+            const activeClasses = ['bg-secondary', 'text-white', 'shadow-lg', 'border-transparent'];
+            const inactiveClasses = ['bg-white', 'text-gray-600', 'border-gray-200', 'hover:border-primary', 'hover:text-primary'];
+
+            // Helper to set button state
+            const setBtnState = (btn, isActive) => {
+                if (isActive) {
+                    btn.classList.remove(...inactiveClasses);
+                    btn.classList.add(...activeClasses);
+                    // Remove border if it conflicts, though border-transparent handles it
+                    btn.classList.remove('border-gray-200');
+                } else {
+                    btn.classList.remove(...activeClasses);
+                    btn.classList.add(...inactiveClasses);
+                }
+            };
+
+            // Reset visibility
+            sectionHiragana.classList.remove('hidden');
+            sectionVocab.classList.remove('hidden');
+
+            // Update UI based on category
+            if (category === 'all') {
+                setBtnState(btnAll, true);
+                setBtnState(btnHiragana, false);
+                setBtnState(btnVocab, false);
+            } else if (category === 'hiragana') {
+                setBtnState(btnAll, false);
+                setBtnState(btnHiragana, true);
+                setBtnState(btnVocab, false);
+
+                sectionVocab.classList.add('hidden');
+            } else if (category === 'vocab') {
+                setBtnState(btnAll, false);
+                setBtnState(btnHiragana, false);
+                setBtnState(btnVocab, true);
+
+                sectionHiragana.classList.add('hidden');
+            }
+        }
+    </script>
 </body>
 
 </html>
