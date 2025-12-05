@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Double Consonants (Sokuon) - My Nihongo Path</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="icon" type="image/x-icon" href="images/siteIcoRed.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+Sinhala:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b3b",
+                        "background-light": "#fcf8f8",
+                        "brand-dark": "#1b0d0f",
+                        "brand-subtle": "#f3e7e8",
+                        "muted-indigo": "#5C6784",
+                        "sakura-pink": "#ffd7e6"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "Noto Sans Sinhala", "sans-serif"],
+                        "jp": ["Noto Sans JP", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "1.5rem" }
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', 'Noto Sans Sinhala', sans-serif;
+        }
+
+        .jp-text {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        .slide-enter {
+            animation: slideIn 0.3s ease-out forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display">
+    <main class="min-h-screen px-4 sm:px-10 lg:px-20 xl:px-40 py-8">
+        <header class="flex items-center justify-between border-b border-brand-subtle pb-4 mb-8">
+            <h1 class="text-brand-dark text-2xl font-black">Double Consonants</h1>
+            <a href="activities.html"
+                class="flex items-center gap-2 text-muted-indigo hover:text-primary transition-colors">
+                <span class="material-symbols-outlined">grid_view</span>
+                <span class="font-bold">All Sets</span>
+            </a>
+        </header>
+
+        <div class="max-w-4xl mx-auto">
+            <div id="carousel-container" class="relative">
+
+                <!-- Slide 1: Introduction to Sokuon -->
+                <div class="rule-slide" data-index="0">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="bg-brand-subtle text-brand-dark text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Rule
+                                    01</span>
+                                <h2 class="text-brand-dark text-xl font-black">The Small 'tsu' (っ)</h2>
+                            </div>
+                            <span class="text-muted-indigo text-sm font-medium">1 / 1</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-brand-subtle shadow-sm">
+                            <p class="text-muted-indigo">In Hiragana, to create a double consonant sound (glottal
+                                stop/pause), the small 'tsu' <b>(っ)</b> character is used. This is called "Sokuon".
+                                <br>
+                                When pronouncing, the consonant sound of the character following the small 'tsu' is
+                                doubled (or a small pause is made).
+                                <br>
+                                (හිරගනා අකුරු හල් කිරීම සඳහා කුඩා <b>っ</b> අකුර (Sokuon) භාවිතා කරනු ලැබේ. එය කියවීමේදී
+                                එම කුඩා <b>っ</b> අකුරට පිටුපසින් ඇති අකුරේ හල් අකුර භාවිතා කරයි.)
+                            </p>
+                        </div>
+
+                        <h3 class="text-brand-dark font-bold text-lg mt-2">Word Examples (උදාහරණ වචන)</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="きっさてん" title="kissaten">
+                                <span class="text-primary text-2xl font-bold">きっさてん</span>
+                                <span class="text-brand-dark text-lg font-black">kissaten</span>
+                                <span class="text-brand-dark text-lg font-black">කෝපි කඩය</span>
+                                <span class="text-brand-dark text-lg font-black">Coffee Shop</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="きっぷ" title="kippu">
+                                <span class="text-primary text-2xl font-bold">きっぷ</span>
+                                <span class="text-brand-dark text-lg font-black">kippu</span>
+                                <span class="text-brand-dark text-lg font-black">ප්‍රවේශ පත්‍ර</span>
+                                <span class="text-brand-dark text-lg font-black">Ticket</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="きって" title="kitte">
+                                <span class="text-primary text-2xl font-bold">きって</span>
+                                <span class="text-brand-dark text-lg font-black">kitte</span>
+                                <span class="text-brand-dark text-lg font-black">මුද්දර</span>
+                                <span class="text-brand-dark text-lg font-black">Stamp</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center justify-center bg-white rounded-lg border border-brand-subtle shadow-sm p-4 hover:shadow-md transition jp-speak"
+                                data-text="ざっし" title="zasshi">
+                                <span class="text-primary text-2xl font-bold">ざっし</span>
+                                <span class="text-brand-dark text-lg font-black">zasshi</span>
+                                <span class="text-brand-dark text-lg font-black">සඟරාව</span>
+                                <span class="text-brand-dark text-lg font-black">Magazine</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="flex items-center justify-center gap-4 mt-8">
+                    <button id="prevBtn"
+                        class="p-2 rounded-full bg-white border border-brand-subtle shadow-sm hover:shadow-md text-muted-indigo disabled:opacity-50 disabled:cursor-not-allowed transition">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                    </button>
+                    <div class="flex gap-2" id="dotsContainer">
+                        <button class="w-3 h-3 rounded-full bg-primary transition-colors" data-slide="0"></button>
+                    </div>
+                    <button id="nextBtn"
+                        class="p-2 rounded-full bg-white border border-brand-subtle shadow-sm hover:shadow-md text-muted-indigo disabled:opacity-50 disabled:cursor-not-allowed transition">
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Practice instructions and button -->
+            <div
+                class="mt-4 bg-sakura-pink/40 border border-brand-subtle rounded-lg px-4 py-3 flex items-center justify-between">
+                <div>
+                    <p class="text-brand-dark font-semibold">
+                        Click the button for to practice the words.
+                    </p>
+                </div>
+                <button id="letsPracticeBtn"
+                    class="flex items-center gap-2 rounded-full bg-primary text-white font-bold px-5 py-2 hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed">
+                    <span class="material-symbols-outlined text-white">play_arrow</span>
+                    LET'S PRACTICE
+                </button>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex justify-between mt-4">
+                <a href="activities.html"
+                    class="flex items-center gap-2 text-muted-indigo hover:text-primary font-bold transition-colors">
+                    <span class="material-symbols-outlined">arrow_back</span> Back to Activities
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('letsPracticeBtn').addEventListener('click', function () {
+                const letters = [];
+                document.querySelectorAll('.jp-speak').forEach(btn => {
+                    const spans = btn.querySelectorAll('span');
+                    if (spans.length >= 3) {
+                        letters.push({
+                            jp: spans[0].textContent.trim(),
+                            en: spans[1].textContent.trim(),
+                            si: spans[2].textContent.trim()
+                        });
+                    }
+                });
+                localStorage.setItem('practiceLetters', JSON.stringify(letters));
+                window.location.href = 'practiceLetters.html';
+            });
+
+            const slides = document.querySelectorAll('.rule-slide');
+            const dots = document.querySelectorAll('#dotsContainer button');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const container = document.getElementById('carousel-container');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            function updateSlide(index) {
+                slides.forEach(slide => slide.classList.add('hidden'));
+                slides[index].classList.remove('hidden');
+                slides[index].classList.add('slide-enter');
+
+                setTimeout(() => {
+                    slides[index].classList.remove('slide-enter');
+                }, 300);
+
+                dots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.remove('bg-brand-subtle');
+                        dot.classList.add('bg-primary');
+                    } else {
+                        dot.classList.add('bg-brand-subtle');
+                        dot.classList.remove('bg-primary');
+                    }
+                });
+
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === totalSlides - 1;
+            }
+
+            if (totalSlides > 0) {
+                prevBtn.addEventListener('click', () => {
+                    if (currentSlide > 0) {
+                        currentSlide--;
+                        updateSlide(currentSlide);
+                    }
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    if (currentSlide < totalSlides - 1) {
+                        currentSlide++;
+                        updateSlide(currentSlide);
+                    }
+                });
+
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        currentSlide = index;
+                        updateSlide(currentSlide);
+                    });
+                });
+
+                updateSlide(0);
+            }
+        });
+    </script>
+</body>
+
+</html>
