@@ -30,7 +30,9 @@
                         "background-light": "#fcf8f8",
                         "brand-dark": "#1b0d0f",
                         "brand-subtle": "#f3e7e8",
+                        "brand-subtle": "#f3e7e8",
                         "muted-indigo": "#5C6784",
+                        "secondary": "#1A1A1A",
                         "sakura-pink": "#ffd7e6"
                     },
                     fontFamily: {
@@ -66,12 +68,42 @@
                 transform: translateX(0);
             }
         }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-background-light font-display">
-    <main class="min-h-screen px-4 sm:px-10 lg:px-20 xl:px-40 py-8">
-        <header class="flex items-center justify-between border-b border-brand-subtle pb-4 mb-8">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer"
+                    onclick="window.location.href='index.html'">
+                    <img class="h-10 w-10 md:h-12 md:w-12" src="images/siteIcoRed.png" alt="Logo">
+                    <span class="font-bold text-2xl tracking-tight text-secondary">My <span
+                            class="text-primary">Nihongo</span> Path</span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="nav-link-animated text-gray-600 hover:text-primary font-medium text-lg px-3 py-2 rounded-lg transition-colors">Home</a>
+                    <a href="activities.html"
+                        class="nav-link-animated text-gray-600 hover:text-primary font-medium text-lg px-3 py-2 rounded-lg transition-colors">Activities</a>
+                    <a href="about.html"
+                        class="nav-link-animated text-gray-600 hover:text-primary font-medium text-lg px-3 py-2 rounded-lg transition-colors">About</a>
+                    <a href="faq.html"
+                        class="nav-link-animated text-gray-600 hover:text-primary font-medium text-lg px-3 py-2 rounded-lg transition-colors">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <header class="flex items-center justify-between border-b border-brand-subtle pb-4 mb-8 max-w-4xl mx-auto">
             <h1 class="text-brand-dark text-2xl font-black">Double Consonants</h1>
             <a href="activities.html"
                 class="flex items-center gap-2 text-muted-indigo hover:text-primary transition-colors">
@@ -202,6 +234,29 @@
             </div>
         </div>
     </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <div class="flex items-center gap-3">
+                    <img src="images/siteIcoRed.png" alt="Logo"
+                        class="w-10 h-10 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                    <span class="font-bold text-xl text-gray-800">My Nihongo Path</span>
+                </div>
+                <div class="flex gap-8 text-sm font-medium text-gray-500">
+                    <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                    <a href="activities.html" class="hover:text-primary transition-colors">Activities</a>
+                    <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                    <a href="faq.html" class="hover:text-primary transition-colors">FAQ</a>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+                <p>&copy; 2025 My Nihongo Path. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
