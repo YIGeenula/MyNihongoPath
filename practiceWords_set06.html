@@ -80,6 +80,89 @@
             background: #94a3b8;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .fade-enter {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            75% {
+                transform: translateX(5px);
+            }
+        }
+
+        .animate-pop {
+            animation: pop 0.3s ease-out;
+        }
+
+        .animate-shake {
+            animation: shake 0.4s ease-in-out;
+        }
+
+        .progress-bar {
+            transition: width 1s linear;
+        }
+
+        /* Custom Scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
 </head>
 
 <body class="bg-background-light font-display">
@@ -125,17 +208,22 @@
                         <!-- Filled by JS -->
                     </div>
 
-                    <div class="mt-6 pt-6 border-t border-brand-subtle flex flex-col gap-3">
-                        <button id="startBtn"
-                            class="w-full py-4 text-white font-bold text-lg rounded-xl shadow-lg bg-primary hover:bg-primary/90 transform active:scale-95 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
-                            <span class="material-symbols-outlined">play_circle</span>
-                            Start Practice
+                    <div class="grid grid-cols-2 gap-4 mt-6 pt-6 border-t border-brand-subtle">
+                        <button id="startPracticeBtn"
+                            class="py-4 rounded-xl font-bold text-lg bg-white border-2 border-brand-subtle text-brand-dark hover:border-primary hover:text-primary transition-all flex flex-col items-center justify-center gap-1 group shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed">
+                            <span
+                                class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">school</span>
+                            <span>Practice Mode</span>
+                        </button>
+                        <button id="startQuizBtn"
+                            class="py-4 rounded-xl font-bold text-lg bg-primary text-white shadow-lg shadow-primary/30 hover:bg-primary/90 hover:-translate-y-1 transition-all flex flex-col items-center justify-center gap-1 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed">
+                            <span class="material-symbols-outlined text-3xl animate-bounce">sports_esports</span>
+                            <span>Quiz Game</span>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Practice Area (Hidden initially) -->
             <div id="practiceArea" class="hidden flex-col gap-6 w-full max-w-2xl mx-auto">
                 <!-- Status Bar -->
                 <div class="flex items-center justify-between text-sm font-bold text-muted-indigo">
@@ -169,6 +257,59 @@
                 </div>
             </div>
 
+            <!-- Quiz Area -->
+            <div id="quizArea" class="hidden flex-col gap-6 w-full max-w-2xl mx-auto fade-enter">
+                <!-- Quiz Header -->
+                <div
+                    class="flex items-center justify-between bg-white p-4 rounded-2xl shadow-sm border border-brand-subtle">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2 px-3 py-1.5 bg-brand-subtle/50 rounded-lg">
+                            <span class="text-sm font-bold text-muted-indigo">Progress</span>
+                            <span id="quizProgressText" class="text-primary font-black">1/10</span>
+                        </div>
+                        <div class="flex gap-1" id="livesContainer">
+                            <!-- Hearts -->
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div id="streakContainer"
+                            class="hidden items-center gap-2 px-3 py-1 bg-orange-100 text-orange-600 rounded-full animate-pulse">
+                            <span class="material-symbols-outlined text-lg">local_fire_department</span>
+                            <span id="streakCount" class="font-black">3</span>
+                        </div>
+                        <div class="px-4 py-1.5 bg-brand-dark text-white rounded-lg font-black tracking-wider"
+                            id="quizScoreText">
+                            0
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="h-3 w-full bg-brand-subtle rounded-full overflow-hidden">
+                    <div id="quizProgressBar" class="h-full bg-primary transition-all duration-500 ease-out"
+                        style="width: 0%"></div>
+                </div>
+
+                <!-- Question Hero -->
+                <div
+                    class="bg-gradient-to-br from-brand-subtle/50 to-white p-8 rounded-3xl border border-brand-subtle/60 text-center relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent">
+                    </div>
+                    <h2 class="text-sm font-bold text-muted-indigo uppercase tracking-widest mb-2">Translate to Japanese
+                    </h2>
+                    <div class="flex flex-col gap-1">
+                        <h3 id="quizWordEn" class="text-4xl sm:text-5xl font-black text-brand-dark drop-shadow-sm"></h3>
+                        <p id="quizWordSi" class="text-xl text-muted-indigo/80 font-medium"></p>
+                    </div>
+                </div>
+
+                <!-- Options Grid -->
+                <div id="quizOptionsGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Buttons generated by JS -->
+                </div>
+            </div>
+
             <!-- Results Panel (Hidden initially) -->
             <div id="resultsPanel" class="hidden flex-col gap-8 fade-enter">
                 <div class="text-center">
@@ -198,28 +339,28 @@
     <script>
         const wordList = [
             // Set 06
-            { jp: "じしょ", en: "Dictionary", si: "ශබ්දකෝෂය" },
-            { jp: "りょかん", en: "Traditional Japanese Hotel", si: "ජපන් හෝටලය" },
-            { jp: "としょかん", en: "Library", si: "පුස්තකාලය" },
-            { jp: "おちゃ", en: "Green Tea", si: "ජපන් තේ (Green Tea)" },
-            { jp: "ちゃいろ", en: "Brown", si: "දුඹුරු පාට" },
-            { jp: "でんしゃ", en: "Train", si: "දුම්රිය" },
-            { jp: "いしゃ", en: "Doctor", si: "වෛද්‍යවරයා" },
-            { jp: "おいしゃさん", en: "Doctor (polite)", si: "වෛද්‍යවරයා (ගෞරවවාචී)" },
-            { jp: "しょくじ", en: "Meal", si: "ආහාර වේල" },
-            { jp: "うんてんしゅ", en: "Driver", si: "රියදුරා" },
-            { jp: "かしゅ", en: "Singer", si: "ගායකයා" },
-            { jp: "ひゃく", en: "100", si: "100 (සියය)" },
-            { jp: "さんびゃく", en: "300", si: "300 (තුන්සියය)" },
-            { jp: "しゃかい", en: "Society", si: "සමාජය" },
-            { jp: "かいしゃ", en: "Company", si: "සමාගම" },
-            { jp: "しゃしん", en: "Photograph", si: "ඡායාරූපය" },
-            { jp: "しゅくだい", en: "Homework", si: "ගෙදර වැඩ" },
-            { jp: "しょるい", en: "Documents", si: "ලියකියවිලි" },
-            { jp: "しゅるい", en: "Type", si: "වර්ග" },
-            { jp: "おきゃくさん", en: "Guest / Customer", si: "ආගන්තුකයා / පාරිභෝගිකයා" },
-            { jp: "せんしゅ", en: "Athlete/Player", si: "ක්‍රීඩකයා" },
-            { jp: "しあい", en: "Match/Game", si: "තරගය" }
+            { jp: "じしょ", en: "Dictionary", si: "ශබ්දකෝෂය", romaji: "jisho" },
+            { jp: "りょかん", en: "Traditional Japanese Hotel", si: "ජපන් හෝටලය", romaji: "ryokan" },
+            { jp: "としょかん", en: "Library", si: "පුස්තකාලය", romaji: "toshokan" },
+            { jp: "おちゃ", en: "Green Tea", si: "ජපන් තේ (Green Tea)", romaji: "ocha" },
+            { jp: "ちゃいろ", en: "Brown", si: "දුඹුරු පාට", romaji: "chairo" },
+            { jp: "でんしゃ", en: "Train", si: "දුම්රිය", romaji: "densha" },
+            { jp: "いしゃ", en: "Doctor", si: "වෛද්‍යවරයා", romaji: "isha" },
+            { jp: "おいしゃさん", en: "Doctor (polite)", si: "වෛද්‍යවරයා (ගෞරවවාචී)", romaji: "oishasan" },
+            { jp: "しょくじ", en: "Meal", si: "ආහාර වේල", romaji: "shokuji" },
+            { jp: "うんてんしゅ", en: "Driver", si: "රියදුරා", romaji: "untenshu" },
+            { jp: "かしゅ", en: "Singer", si: "ගායකයා", romaji: "kashu" },
+            { jp: "ひゃく", en: "100", si: "100 (සියය)", romaji: "hyaku" },
+            { jp: "さんびゃく", en: "300", si: "300 (තුන්සියය)", romaji: "sanbyaku" },
+            { jp: "しゃかい", en: "Society", si: "සමාජය", romaji: "shakai" },
+            { jp: "かいしゃ", en: "Company", si: "සමාගම", romaji: "kaisha" },
+            { jp: "しゃしん", en: "Photograph", si: "ඡායාරූපය", romaji: "shashin" },
+            { jp: "しゅくだい", en: "Homework", si: "ගෙදර වැඩ", romaji: "shukudai" },
+            { jp: "しょるい", en: "Documents", si: "ලියකියවිලි", romaji: "shorui" },
+            { jp: "しゅるい", en: "Type", si: "වර්ග", romaji: "shurui" },
+            { jp: "おきゃくさん", en: "Guest / Customer", si: "ආගන්තුකයා / පාරිභෝගිකයා", romaji: "okyakusan" },
+            { jp: "せんしゅ", en: "Athlete/Player", si: "ක්‍රීඩකයා", romaji: "senshu" },
+            { jp: "しあい", en: "Match/Game", si: "තරගය", romaji: "shiai" }
         ];
 
         // UI Elements
@@ -227,7 +368,8 @@
         const selectionGrid = document.getElementById('selectionGrid');
         const selectAllBtn = document.getElementById('selectAllBtn');
         const selectedCount = document.getElementById('selectedCount');
-        const startBtn = document.getElementById('startBtn');
+        const startPracticeBtn = document.getElementById('startPracticeBtn');
+        const startQuizBtn = document.getElementById('startQuizBtn');
 
         const practiceArea = document.getElementById('practiceArea');
         const preCountdown = document.getElementById('preCountdown');
@@ -239,6 +381,18 @@
         const timerText = document.getElementById('timerText');
         const timerBar = document.getElementById('timerBar');
 
+        // Quiz UI
+        const quizArea = document.getElementById('quizArea');
+        const quizProgressText = document.getElementById('quizProgressText');
+        const livesContainer = document.getElementById('livesContainer');
+        const streakContainer = document.getElementById('streakContainer');
+        const streakCount = document.getElementById('streakCount');
+        const quizScoreText = document.getElementById('quizScoreText');
+        const quizWordEn = document.getElementById('quizWordEn');
+        const quizWordSi = document.getElementById('quizWordSi');
+        const quizOptionsGrid = document.getElementById('quizOptionsGrid');
+        const quizProgressBar = document.getElementById('quizProgressBar');
+
         const resultsPanel = document.getElementById('resultsPanel');
         const resultsList = document.getElementById('resultsList');
 
@@ -246,6 +400,13 @@
         let currentIndex = 0;
         let shuffledWords = [];
         let timerInterval;
+        let isQuizMode = false;
+
+        // Quiz State
+        let lives = 3;
+        let quizScore = 0;
+        let currentStreak = 0;
+        let quizProcessing = false;
 
         // Initialize Selection Grid
         function initGrid() {
@@ -263,8 +424,11 @@
 
                     <!-- Text Content -->
                     <div class="flex flex-col">
-                        <span class="text-brand-dark font-black text-2xl leading-tight group-hover:text-primary transition-colors">${word.jp}</span>
-                        <div class="text-sm font-bold text-muted-indigo/80 flex items-center gap-2 mt-0.5">
+                        <div class="flex items-baseline gap-2">
+                             <span class="text-brand-dark font-black text-2xl leading-tight group-hover:text-primary transition-colors">${word.jp}</span>
+                             <span class="text-sm font-bold text-muted-indigo/60">${word.romaji}</span>
+                        </div>
+                        <div class="text-xs font-bold text-muted-indigo/80 flex items-center gap-2 mt-0.5">
                             <span>${word.en}</span>
                             <span class="w-1 h-1 rounded-full bg-muted-indigo/40"></span>
                             <span>${word.si}</span>
@@ -286,9 +450,15 @@
             selectAllBtn.checked = checked.length === checkboxes.length;
             selectAllBtn.indeterminate = checked.length > 0 && checked.length < checkboxes.length;
 
-            // Disable Start Button if 0 selected
-            startBtn.disabled = checked.length === 0;
-            startBtn.classList.toggle('opacity-50', checked.length === 0);
+            // Disable Start Buttons if 0 selected
+            const disabled = checked.length === 0;
+            startPracticeBtn.disabled = disabled;
+            startQuizBtn.disabled = disabled;
+
+            [startPracticeBtn, startQuizBtn].forEach(btn => {
+                btn.classList.toggle('opacity-50', disabled);
+                btn.classList.toggle('cursor-not-allowed', disabled);
+            });
         }
 
         // Event Listeners
@@ -308,23 +478,44 @@
             return array.sort(() => Math.random() - 0.5);
         }
 
-        startBtn.addEventListener('click', () => {
+        startPracticeBtn.addEventListener('click', () => startSession(false));
+        startQuizBtn.addEventListener('click', () => startSession(true));
+
+        function startSession(quizMode) {
             // Gather selected words
             const checkboxes = document.querySelectorAll('.word-checkbox:checked');
             const selectedIndices = Array.from(checkboxes).map(cb => parseInt(cb.dataset.index));
-
             const selectedWords = selectedIndices.map(i => wordList[i]);
 
             if (selectedWords.length === 0) return;
 
             shuffledWords = shuffle([...selectedWords]);
+            isQuizMode = quizMode;
+            currentIndex = 0;
 
             startPanel.classList.add('hidden');
-            practiceArea.classList.remove('hidden');
-            practiceArea.classList.add('flex');
 
-            startPreCountdown();
-        });
+            if (isQuizMode) {
+                // Init Quiz
+                quizScore = 0;
+                currentStreak = 0;
+                lives = 3;
+                updateStreakUI();
+                updateLivesUI();
+
+                quizArea.classList.remove('hidden');
+                quizArea.classList.add('flex');
+
+                loadQuizQuestion();
+            } else {
+                // Init Practice
+                practiceArea.classList.remove('hidden');
+                practiceArea.classList.add('flex');
+                startPreCountdown();
+            }
+        }
+
+        // --- PRACTICE MODE LOGIC ---
 
         function startPreCountdown() {
             preCountdown.classList.remove('hidden');
@@ -379,16 +570,165 @@
             }, 50);
         }
 
+        // --- QUIZ GAME LOGIC ---
+
+        function updateLivesUI() {
+            livesContainer.innerHTML = '';
+            for (let i = 0; i < 3; i++) {
+                const heart = document.createElement('span');
+                heart.className = `material-symbols-outlined ${i < lives ? 'text-red-500 font-filled' : 'text-gray-300'}`;
+                heart.innerText = 'favorite';
+                livesContainer.appendChild(heart);
+            }
+        }
+
+        function updateStreakUI() {
+            streakCount.innerText = currentStreak;
+            if (currentStreak > 1) {
+                streakContainer.classList.remove('hidden');
+                streakContainer.classList.add('flex');
+            } else {
+                streakContainer.classList.add('hidden');
+                streakContainer.classList.remove('flex');
+            }
+        }
+
+        function loadQuizQuestion() {
+            if (currentIndex >= shuffledWords.length || lives <= 0) {
+                showResults();
+                return;
+            }
+
+            const word = shuffledWords[currentIndex];
+            quizWordEn.textContent = word.en;
+            quizWordSi.textContent = word.si;
+
+            quizProgressText.innerText = `${currentIndex + 1}/${shuffledWords.length}`;
+            quizScoreText.innerText = `${quizScore}`;
+
+            // Update Progress Bar
+            const progress = ((currentIndex) / shuffledWords.length) * 100;
+            quizProgressBar.style.width = `${progress}%`;
+
+            // Generate Options
+            const correct = word;
+            const otherWords = wordList.filter(w => w.jp !== correct.jp);
+            const distractors = shuffle(otherWords).slice(0, 3);
+            const options = shuffle([correct, ...distractors]);
+
+            quizOptionsGrid.innerHTML = '';
+            quizProcessing = false;
+
+            options.forEach(opt => {
+                const btn = document.createElement('button');
+                // 3D Button Style
+                btn.className = "group w-full py-5 rounded-2xl border-2 border-b-4 border-brand-subtle bg-white text-brand-dark font-black text-xl hover:border-primary hover:border-b-primary hover:-translate-y-0.5 active:border-b-2 active:translate-y-0.5 transition-all shadow-sm relative overflow-hidden flex flex-col items-center justify-center gap-1";
+                btn.setAttribute('data-word', opt.jp);
+
+                btn.innerHTML = `
+                    <span class="text-2xl group-hover:text-primary transition-colors">${opt.jp}</span>
+                    <span class="text-xs text-gray-400 font-bold group-hover:text-primary/60 transition-colors">${opt.romaji}</span>
+                `;
+
+                btn.onclick = () => handleQuizAnswer(btn, opt, correct);
+                quizOptionsGrid.appendChild(btn);
+            });
+        }
+
+        function handleQuizAnswer(btn, selected, correct) {
+            if (quizProcessing) return;
+            quizProcessing = true;
+
+            if (selected.jp === correct.jp) {
+                // Correct
+                quizScore++;
+                currentStreak++;
+                updateStreakUI();
+                quizScoreText.innerText = `${quizScore}`;
+
+                // Success State - Solid Green
+                btn.classList.remove('bg-white', 'text-brand-dark', 'border-brand-subtle', 'hover:border-primary', 'hover:border-b-primary', 'border-b-4');
+                btn.classList.add('bg-green-500', 'border-green-600', 'border-b-4', 'text-white', 'animate-pop');
+
+                // Fix inner text colors
+                const spans = btn.querySelectorAll('span');
+                spans.forEach(s => s.classList.remove('text-brand-dark', 'text-gray-400', 'group-hover:text-primary'));
+                spans.forEach(s => s.classList.add('text-white'));
+
+                // Trigger Confetti
+                if (currentStreak > 2) {
+                    confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: { y: 0.6 },
+                        colors: ['#ee2b3b', '#ffffff', '#ffd7e6'] // Brand colors
+                    });
+                }
+            } else {
+                // Wrong
+                lives--;
+                currentStreak = 0;
+                updateStreakUI();
+                updateLivesUI();
+
+                if (btn) {
+                    // Error State - Solid Red
+                    btn.classList.remove('bg-white', 'text-brand-dark', 'border-brand-subtle', 'hover:border-primary', 'hover:border-b-primary', 'border-b-4');
+                    btn.classList.add('bg-red-500', 'border-red-600', 'border-b-4', 'text-white', 'animate-shake');
+
+                    const spans = btn.querySelectorAll('span');
+                    spans.forEach(s => s.classList.remove('text-brand-dark', 'text-gray-400', 'group-hover:text-primary'));
+                    spans.forEach(s => s.classList.add('text-white'));
+                }
+
+                // Highlight Correct
+                Array.from(quizOptionsGrid.children).forEach(b => {
+                    if (b.getAttribute('data-word') === correct.jp) {
+                        b.classList.remove('bg-white', 'text-brand-dark', 'border-brand-subtle', 'border-b-4');
+                        b.classList.add('bg-green-500', 'border-green-600', 'border-b-4', 'text-white');
+                        const spans = b.querySelectorAll('span');
+                        spans.forEach(s => s.classList.remove('text-gray-400', 'text-brand-dark'));
+                        spans.forEach(s => s.classList.add('text-white'));
+                    }
+                });
+            }
+
+            // Wait before next
+            setTimeout(() => {
+                if (lives > 0) {
+                    currentIndex++;
+                    loadQuizQuestion();
+                } else {
+                    showResults(); // Game Over
+                }
+            }, 1200);
+        }
+
         function showResults() {
             practiceArea.classList.add('hidden');
+            quizArea.classList.add('hidden'); // Also hide quiz area if present
             resultsPanel.classList.remove('hidden');
             resultsPanel.classList.add('flex');
 
+            // Custom Header based on mode
+            const header = resultsPanel.querySelector('h2');
+            if (isQuizMode) {
+                if (lives <= 0) {
+                    header.innerText = `Game Over! Score: ${quizScore} 💔`;
+                } else {
+                    header.innerText = `Quiz Complete! Score: ${quizScore}/${shuffledWords.length} 🎉`;
+                }
+            } else {
+                header.innerText = "Practice Complete! 🎉";
+            }
+
+            resultsList.innerHTML = ''; // Clear previous results
             shuffledWords.forEach(word => {
                 const card = document.createElement('div');
                 card.className = "bg-white p-4 rounded-xl border border-brand-subtle shadow-sm flex flex-col items-center gap-1";
                 card.innerHTML = `
                     <span class="text-3xl font-black text-primary mb-1">${word.jp}</span>
+                    <span class="text-xs font-bold text-gray-400 mb-1">${word.romaji}</span>
                     <span class="text-sm font-bold text-brand-dark">${word.en}</span>
                     <span class="text-xs text-muted-indigo">${word.si}</span>
                 `;
