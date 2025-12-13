@@ -512,7 +512,6 @@
                     <div class="flex flex-col">
                         <div class="flex items-baseline gap-2">
                              <span class="text-brand-dark font-black text-2xl leading-tight group-hover:text-primary transition-colors">${word.jp}</span>
-                             <span class="text-sm font-bold text-muted-indigo/60">${word.romaji}</span>
                         </div>
                         <div class="text-xs font-bold text-muted-indigo/80 flex items-center gap-2 mt-0.5">
                             <span>${word.en}</span>
@@ -713,7 +712,6 @@
 
                 btn.innerHTML = `
                     <span class="text-2xl group-hover:text-primary transition-colors">${opt.jp}</span>
-                    <span class="text-xs text-gray-400 font-bold group-hover:text-primary/60 transition-colors">${opt.romaji}</span>
                 `;
 
                 btn.onclick = () => handleQuizAnswer(btn, opt, correct);
@@ -814,7 +812,6 @@
                 card.className = "bg-white p-4 rounded-xl border border-brand-subtle shadow-sm flex flex-col items-center gap-1";
                 card.innerHTML = `
                     <span class="text-3xl font-black text-primary mb-1">${word.jp}</span>
-                    <span class="text-xs font-bold text-gray-400 mb-1">${word.romaji}</span>
                     <span class="text-sm font-bold text-brand-dark">${word.en}</span>
                     <span class="text-xs text-muted-indigo">${word.si}</span>
                 `;
