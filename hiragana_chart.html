@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VTJR4ZW26"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9VTJR4ZW26');
+    </script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Hiragana Full Alphabet Chart - My Nihongo Path</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="icon" type="image/x-icon" href="images/siteIcoRed.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b3b",
+                        "background-light": "#fcf8f8",
+                        "brand-dark": "#1b0d0f",
+                        "brand-light": "#fcf8f8",
+                        "brand-subtle": "#f3e7e8",
+                        "muted-indigo": "#5C6784",
+                        "secondary": "#1A1A1A"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem"
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        /* --- CHART STYLES (Kept from previous version, adapted) --- */
+        :root {
+            --print-border: #2c3e50;
+        }
+
+        .chart-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .section-box {
+            break-inside: avoid;
+        }
+
+        .section-header {
+            background: #ee2b3b;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            display: inline-block;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* --- Grid System for Characters --- */
+        .kana-table {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+        }
+
+        .kana-table.yoon {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .cell {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px 5px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+        }
+
+        .cell.empty {
+            border: none;
+            background: transparent;
+        }
+
+        .char-main {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            font-size: 2rem;
+            color: #2c3e50;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .char-sub {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+
+        /* Custom Hover Effect for on-screen view */
+        .cell:not(.empty):hover {
+            border-color: #ee2b3b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+        }
+
+        /* --- PRINT STYLES --- */
+        @media print {
+            @page {
+                margin: 5mm;
+            }
+
+            body {
+                background: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                font-size: 10pt;
+            }
+
+            /* Hide site UI */
+            nav,
+            footer,
+            .print-controls,
+            .back-link,
+            .site-ui-hide {
+                display: none !important;
+            }
+
+            /* Reset container for print */
+            main.max-w-7xl {
+                max-width: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                padding-top: 0 !important;
+            }
+
+            .layout-content-container {
+                max-width: none !important;
+                width: 100% !important;
+            }
+
+            .chart-container-wrapper {
+                box-shadow: none !important;
+                padding: 0 !important;
+                background: white !important;
+                border: none !important;
+            }
+
+            .header-area {
+                margin-bottom: 5px;
+                padding-bottom: 2px;
+                border-bottom: 1px solid #000;
+                text-align: center;
+            }
+
+            .header-area h1 {
+                font-size: 16pt;
+                margin: 0;
+                color: black;
+            }
+
+            .header-area p {
+                font-size: 9pt;
+                margin: 0;
+                color: #555;
+            }
+
+            .section-header {
+                font-size: 10pt;
+                background: transparent;
+                color: black;
+                border-bottom: 1px solid #000;
+                margin-bottom: 5px;
+                padding: 2px 0;
+                border-radius: 0;
+                font-weight: 800;
+            }
+
+            /* Common Grid defaults for Print */
+            .kana-table {
+                display: grid;
+                gap: 0;
+                border: 1px solid #000;
+            }
+
+            .kana-table.yoon {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .cell {
+                border-radius: 0;
+                border: 1px solid #ddd;
+                padding: 2px;
+                page-break-inside: avoid;
+                box-shadow: none;
+                transform: none;
+            }
+
+            .char-main {
+                font-family: 'Zen Maru Gothic', sans-serif;
+                color: black;
+            }
+
+            .char-sub {
+                color: #444;
+            }
+
+            /* --- A4 PORTRAIT OPTIMIZATION (1 Page) --- */
+            body.print-a4-optimized .chart-grid {
+                display: grid;
+                grid-template-columns: 58% 40%;
+                /* 2 Columns */
+                gap: 10px;
+                align-items: start;
+            }
+
+            body.print-a4-optimized .kana-table {
+                grid-template-columns: repeat(5, 1fr);
+            }
+
+            body.print-a4-optimized .kana-table.yoon {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            body.print-a4-optimized .col-right {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            body.print-a4-optimized .char-main {
+                font-size: 14pt;
+                line-height: 1.1;
+            }
+
+            body.print-a4-optimized .char-sub {
+                font-size: 8pt;
+            }
+
+            /* --- A3 LANDSCAPE OPTIMIZATION (1 Page) --- */
+            body.print-a3-landscape .chart-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                /* 3 Equal Columns */
+                gap: 20px;
+                align-items: start;
+            }
+
+            body.print-a3-landscape .col-right {
+                display: contents;
+                /* This effectively removes .col-right div from rendering, putting children into main grid */
+            }
+
+            body.print-a3-landscape .char-main {
+                font-size: 20pt;
+            }
+
+            body.print-a3-landscape .char-sub {
+                font-size: 10pt;
+            }
+
+            body.print-a3-landscape .section-box {
+                margin-top: 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer"
+                    onclick="window.location.href='index.html'">
+                    <img class="h-10 w-10 md:h-12 md:w-12" src="images/siteIcoRed.png" alt="Logo">
+                    <span class="font-bold text-2xl tracking-tight text-secondary">My <span
+                            class="text-primary">Nihongo</span> Path</span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="nav-link-animated text-gray-600 hover:text-primary font-medium text-lg px-3 py-2 rounded-lg transition-colors">Home</a>
+                    <a href="activities.html"
+                        class="nav-link-animated text-gray-600 hover:text-primary font-medium text-lg px-3 py-2 rounded-lg transition-colors">Activities</a>
+                    <a href="about.html"
+                        class="nav-link-animated text-gray-600 hover:text-primary font-medium text-lg px-3 py-2 rounded-lg transition-colors">About</a>
+                    <a href="faq.html"
+                        class="nav-link-animated text-gray-600 hover:text-primary font-medium text-lg px-3 py-2 rounded-lg transition-colors">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div class="layout-content-container flex flex-col w-full max-w-[1100px] gap-8 mx-auto">
+
+            <!-- Breadcrumb / Back -->
+            <div class="flex items-center gap-2 text-muted-indigo site-ui-hide">
+                <a href="activities.html"
+                    class="flex items-center gap-1 hover:text-primary transition-colors font-medium">
+                    <span class="material-symbols-outlined text-lg">arrow_back</span>
+                    Back to Activities
+                </a>
+            </div>
+
+            <!-- Page Title Area (visible on screen) -->
+            <div class="flex flex-col gap-2 text-left site-ui-hide">
+                <h1 class="text-brand-dark text-3xl font-black tracking-[-0.03em]">Printable Hiragana Chart</h1>
+                <p class="text-muted-indigo">Full alphabet reference formatted for printing on A4 (Portrait) or A3
+                    (Landscape).</p>
+            </div>
+
+            <!-- Print Buttons Area -->
+            <div
+                class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-wrap gap-4 items-center justify-center print-controls">
+                <span class="text-brand-dark font-bold mr-2">Print Options:</span>
+                <button onclick="printChart('a4')"
+                    class="flex items-center gap-2 rounded-full bg-primary text-white font-bold px-6 py-3 hover:bg-primary/90 transition shadow-sm hover:shadow-md">
+                    <span class="material-symbols-outlined">print</span> Print A4 (Portrait)
+                </button>
+                <button onclick="printChart('a3')"
+                    class="flex items-center gap-2 rounded-full bg-secondary text-white font-bold px-6 py-3 hover:bg-gray-800 transition shadow-sm hover:shadow-md">
+                    <span class="material-symbols-outlined">photo_size_select_large</span> Print A3 (Landscape)
+                </button>
+            </div>
+
+            <!-- CHART VISUAL PREVIEW AREA (The actual chart DOM) -->
+            <div
+                class="bg-white rounded-xl shadow-sm border border-brand-subtle p-8 chart-container-wrapper chart-container">
+
+                <!-- Print Header (Hidden normally, shown in print via CSS if needed, but we use special logic) -->
+                <div class="header-area hidden print:block">
+                    <h1>Hiragana Chart</h1>
+                    <p>Complete Reference Guide</p>
+                </div>
+
+                <!-- MAIN CHART GRID -->
+                <div class="chart-grid" id="chartGrid">
+
+                    <!-- Left Column (Part 1) -->
+                    <div class="section-box col-main">
+                        <div class="section-header">Part 1: Seion (Basic)</div>
+                        <div class="kana-table">
+                            <!-- A -->
+                            <div class="cell"><span class="char-main">あ</span><span class="char-sub">a</span></div>
+                            <div class="cell"><span class="char-main">い</span><span class="char-sub">i</span></div>
+                            <div class="cell"><span class="char-main">う</span><span class="char-sub">u</span></div>
+                            <div class="cell"><span class="char-main">え</span><span class="char-sub">e</span></div>
+                            <div class="cell"><span class="char-main">お</span><span class="char-sub">o</span></div>
+                            <!-- Ka -->
+                            <div class="cell"><span class="char-main">か</span><span class="char-sub">ka</span></div>
+                            <div class="cell"><span class="char-main">き</span><span class="char-sub">ki</span></div>
+                            <div class="cell"><span class="char-main">く</span><span class="char-sub">ku</span></div>
+                            <div class="cell"><span class="char-main">け</span><span class="char-sub">ke</span></div>
+                            <div class="cell"><span class="char-main">こ</span><span class="char-sub">ko</span></div>
+                            <!-- Sa -->
+                            <div class="cell"><span class="char-main">さ</span><span class="char-sub">sa</span></div>
+                            <div class="cell"><span class="char-main">し</span><span class="char-sub">shi</span></div>
+                            <div class="cell"><span class="char-main">す</span><span class="char-sub">su</span></div>
+                            <div class="cell"><span class="char-main">せ</span><span class="char-sub">se</span></div>
+                            <div class="cell"><span class="char-main">そ</span><span class="char-sub">so</span></div>
+                            <!-- Ta -->
+                            <div class="cell"><span class="char-main">た</span><span class="char-sub">ta</span></div>
+                            <div class="cell"><span class="char-main">ち</span><span class="char-sub">chi</span></div>
+                            <div class="cell"><span class="char-main">つ</span><span class="char-sub">tsu</span></div>
+                            <div class="cell"><span class="char-main">て</span><span class="char-sub">te</span></div>
+                            <div class="cell"><span class="char-main">と</span><span class="char-sub">to</span></div>
+                            <!-- Na -->
+                            <div class="cell"><span class="char-main">な</span><span class="char-sub">na</span></div>
+                            <div class="cell"><span class="char-main">に</span><span class="char-sub">ni</span></div>
+                            <div class="cell"><span class="char-main">ぬ</span><span class="char-sub">nu</span></div>
+                            <div class="cell"><span class="char-main">ね</span><span class="char-sub">ne</span></div>
+                            <div class="cell"><span class="char-main">の</span><span class="char-sub">no</span></div>
+                            <!-- Ha -->
+                            <div class="cell"><span class="char-main">は</span><span class="char-sub">ha</span></div>
+                            <div class="cell"><span class="char-main">ひ</span><span class="char-sub">hi</span></div>
+                            <div class="cell"><span class="char-main">ふ</span><span class="char-sub">fu</span></div>
+                            <div class="cell"><span class="char-main">へ</span><span class="char-sub">he</span></div>
+                            <div class="cell"><span class="char-main">ほ</span><span class="char-sub">ho</span></div>
+                            <!-- Ma -->
+                            <div class="cell"><span class="char-main">ま</span><span class="char-sub">ma</span></div>
+                            <div class="cell"><span class="char-main">み</span><span class="char-sub">mi</span></div>
+                            <div class="cell"><span class="char-main">む</span><span class="char-sub">mu</span></div>
+                            <div class="cell"><span class="char-main">め</span><span class="char-sub">me</span></div>
+                            <div class="cell"><span class="char-main">も</span><span class="char-sub">mo</span></div>
+                            <!-- Ya -->
+                            <div class="cell"><span class="char-main">や</span><span class="char-sub">ya</span></div>
+                            <div class="cell empty"></div>
+                            <div class="cell"><span class="char-main">ゆ</span><span class="char-sub">yu</span></div>
+                            <div class="cell empty"></div>
+                            <div class="cell"><span class="char-main">よ</span><span class="char-sub">yo</span></div>
+                            <!-- Ra -->
+                            <div class="cell"><span class="char-main">ら</span><span class="char-sub">ra</span></div>
+                            <div class="cell"><span class="char-main">り</span><span class="char-sub">ri</span></div>
+                            <div class="cell"><span class="char-main">る</span><span class="char-sub">ru</span></div>
+                            <div class="cell"><span class="char-main">れ</span><span class="char-sub">re</span></div>
+                            <div class="cell"><span class="char-main">ろ</span><span class="char-sub">ro</span></div>
+                            <!-- Wa/N -->
+                            <div class="cell"><span class="char-main">わ</span><span class="char-sub">wa</span></div>
+                            <div class="cell empty"></div>
+                            <div class="cell empty"></div>
+                            <div class="cell empty"></div>
+                            <div class="cell"><span class="char-main">を</span><span class="char-sub">wo</span></div>
+                            <div class="cell"><span class="char-main">ん</span><span class="char-sub">n</span></div>
+                            <div class="cell empty"></div>
+                            <div class="cell empty"></div>
+                            <div class="cell empty"></div>
+                            <div class="cell empty"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column (Part 2 and 3) -->
+                    <div class="col-right">
+                        <!-- Part 2 -->
+                        <div class="section-box">
+                            <div class="section-header">Part 2: Dakuon (Voiced)</div>
+                            <div class="kana-table">
+                                <!-- Ga -->
+                                <div class="cell"><span class="char-main">が</span><span class="char-sub">ga</span></div>
+                                <div class="cell"><span class="char-main">ぎ</span><span class="char-sub">gi</span></div>
+                                <div class="cell"><span class="char-main">ぐ</span><span class="char-sub">gu</span></div>
+                                <div class="cell"><span class="char-main">げ</span><span class="char-sub">ge</span></div>
+                                <div class="cell"><span class="char-main">ご</span><span class="char-sub">go</span></div>
+                                <!-- Za -->
+                                <div class="cell"><span class="char-main">ざ</span><span class="char-sub">za</span></div>
+                                <div class="cell"><span class="char-main">じ</span><span class="char-sub">ji</span></div>
+                                <div class="cell"><span class="char-main">ず</span><span class="char-sub">zu</span></div>
+                                <div class="cell"><span class="char-main">ぜ</span><span class="char-sub">ze</span></div>
+                                <div class="cell"><span class="char-main">ぞ</span><span class="char-sub">zo</span></div>
+                                <!-- Da -->
+                                <div class="cell"><span class="char-main">だ</span><span class="char-sub">da</span></div>
+                                <div class="cell"><span class="char-main">ぢ</span><span class="char-sub">ji</span></div>
+                                <div class="cell"><span class="char-main">づ</span><span class="char-sub">zu</span></div>
+                                <div class="cell"><span class="char-main">で</span><span class="char-sub">de</span></div>
+                                <div class="cell"><span class="char-main">ど</span><span class="char-sub">do</span></div>
+                                <!-- Ba -->
+                                <div class="cell"><span class="char-main">ば</span><span class="char-sub">ba</span></div>
+                                <div class="cell"><span class="char-main">び</span><span class="char-sub">bi</span></div>
+                                <div class="cell"><span class="char-main">ぶ</span><span class="char-sub">bu</span></div>
+                                <div class="cell"><span class="char-main">べ</span><span class="char-sub">be</span></div>
+                                <div class="cell"><span class="char-main">ぼ</span><span class="char-sub">bo</span></div>
+                                <!-- Pa -->
+                                <div class="cell"><span class="char-main">ぱ</span><span class="char-sub">pa</span></div>
+                                <div class="cell"><span class="char-main">ぴ</span><span class="char-sub">pi</span></div>
+                                <div class="cell"><span class="char-main">ぷ</span><span class="char-sub">pu</span></div>
+                                <div class="cell"><span class="char-main">ぺ</span><span class="char-sub">pe</span></div>
+                                <div class="cell"><span class="char-main">ぽ</span><span class="char-sub">po</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Part 3 -->
+                        <div class="section-box" style="margin-top: 15px;">
+                            <div class="section-header">Part 3: Yoon (Combo)</div>
+                            <div class="kana-table yoon">
+                                <!-- Combo Rows -->
+                                <div class="cell"><span class="char-main">きゃ</span><span class="char-sub">kya</span>
+                                </div>
+                                <div class="cell"><span class="char-main">きゅ</span><span class="char-sub">kyu</span>
+                                </div>
+                                <div class="cell"><span class="char-main">きょ</span><span class="char-sub">kyo</span>
+                                </div>
+
+                                <div class="cell"><span class="char-main">しゃ</span><span class="char-sub">sha</span>
+                                </div>
+                                <div class="cell"><span class="char-main">しゅ</span><span class="char-sub">shu</span>
+                                </div>
+                                <div class="cell"><span class="char-main">しょ</span><span class="char-sub">sho</span>
+                                </div>
+
+                                <div class="cell"><span class="char-main">ちゃ</span><span class="char-sub">cha</span>
+                                </div>
+                                <div class="cell"><span class="char-main">ちゅ</span><span class="char-sub">chu</span>
+                                </div>
+                                <div class="cell"><span class="char-main">ちょ</span><span class="char-sub">cho</span>
+                                </div>
+
+                                <div class="cell"><span class="char-main">にゃ</span><span class="char-sub">nya</span>
+                                </div>
+                                <div class="cell"><span class="char-main">にゅ</span><span class="char-sub">nyu</span>
+                                </div>
+                                <div class="cell"><span class="char-main">にょ</span><span class="char-sub">nyo</span>
+                                </div>
+
+                                <div class="cell"><span class="char-main">ひゃ</span><span class="char-sub">hya</span>
+                                </div>
+                                <div class="cell"><span class="char-main">ひゅ</span><span class="char-sub">hyu</span>
+                                </div>
+                                <div class="cell"><span class="char-main">ひょ</span><span class="char-sub">hyo</span>
+                                </div>
+
+                                <div class="cell"><span class="char-main">みゃ</span><span class="char-sub">mya</span>
+                                </div>
+                                <div class="cell"><span class="char-main">みゅ</span><span class="char-sub">myu</span>
+                                </div>
+                                <div class="cell"><span class="char-main">みょ</span><span class="char-sub">myo</span>
+                                </div>
+
+                                <div class="cell"><span class="char-main">りゃ</span><span class="char-sub">rya</span>
+                                </div>
+                                <div class="cell"><span class="char-main">りゅ</span><span class="char-sub">ryu</span>
+                                </div>
+                                <div class="cell"><span class="char-main">りょ</span><span class="char-sub">ryo</span>
+                                </div>
+
+                                <div class="cell"><span class="char-main">ぎゃ</span><span class="char-sub">gya</span>
+                                </div>
+                                <div class="cell"><span class="char-main">ぎゅ</span><span class="char-sub">gyu</span>
+                                </div>
+                                <div class="cell"><span class="char-main">ぎょ</span><span class="char-sub">gyo</span>
+                                </div>
+
+                                <div class="cell"><span class="char-main">じゃ</span><span class="char-sub">ja</span>
+                                </div>
+                                <div class="cell"><span class="char-main">じゅ</span><span class="char-sub">ju</span>
+                                </div>
+                                <div class="cell"><span class="char-main">じょ</span><span class="char-sub">jo</span>
+                                </div>
+
+                                <div class="cell"><span class="char-main">びゃ</span><span class="char-sub">bya</span>
+                                </div>
+                                <div class="cell"><span class="char-main">びゅ</span><span class="char-sub">byu</span>
+                                </div>
+                                <div class="cell"><span class="char-main">びょ</span><span class="char-sub">byo</span>
+                                </div>
+
+                                <div class="cell"><span class="char-main">ぴゃ</span><span class="char-sub">pya</span>
+                                </div>
+                                <div class="cell"><span class="char-main">ぴゅ</span><span class="char-sub">pyu</span>
+                                </div>
+                                <div class="cell"><span class="char-main">ぴょ</span><span class="char-sub">pyo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End chart grid -->
+
+            </div> <!-- End visual container -->
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <div class="flex items-center gap-3">
+                    <img src="images/siteIcoRed.png" alt="Logo"
+                        class="w-10 h-10 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                    <span class="font-bold text-xl text-gray-800">My Nihongo Path</span>
+                </div>
+                <div class="flex gap-8 text-sm font-medium text-gray-500">
+                    <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                    <a href="activities.html" class="hover:text-primary transition-colors">Activities</a>
+                    <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                    <a href="faq.html" class="hover:text-primary transition-colors">FAQ</a>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+                <p>&copy; 2025 My Nihongo Path. All rights reserved.</p>
+                <p class="flex items-center gap-1">
+                    Designed & Developed by
+                    <a href="https://www.linkedin.com/in/yigeenula" target="_blank"
+                        class="text-gray-600 hover:text-primary font-semibold transition-colors">Yasiru Isum Geenula</a>
+                    <span class="mx-2">|</span>
+                    <a href="https://codexblaze.online/" target="_blank"
+                        class="text-gray-600 hover:text-primary font-semibold transition-colors">CodeXBlaze</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function printChart(size) {
+            // Remove existing style block if any
+            const existingStyle = document.getElementById('page-size-style');
+            if (existingStyle) existingStyle.remove();
+
+            // Create new style for page size
+            const style = document.createElement('style');
+            style.id = 'page-size-style';
+
+            // Define size and orientation logic
+            if (size === 'a4') {
+                style.innerHTML = `@page { size: A4 portrait; margin: 3mm; }`;
+                document.body.className = 'bg-background-light font-display print-a4-optimized';
+            } else if (size === 'a3') {
+                style.innerHTML = `@page { size: A3 landscape; margin: 3mm; }`;
+                document.body.className = 'bg-background-light font-display print-a3-landscape';
+            }
+
+            document.head.appendChild(style);
+
+            // Print
+            setTimeout(() => {
+                window.print();
+            }, 100);
+        }
+    </script>
+</body>
+
+</html>
