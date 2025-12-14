@@ -229,7 +229,8 @@
                 color: #444;
             }
 
-            /* --- A4 PORTRAIT OPTIMIZATION (1 Page) --- */
+            /* --- A4 PORTRAIT OPTIMIZATION (Legacy/Option if needed, currently unused as user requested Landscape) --- */
+            /* We will keep the class just in case, but user wants A4 Landscape now */
             body.print-a4-optimized .chart-grid {
                 display: grid;
                 grid-template-columns: 58% 40%;
@@ -261,7 +262,8 @@
                 font-size: 8pt;
             }
 
-            /* --- A3 LANDSCAPE OPTIMIZATION (1 Page) --- */
+            /* --- LANDSCAPE LAYOUT SHARED (A4 & A3) --- */
+            body.print-a4-landscape .chart-grid,
             body.print-a3-landscape .chart-grid {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
@@ -270,11 +272,18 @@
                 align-items: start;
             }
 
+            body.print-a4-landscape .col-right,
             body.print-a3-landscape .col-right {
                 display: contents;
-                /* This effectively removes .col-right div from rendering, putting children into main grid */
+                /* Unwrap Part 2 & 3 */
             }
 
+            body.print-a4-landscape .section-box,
+            body.print-a3-landscape .section-box {
+                margin-top: 0 !important;
+            }
+
+            /* A3 Specific Sizes */
             body.print-a3-landscape .char-main {
                 font-size: 20pt;
             }
@@ -283,8 +292,22 @@
                 font-size: 10pt;
             }
 
-            body.print-a3-landscape .section-box {
-                margin-top: 0 !important;
+            /* A4 Specific Sizes (Smaller to fit) */
+            body.print-a4-landscape .char-main {
+                font-size: 14pt;
+            }
+
+            body.print-a4-landscape .char-sub {
+                font-size: 8pt;
+            }
+
+            /* Tweak margins for A4 Landscape to ensure it fits */
+            body.print-a4-landscape .kana-table {
+                gap: 2px;
+            }
+
+            body.print-a4-landscape .cell {
+                padding: 0;
             }
         }
     </style>
@@ -331,8 +354,7 @@
             <!-- Page Title Area (visible on screen) -->
             <div class="flex flex-col gap-2 text-left site-ui-hide">
                 <h1 class="text-brand-dark text-3xl font-black tracking-[-0.03em]">Printable Hiragana Chart</h1>
-                <p class="text-muted-indigo">Full alphabet reference formatted for printing on A4 (Portrait) or A3
-                    (Landscape).</p>
+                <p class="text-muted-indigo">Full alphabet reference formatted for printing on A4 or A3 (Landscape).</p>
             </div>
 
             <!-- Print Buttons Area -->
@@ -341,7 +363,7 @@
                 <span class="text-brand-dark font-bold mr-2">Print Options:</span>
                 <button onclick="printChart('a4')"
                     class="flex items-center gap-2 rounded-full bg-primary text-white font-bold px-6 py-3 hover:bg-primary/90 transition shadow-sm hover:shadow-md">
-                    <span class="material-symbols-outlined">print</span> Print A4 (Portrait)
+                    <span class="material-symbols-outlined">print</span> Print A4 (Landscape)
                 </button>
                 <button onclick="printChart('a3')"
                     class="flex items-center gap-2 rounded-full bg-secondary text-white font-bold px-6 py-3 hover:bg-gray-800 transition shadow-sm hover:shadow-md">
@@ -607,8 +629,8 @@
 
             // Define size and orientation logic
             if (size === 'a4') {
-                style.innerHTML = `@page { size: A4 portrait; margin: 3mm; }`;
-                document.body.className = 'bg-background-light font-display print-a4-optimized';
+                style.innerHTML = `@page { size: A4 landscape; margin: 3mm; }`;
+                document.body.className = 'bg-background-light font-display print-a4-landscape';
             } else if (size === 'a3') {
                 style.innerHTML = `@page { size: A3 landscape; margin: 3mm; }`;
                 document.body.className = 'bg-background-light font-display print-a3-landscape';
