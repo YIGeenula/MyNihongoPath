@@ -3,78 +3,100 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VTJR4ZW26"></script>
+    <script async src="https://www.googletagmanager.online/gtag/js?id=G-9VTJR4ZW26"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-9VTJR4ZW26');
     </script>
+
+    <!-- Basic Meta -->
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>My Nihongo Path - Master Japanese in English & Sinhala</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Nihongo Path – Your Japanese Journey</title>
+
     <meta name="description"
-        content="Start your Japanese learning journey with My Nihongo Path. Master Hiragana, Katakana, and vocabulary with free interactive lessons in English and Sinhala." />
+        content="Learn Japanese with My Nihongo Path. Master Hiragana, Katakana, vocabulary, and JLPT concepts through interactive lessons in English and Sinhala." />
+
     <meta name="keywords"
-        content="Learn Japanese, Hiragana, Katakana, Sinhala Japanese lessons, Japanese vocabulary, JLPT practice, My Nihongo Path" />
+        content="Learn Japanese, Hiragana, Katakana, JLPT, Sinhala Japanese lessons, Japanese vocabulary, My Nihongo Path" />
+
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Yasiru Isum Geenula" />
-    <link rel="canonical" href="https://mynihongopath.com/index.html" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Canonical -->
+    <link rel="canonical" href="https://mynihongopath.online/" />
+
+    <!-- Favicon (IMPORTANT for Google icon) -->
+    <link rel="icon" type="image/png" href="images/siteIcoRed.png" />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mynihongopath.com/index.html" />
-    <meta property="og:title" content="My Nihongo Path - Free Japanese Lessons" />
+    <meta property="og:url" content="https://mynihongopath.online/" />
+    <meta property="og:title" content="My Nihongo Path – Your Japanese Journey" />
     <meta property="og:description"
-        content="Master Japanese simply with lessons guided by both English and Sinhala. Interactive resources for Hiragana, Katakana, and more." />
-    <meta property="og:image" content="https://mynihongopath.com/images/siteIcoRed.png" />
+        content="Master Japanese simply with lessons guided by English and Sinhala. Interactive resources for Hiragana, Katakana, and more." />
+    <meta property="og:image" content="https://mynihongopath.online/images/siteIcoRed.png" />
+    <meta property="og:site_name" content="My Nihongo Path" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://mynihongopath.com/index.html" />
-    <meta property="twitter:title" content="My Nihongo Path - Free Japanese Lessons" />
-    <meta property="twitter:description"
-        content="Master Japanese simply with lessons guided by both English and Sinhala. Interactive resources for Hiragana, Katakana, and more." />
-    <meta property="twitter:image" content="https://mynihongopath.com/images/siteIcoRed.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://mynihongopath.online/" />
+    <meta name="twitter:title" content="My Nihongo Path – Your Japanese Journey" />
+    <meta name="twitter:description"
+        content="Learn Japanese with interactive lessons in English and Sinhala. Start your journey with My Nihongo Path." />
+    <meta name="twitter:image" content="https://mynihongopath.online/images/siteIcoRed.png" />
 
-    <!-- JSON-LD Structured Data -->
+    <!-- ✅ Structured Data: Organization (LOGO SOURCE) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "My Nihongo Path",
+      "url": "https://mynihongopath.online/",
+      "logo": "https://mynihongopath.online/images/siteIcoRed.png"
+    }
+    </script>
+
+    <!-- ✅ Structured Data: Website (SITE NAME FIX)-->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "My Nihongo Path",
-      "url": "https://mynihongopath.com/",
-      "description": "Learn Japanese with English and Sinhala guidance.",
-      "author": {
-        "@type": "Person",
-        "name": "Yasiru Isum Geenula"
-      }
+      "alternateName": "My Nihongo Path – Learn Japanese",
+      "url": "https://mynihongopath.online/"
     }
     </script>
 
-    <!-- Tailwind & Fonts -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link rel="icon" type="image/x-icon" href="images/siteIcoRed.png">
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+Sinhala:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="sakura.css">
+        rel="stylesheet" />
 
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="sakura.css" />
+
+    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        primary: "#EE2B3B", // Japan Red
+                        primary: "#EE2B3B",
                         "primary-dark": "#C41E2B",
                         secondary: "#1A1A1A",
-                        accent: "#FF9AA2", // Sakura Pink
+                        accent: "#FF9AA2",
                         "accent-light": "#FFB7B2",
                         "bg-light": "#FAFAFA",
                         "text-main": "#2D3748",
@@ -88,29 +110,11 @@
                     backgroundImage: {
                         'hero-pattern': "url('images/hero_bg.png')",
                     },
-                    animation: {
-                        'fade-in': 'fadeIn 0.8s ease-out forwards',
-                        'slide-up': 'slideUp 0.8s ease-out forwards',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
                 },
             },
         };
     </script>
+
     <style>
         body {
             font-family: 'Lexend', sans-serif;
@@ -119,21 +123,15 @@
         .glass {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
         }
 
         .glass-dark {
             background: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-
-        .text-outline-white {
-            text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
         }
     </style>
-    <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body class="bg-bg-light text-text-main antialiased selection:bg-primary selection:text-white">
 
