@@ -110,15 +110,43 @@
                     onclick="window.location.href='index.html'">
                     <img class="h-10 w-10 md:h-12 md:w-12 transition-transform hover:rotate-12"
                         src="images/siteIcoRed.png" alt="Logo">
-                    <span class="font-bold text-2xl tracking-tight">My <span class="text-primary">Nihongo</span>
-                        Path</span>
+                    <span class="font-bold text-2xl tracking-tight text-secondary">My <span
+                            class="text-primary">Nihongo</span> Path</span>
                 </div>
-                <div class="hidden md:flex items-center space-x-8 text-sm md:text-base font-bold text-gray-500">
-                    <a href="index.html" class="hover:text-primary transition-colors">Home</a>
-                    <a href="activities.html" class="hover:text-primary transition-colors">Activities</a>
-                    <a href="vocabulary.html" class="text-primary">Vocabulary</a>
-                    <a href="faq.html" class="hover:text-primary transition-colors">FAQ</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="nav-link-animated text-gray-600 hover:text-primary font-medium text-lg px-3 py-2 rounded-xl transition-all">Home</a>
+                    <a href="activities.html"
+                        class="nav-link-animated text-gray-600 hover:text-primary font-medium text-lg px-3 py-2 rounded-xl transition-all">Activities</a>
+                    <a href="vocabulary.html"
+                        class="nav-link-active text-primary font-bold text-lg px-4 py-2 rounded-xl transition-all shadow-sm">Vocabulary</a>
+                    <a href="about.html"
+                        class="nav-link-animated text-gray-600 hover:text-primary font-medium text-lg px-3 py-2 rounded-xl transition-all">About</a>
+                    <a href="faq.html"
+                        class="nav-link-animated text-gray-600 hover:text-primary font-medium text-lg px-3 py-2 rounded-xl transition-all">FAQ</a>
                 </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-toggle" class="p-2 text-gray-600 hover:text-primary focus:outline-none">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-gray-100 animate-slide-down">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html"
+                    class="block px-4 py-3 text-gray-600 hover:text-primary hover:bg-red-50 rounded-xl font-bold">Home</a>
+                <a href="activities.html"
+                    class="block px-4 py-3 text-gray-600 hover:text-primary hover:bg-red-50 rounded-xl font-bold">Activities</a>
+                <a href="vocabulary.html"
+                    class="block px-4 py-3 text-primary bg-red-50 rounded-xl font-bold">Vocabulary</a>
+                <a href="about.html"
+                    class="block px-4 py-3 text-gray-600 hover:text-primary hover:bg-red-50 rounded-xl font-bold">About</a>
+                <a href="faq.html"
+                    class="block px-4 py-3 text-gray-600 hover:text-primary hover:bg-red-50 rounded-xl font-bold">FAQ</a>
             </div>
         </div>
     </nav>
@@ -365,7 +393,7 @@
                     <img src="images/siteIcoRed.png" alt="Logo" class="w-10 h-10 transition-all hover:rotate-12">
                     <span class="font-black text-2xl text-secondary">My Nihongo Path</span>
                 </div>
-                <div class="flex gap-8 text-sm font-bold text-gray-400">
+                <div class="flex gap-6 text-sm font-bold text-gray-400">
                     <a href="index.html" class="hover:text-primary transition-colors">Home</a>
                     <a href="activities.html" class="hover:text-primary transition-colors">Activities</a>
                     <a href="vocabulary.html" class="hover:text-primary transition-colors">Vocabulary</a>

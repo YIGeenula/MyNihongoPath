@@ -178,13 +178,15 @@
 
         @media (max-width: 640px) {
             .category-btn {
-                padding: 0.5rem 0.75rem;
-                font-size: 0.875rem;
-                gap: 0.25rem;
+                padding: 0.75rem;
+                font-size: 0;
+                /* Hide text */
+                gap: 0;
+                justify-content: center;
             }
 
             .category-btn span {
-                font-size: 1.1rem;
+                font-size: 1.5rem;
             }
         }
 
@@ -308,12 +310,13 @@
         <!-- HIRAGANA SECTION -->
         <div id="section-hiragana" class="mb-32 scroll-mt-32">
             <div class="flex flex-col md:flex-row md:items-end gap-4 mb-12 border-b-2 border-red-50 pb-6">
-                <div class="bg-primary text-white p-4 rounded-3xl shadow-xl shadow-primary/30">
+                <div class="bg-primary text-white p-4 rounded-3xl shadow-xl shadow-primary/30 w-fit">
                     <span class="material-symbols-outlined text-4xl">edit_note</span>
                 </div>
                 <div>
-                    <h2 class="text-4xl md:text-5xl font-black text-secondary mb-1">Hiragana Course</h2>
-                    <p class="text-gray-500 font-bold tracking-tight">Level 0: The Foundation of Modern Japanese</p>
+                    <h2 class="text-3xl md:text-5xl font-black text-secondary mb-1">Hiragana Course</h2>
+                    <p class="text-gray-500 font-bold tracking-tight text-sm md:text-base">Level 0: The Foundation of
+                        Modern Japanese</p>
                 </div>
             </div>
 
@@ -450,12 +453,13 @@
         <!-- KATAKANA SECTION -->
         <div id="section-katakana" class="mb-32 scroll-mt-32">
             <div class="flex flex-col md:flex-row md:items-end gap-4 mb-12 border-b-2 border-blue-50 pb-6">
-                <div class="bg-blue-600 text-white p-4 rounded-3xl shadow-xl shadow-blue-600/30">
+                <div class="bg-blue-600 text-white p-4 rounded-3xl shadow-xl shadow-blue-600/30 w-fit">
                     <span class="material-symbols-outlined text-4xl">travel_explore</span>
                 </div>
                 <div>
-                    <h2 class="text-4xl md:text-5xl font-black text-secondary mb-1">Katakana Course</h2>
-                    <p class="text-gray-500 font-bold tracking-tight">Essential for Names, Places, and Foreign Words</p>
+                    <h2 class="text-3xl md:text-5xl font-black text-secondary mb-1">Katakana Course</h2>
+                    <p class="text-gray-500 font-bold tracking-tight text-sm md:text-base">Essential for Names, Places,
+                        and Foreign Words</p>
                 </div>
             </div>
 
@@ -589,12 +593,13 @@
         <!-- KANJI SECTION -->
         <div id="section-kanji" class="scroll-mt-32 mb-32">
             <div class="flex flex-col md:flex-row md:items-end gap-4 mb-12 border-b-2 border-blue-50 pb-6">
-                <div class="bg-orange-600 text-white p-4 rounded-3xl shadow-xl shadow-orange-600/30">
+                <div class="bg-orange-600 text-white p-4 rounded-3xl shadow-xl shadow-orange-600/30 w-fit">
                     <span class="material-symbols-outlined text-4xl">auto_stories</span>
                 </div>
                 <div>
-                    <h2 class="text-4xl md:text-5xl font-black text-secondary mb-1">Kanji Course</h2>
-                    <p class="text-gray-500 font-bold tracking-tight">Essential for Names, Places, and Foreign Words</p>
+                    <h2 class="text-3xl md:text-5xl font-black text-secondary mb-1">Kanji Course</h2>
+                    <p class="text-gray-500 font-bold tracking-tight text-sm md:text-base">Essential for writing Nouns,
+                        Adjective/Verb Stems, and Names</p>
                 </div>
             </div>
 
@@ -608,12 +613,12 @@
 
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
                         <div class="flex-1">
-                            <div class="flex items-center gap-3 mb-4">
+                            <div class="flex flex-wrap items-center gap-3 mb-4">
                                 <span
-                                    class="px-6 py-2 bg-orange-100 text-orange-600 rounded-full text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
+                                    class="px-5 py-1.5 bg-orange-100 text-orange-600 rounded-full text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
                                     Lesson 1
                                 </span>
-                                <h3 class="text-2xl font-black text-gray-700">Nature & Basic Elements</h3>
+                                <h3 class="text-xl md:text-2xl font-black text-gray-700">Nature & Basic Elements</h3>
                             </div>
                             <p class="text-gray-500 font-medium mb-8 max-w-lg">The foundation of Kanji. Learn characters
                                 representing the natural world: mountain, river, sun, and more.</p>
@@ -626,36 +631,37 @@
                         </div>
 
                         <div class="flex-shrink-0">
-                            <div class="grid grid-cols-5 gap-2.5 p-2 bg-gray-50 rounded-[2rem] border border-gray-100">
+                            <div
+                                class="grid grid-cols-5 gap-1.5 md:gap-2.5 p-2 bg-gray-50 rounded-[2rem] border border-gray-100">
                                 <div
-                                    class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-lg font-bold text-orange-600 shadow-sm">
+                                    class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-base md:text-lg font-bold text-orange-600 shadow-sm">
                                     山</div>
                                 <div
-                                    class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-lg font-bold text-orange-600 shadow-sm">
+                                    class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-base md:text-lg font-bold text-orange-600 shadow-sm">
                                     川</div>
                                 <div
-                                    class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-lg font-bold text-orange-600 shadow-sm">
+                                    class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-base md:text-lg font-bold text-orange-600 shadow-sm">
                                     田</div>
                                 <div
-                                    class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-lg font-bold text-orange-600 shadow-sm">
+                                    class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-base md:text-lg font-bold text-orange-600 shadow-sm">
                                     日</div>
                                 <div
-                                    class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-lg font-bold text-orange-600 shadow-sm">
+                                    class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-base md:text-lg font-bold text-orange-600 shadow-sm">
                                     月</div>
                                 <div
-                                    class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-lg font-bold text-orange-600 shadow-sm">
+                                    class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-base md:text-lg font-bold text-orange-600 shadow-sm">
                                     火</div>
                                 <div
-                                    class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-lg font-bold text-orange-600 shadow-sm">
+                                    class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-base md:text-lg font-bold text-orange-600 shadow-sm">
                                     水</div>
                                 <div
-                                    class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-lg font-bold text-orange-600 shadow-sm">
+                                    class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-base md:text-lg font-bold text-orange-600 shadow-sm">
                                     木</div>
                                 <div
-                                    class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-lg font-bold text-orange-600 shadow-sm">
+                                    class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-base md:text-lg font-bold text-orange-600 shadow-sm">
                                     金</div>
                                 <div
-                                    class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-lg font-bold text-orange-600 shadow-sm">
+                                    class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-base md:text-lg font-bold text-orange-600 shadow-sm">
                                     土</div>
                             </div>
                         </div>
@@ -724,7 +730,7 @@
                     <img src="images/siteIcoRed.png" alt="Logo" class="w-10 h-10 transition-all hover:rotate-12">
                     <span class="font-black text-2xl text-secondary">My Nihongo Path</span>
                 </div>
-                <div class="flex gap-8 text-sm font-bold text-gray-400">
+                <div class="flex gap-6 text-sm font-bold text-gray-400">
                     <a href="index.html" class="hover:text-primary transition-colors">Home</a>
                     <a href="activities.html" class="hover:text-primary transition-colors">Activities</a>
                     <a href="vocabulary.html" class="hover:text-primary transition-colors">Vocabulary</a>
