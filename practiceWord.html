@@ -184,7 +184,10 @@
                     const li = document.createElement('li');
                     li.className = 'flex items-center gap-3 bg-white rounded-lg border border-brand-subtle shadow-sm px-4 py-2';
                     li.innerHTML = `
-                <span class="text-primary font-bold text-xl">${w.jp || ''}</span>
+                <div class="flex flex-col">
+                    <span class="text-primary font-bold text-xl">${w.jp || ''}</span>
+                    <span class="text-[10px] font-bold text-primary/40 italic -mt-1">${w.ro || ''}</span>
+                </div>
                 <span class="text-muted-indigo">-</span>
                 <span class="text-brand-dark">${w.en || ''}</span>
                 <span class="text-muted-indigo">-</span>

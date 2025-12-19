@@ -700,11 +700,6 @@
                         <span class="material-symbols-outlined">open_in_new</span>
                         Enter Vocabulary Hub
                     </a>
-                    <a href="practiceWords_set04.html"
-                        class="px-8 py-4 bg-white border border-green-200 text-green-600 hover:bg-green-50 rounded-2xl font-black transition-all shadow-sm flex items-center gap-3">
-                        <span class="material-symbols-outlined">hotel_class</span>
-                        Quick 103 Drill
-                    </a>
                 </div>
 
                 <!-- Decorative backgrounds -->
@@ -766,24 +761,30 @@
             }
         }
 
-        // Mobile Menu Toggle
-        const toggle = document.getElementById('mobile-menu-toggle');
-        const menu = document.getElementById('mobile-menu');
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const toggle = document.getElementById('mobile-menu-toggle');
+            const menu = document.getElementById('mobile-menu');
 
-        toggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            const icon = toggle.querySelector('span');
-            icon.textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
-        });
-
-        // Sticky Nav Shadow on scroll
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 20) {
-                navbar.classList.add('shadow-xl');
-            } else {
-                navbar.classList.remove('shadow-xl');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    const icon = toggle.querySelector('span');
+                    icon.textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
+                });
             }
+
+            // Sticky Nav Shadow on scroll
+            window.addEventListener('scroll', () => {
+                const navbar = document.getElementById('navbar');
+                if (navbar) {
+                    if (window.scrollY > 20) {
+                        navbar.classList.add('shadow-xl');
+                    } else {
+                        navbar.classList.remove('shadow-xl');
+                    }
+                }
+            });
         });
     </script>
 </body>

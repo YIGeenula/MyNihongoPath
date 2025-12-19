@@ -199,30 +199,30 @@
                     }, 1200); // Wait for transition
                 }, 300);
             }, 1500); // Initial delay
-        });
 
-        // Mobile Menu Toggle
-        const toggle = document.getElementById('mobile-menu-toggle');
-        const menu = document.getElementById('mobile-menu');
+            // Mobile Menu Toggle
+            const toggle = document.getElementById('mobile-menu-toggle');
+            const menu = document.getElementById('mobile-menu');
 
-        if (toggle && menu) {
-            toggle.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-                const icon = toggle.querySelector('span');
-                icon.textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
-            });
-        }
-
-        // Sticky Nav Shadow on scroll
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (navbar) {
-                if (window.scrollY > 20) {
-                    navbar.classList.add('shadow-xl');
-                } else {
-                    navbar.classList.remove('shadow-xl');
-                }
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    const icon = toggle.querySelector('span');
+                    icon.textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
+                });
             }
+
+            // Sticky Nav Shadow on scroll
+            window.addEventListener('scroll', () => {
+                const navbar = document.getElementById('navbar');
+                if (navbar) {
+                    if (window.scrollY > 20) {
+                        navbar.classList.add('shadow-xl');
+                    } else {
+                        navbar.classList.remove('shadow-xl');
+                    }
+                }
+            });
         });
     </script>
 
